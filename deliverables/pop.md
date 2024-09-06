@@ -18,9 +18,16 @@
     * Databases - Databases that hold all user reports and entity descriptions. Is accessible through tools in the back end.
     * Front End - Retrieves and send data to or from the databases through the back end. 
 * Languages and Frameworks    
-    * Front End(React JS) - React JS for development and Node JS for developing environment
-    * CSS Framework - Material UI as a CSS framework because it offers a comprehensive suite of free UI tools to help us ship new     features faster.
-    * Node JS libraries - NPM CLIs beacuse It helps with installing various packages and resolving their various dependencies.
+    * Front End - 
+      ~ React JS for development and Node JS for developing environment.
+      ~ Node.js for deployment environment.
+      ~ CSS Framework - Material UI as a CSS framework because it offers a comprehensive suite of free UI tools to help us ship new features faster.
+    * Node JS libraries - 
+      ~ NPM CLIs beacuse It helps with installing various packages and resolving  their various dependencies.
+    * Databases -
+      ~ PostgreSQL for entity descriptions and reports.
+    * Comparative Analysis Tools - 
+      ~ Python for data analysis tools and data visualization.
     * Include a response to: "why are you picking the tech stack that you are?" - TBD
 * Predicted life cycle/methodology
     * Sprint/Scrum - TBD
