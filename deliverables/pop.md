@@ -30,4 +30,7 @@
       ~ Python for data analysis tools and data visualization.
     * Include a response to: "why are you picking the tech stack that you are?" - TBD
 * Predicted life cycle/methodology
-    * Sprint/Scrum - TBD
+    * Agile Scrum
+    * Cycle time - 2-week sprints
+    * Standups - Tuesdays and Thursdays
+    * Key Activities - Sprint planning, standups, retrospectives
