@@ -28,5 +28,5 @@
   * Design Specification
     * TBD
   * Gannt Chart
-  ![image](WSU-cshimizu/ceg4110-group-project-chimera/blob/main/deliverables/CEG4110Gantt.png)
+  ![image](./CEG4110Gantt.png)
 
