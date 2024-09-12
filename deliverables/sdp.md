@@ -4,11 +4,10 @@
 * **Administrative**
  * Meeting Location(s)
    * Library Annex 025 (Help Desk Lounge)
-   * Fawcett 204 (Class)
    * Rike 100 (Rey Rey Cafe)
    * Remote (Discord)
  * Meeting Times
-   * Tuesday/Thursday 11:00-12:20 - Fawcett 204 (Class)
+   * Tuesday/Thursday - TBD (Remote)
    * TBD - Remote
    * TBD - Rike 100 (Rey Rey Cafe) Or Library Annex 025 (Help Desk Lounge)
   * Communication Plan (Meeting Structure & Cadence)
