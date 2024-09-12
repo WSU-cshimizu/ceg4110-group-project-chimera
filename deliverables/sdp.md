@@ -2,7 +2,7 @@
 
 ## Requirements
 * **Administrative**
-  * Meeting Location(s)
+ * Meeting Location(s)
    * Library Annex 025 (Help Desk Lounge)
    * Fawcett 204 (Class)
    * Rike 100 (Rey Rey Cafe)
@@ -13,6 +13,7 @@
    * TBD - Rike 100 (Rey Rey Cafe) Or Library Annex 025 (Help Desk Lounge)
   * Communication Plan (Meeting Structure & Cadence)
   * Project Managment
+    
 * **SDLC Details**
 * Timeline (Dates for)
   * MVSs
