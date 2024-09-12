@@ -26,11 +26,11 @@
   - MVSs
     - TBD
   - Milestones (i.e., "Check-ins")
-    - Databases: (Check in end of week 5)
-    - Backend: (Check in end of week 7)
-    - Comparison Tools: (Check in end of week 9)
-    - Front End: (Check in end of week 11)
-    - Management Portal: (Check in end of week 13)
+    - Databases: Creating and filling the databases. (Week 5)
+    - Backend: Creating APIs to access the comparison tools and databases from the front end. (Week 7)
+    - Comparison Tools: Tools that need to be able to compare user reports to entity database, and tools to compare user reports to other user reports. (Week 9)
+    - Front End: Interface that allows users to submit reports and traverse entity database. (Week 11)
+    - Management Portal: Admin interface for management of user reports. Must be able to delete and edit submissions. (week 13)
   - Requirement Specification
     - TBD
   - Design Specification
