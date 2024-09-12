@@ -26,7 +26,11 @@
   - MVSs
     - TBD
   - Milestones (i.e., "Check-ins")
-    - TBD
+    - Databases: (Check in end of week 5)
+    - Backend: (Check in end of week 7)
+    - Comparison Tools: (Check in end of week 9)
+    - Front End: (Check in end of week 11)
+    - Management Portal: (Check in end of week 13)
   - Requirement Specification
     - TBD
   - Design Specification
