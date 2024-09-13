@@ -39,34 +39,30 @@ Also, team members are expected to respond to discord messages within 2 hours du
 
 ### MVSs
 
-- Date: End of week 5 (09/21/24)
+- Date: End of week 4 (09/20/24)
 
 ### Requirement Specification
 
-- Date: End of week 6 (09/27/24)
+- Date: End of week 5 (09/27/24)
 
 ### Design Specification
 
-- Date: End of week 7 (10/03/24)
+- Date: End of week 5 (09/29/24)
 
 ### Milestones (i.e., "Checkins")
 
 Milestone 1: Requirements and Design Completion
-- Date: End of week 7 (10/03/24)
+- Date: End of week 5 (09/29/24)
 - Description: Complete the specification planning and upload documents.
 
 Milestone 2: Core Functionality Implemented
-- Date: End of Week 9 (10/20/24)
+- Date: End of Week 9 (10/25/24)
 - Description: Initial implementation of core functionalities like backend APIs and basic front-end setup.
 
 Milestone 3: Integration and Testing
-- Date: End of Week 11 (11/03/24)
+- Date: End of Week 11 (11/10/24)
 - Description: Complete integration of all system components and begin comprehensive testing, including bug fixing.
 
 Milestone 4: Final MVP Version
-- Date: End of Week 11 (11/03/24)
+- Date: End of Week 11 (11/10/24)
 - Description: Delivery of the Minimum Viable Product (MVP) with core features fully implemented, integrated, and tested.
-
-Milestone 5: Presentation Prep
-- Date: Week 12 (11/07/24)
-- Description: Project retrospective and preparation for final presentations.
