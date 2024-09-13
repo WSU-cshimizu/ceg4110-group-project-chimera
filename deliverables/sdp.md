@@ -20,11 +20,11 @@ We have decided to establish two different meeting locations for in-person colla
 
 ### Meeting Cadence
 
-#### Weekly Meetings
+#### Weekly Meetings : 
 
 We will meet three times a week to ensure consistent progress.
 
-#### Ad-hoc Meetings
+#### Ad-hoc Meetings : 
 
 We will call an ad-hoc meeting as needed for specific issues or in the case of a major discovery, with at least 24 hours’ notice.
 
