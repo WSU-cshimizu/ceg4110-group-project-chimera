@@ -56,11 +56,11 @@ The system compares submitted reports with existing supernatural entities in the
 
 ### 4 . Security
 
-    Ensure that user data is protected.
+Ensure that user data is protected.
 
 ### 5 . Performance
 
-    System should be able to handle multiple reports and entity for comparting and generating reports.
+System should be able to handle multiple reports and entity for comparting and generating reports.
 
 ### 6 . Usability
 
