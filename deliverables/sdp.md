@@ -35,7 +35,7 @@ Also, team members are expected to respond to discord messages within 2 hours du
 
 ## Timeline
 
-![image](./CEG4110_Gantt_Jira.png)
+![image](./Gantt_Jira.png)
 
 ### MVSs
 
