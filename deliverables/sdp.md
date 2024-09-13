@@ -13,9 +13,9 @@ We have decided to establish two different meeting locations for in-person colla
 
 ### Meeting Time(s)
 
-- Fawcett Hall
+- Fawcett Hall : 
   If our class is dismissed early, we will use the remaining time to discuss project updates and progress. If class runs its full length, we will hold a virtual meeting on Discord from 6:30 PM to 7:30 PM on Tuesdays and Thursdays to ensure we stay on track.
-- Library Annex 025
+- Library Annex 025 : 
   For critical decision-making and hands-on activities, we will meet in person at the Library Annex (Room 025). These meetings will be scheduled in advance and reserved for key project milestones or tasks that require group collaboration.
 
 ### Meeting Cadence
