@@ -31,16 +31,42 @@ We will call an ad-hoc meeting as needed for specific issues or in the case of a
 ### Communication mechanism (s) for outside of meeting
 
 For communication outside of meetings, we will use Discord to coordinate and discuss any project updates or questions.
-Also, team members are expected to respond to discord messages within 2 hours during weekdays. (8 AM – 9 PM).
+Also, team members are expected to respond to discord messages within 2 hours during weekday evenings. (6PM – 9PM).
 
-# Timeline
+## Timeline
 
-![image](./CEG4110Gantt.png)
+![image](./CEG4110_Gantt_Jira.png)
 
-## MVSs
+### MVSs
 
-## Milestones (i.e., "Checkins")
+- Date: End of week 5 (09/27/24)
 
-## Requirement Specification
+### Requirement Specification
 
-## Design Specification
+- Date: End of week 6 (09/04/24)
+
+### Design Specification
+
+- Date: End of week 7 (10/11/24)
+
+### Milestones (i.e., "Checkins")
+
+Milestone 1: Requirements and Design Completion
+- Date: End of week 7 (10/11/24)
+- Description: Complete the specification planning and upload documents.
+
+Milestone 2: Core Functionality Implemented
+- Date: End of Week 9 (10/25/24)
+- Description: Initial implementation of core functionalities like backend APIs and basic front-end setup.
+
+Milestone 3: Integration and Testing
+- Date: End of Week 11 (11/08/24)
+- Description: Complete integration of all system components and begin comprehensive testing, including bug fixing.
+
+Milestone 4: Final MVP Version
+- Date: End of Week 13 (11/22/24)
+- Description: Delivery of the Minimum Viable Product (MVP) with core features fully implemented, integrated, and tested.
+
+Milestone 5: Presentation Prep
+- Date: Week 14 (12/02/24)
+- Description: Project retrospective and preparation for final presentations.
