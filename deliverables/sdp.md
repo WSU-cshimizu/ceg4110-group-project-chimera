@@ -39,26 +39,6 @@ Also, team members are expected to respond to discord messages within 2 hours du
 
 ## MVSs
 
-The Minimum Viable Specifications for CHIMERA are :
-
-### 1. User Role
-
-
-### 2 .Disturbance Report Submission
-
-
-### 3 .Report Analysis
-
-
-### 4 . Security
-
-
-### 5 . Performance
-
-
-### 6 . Usability
-
-
 ## Milestones (i.e., "Checkins")
 
 ## Requirement Specification
