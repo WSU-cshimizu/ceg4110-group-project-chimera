@@ -50,13 +50,11 @@ The Minimum Viable Specifications for CHIMERA are :
 
 Users can submit reports including name(optional), role, location of the disturbance, data and time of the event and detailed description of what was witnessed.
 
-### 3 .Supernatural Entity Database
+### 3 .Report Analysis
 
-### 4 .Report Analysis
+The system compares submitted reports with existing supernatural entities in the database to identify potential matches and a final report will be generated about the recurring disturbance.
 
-The machine learning system compares submitted reports with existing supernatural entities in the database to identify potential matches and a final report will be generated about the recurring disturbance.
-
-### 5 . Security
+### 4 . Security
 
     Ensure that user data is protected.
 
@@ -64,7 +62,7 @@ The machine learning system compares submitted reports with existing supernatura
 
     System should be able to handle multiple reports and entity for comparting and generating reports.
 
-### 5 . Usability
+### 6 . Usability
 
 Interface should be easy to navigate for non-technical users.
 
