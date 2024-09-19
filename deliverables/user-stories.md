@@ -16,7 +16,7 @@ The goal of C.H.I.M.E.R.A. is to compile all known supernatural entity data and 
 
 ### Developer stories
 
-- 
+- As a backend developer, I would like to be able to see the relationships between our different entities, reports, and locations so I can correlate the acquired data.
 
 - 
 
