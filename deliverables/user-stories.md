@@ -4,17 +4,15 @@
 The goal of C.H.I.M.E.R.A. is to compile all known supernatural entity data and compare reports from students to help determine unknown supernatural entities.
 ### User-Stories
 
-- As a [user role] I want to [goal] so I can [reason]. (see recent user reports)
+- As a user I should be able to submit reports of my paranormal experience.
 
-- As a [user role] I want to [goal] so I can [reason]. (see known entities)
+- As a user I should be able to see reports of other people's entity sightings.
 
-- As a admin I want to [goal] so I can [reason]. (see all reports)
+- As a admin user I should be able to view all entity sightings and delete or edit reports. 
 
-- As a admin user I want to [goal] so I can [reason]. (get rid of reports)
+- As a user I should be able to view a dictionary of all known entities.
 
-- As a [user role] I want to [goal] so I can [reason]. (see entities that could be what i reported)
-
--  As a [user role] I want to [goal] so I can [reason]. (
+- As a user I should be able to see possible entities that match my report.
 
 ### Developer stories
 
