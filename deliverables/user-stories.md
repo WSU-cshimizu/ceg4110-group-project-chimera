@@ -4,7 +4,7 @@
 The goal of C.H.I.M.E.R.A. is to compile all known supernatural entity data and compare reports from students to help determine unknown supernatural entities.
 ### User-Stories
 
-- As a [user role] I want to [goal] so I can [reason]. (recent reports)
+- As a [user role] I want to [goal] so I can [reason]. (see recent user reports)
 
 - As a [user role] I want to [goal] so I can [reason]. (see known entities)
 
@@ -12,9 +12,9 @@ The goal of C.H.I.M.E.R.A. is to compile all known supernatural entity data and 
 
 - As a admin user I want to [goal] so I can [reason]. (get rid of reports)
 
-- As a [user role] I want to [goal] so I can [reason]. 
+- As a [user role] I want to [goal] so I can [reason]. (see entities that could be what i reported)
 
--  As a [user role] I want to [goal] so I can [reason].
+-  As a [user role] I want to [goal] so I can [reason]. (
 
 ### Developer stories
 
