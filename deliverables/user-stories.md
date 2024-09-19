@@ -26,10 +26,4 @@ The goal of C.H.I.M.E.R.A. is to compile all known supernatural entity data and 
 
 ### Equipment:
 
-- 
-
--
-
--
-
--
+- Any device that can access websites (i.e. Laptop, PC, etc.)
