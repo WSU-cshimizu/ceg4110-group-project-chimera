@@ -30,7 +30,7 @@ The goal of C.H.I.M.E.R.A. is to compile all known supernatural entity data and 
 
 - As a frontend developer, I want to implement validation rules for user inputs, so that only valid and clean data is sent to the backend for processing.
 
-- As a frontend developer of the admin portal, I want to be able to interface with the backend, so that I can access the data to display to the admin user.
+- As a frontend developer, I want to be able to interface with the backend, so that I can access the data to display to the user.
 
 ### Test stories
 
@@ -40,5 +40,5 @@ The goal of C.H.I.M.E.R.A. is to compile all known supernatural entity data and 
 
 ### Equipment:
 
-- A machine for each developer to be able to contribute
+- A machine for each developer to be able to contribute.
 - Any device that can access websites (i.e. Laptop, PC, etc.)
