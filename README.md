@@ -1,7 +1,19 @@
-# C.H.I.M.E.R.A - Cryptic Haunting Investigation and Mysterious Entity Research Application
+# Project C.H.I.M.E.R.A - Cryptic Haunting Investigation and Mysterious Entity Research Application
 
-# Members
+## Members
 
-## Aayush Neupane
-### Major - MS Computer Science
-- I am a graduate student pursuing a Master's in Computer Science in the USA, originally from Nepal. I have two years of experience in
+### Isabella Livingston
+
+- **_Major:_** Computer Science
+- **_Year:_** Senior
+
+### Aayush Neupane
+
+- **_Major:_** Computer Science (MSc)
+- **_Year:_** Senior
+
+### Files to Grade
+
+- **_Project Overview Proposal_** for grading is located in deliverables/pop.md
+- **_Software Development Plan_** for grading is located in deliverables/sdp.md this will also reference Gantt_Jira.png in the deliverables directory.
+- **_User Story Compendium_** for grading is located in deliverables/user-stories.md.
