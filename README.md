@@ -12,6 +12,22 @@
 - **_Major:_** Computer Science (MSc)
 - **_Year:_** Senior
 
+### Jacob Hackman
+
+- **_Major:_** Computer Science
+- **_Year:_** 
+
+### Megan Noble
+
+- **_Major:_** 
+- **_Year:_**
+
+### Ben Jeffers
+
+- **_Major:_** 
+- **_Year:_** 
+
+
 ### Files to Grade
 
 - **_Project Overview Proposal_** for grading is located in deliverables/pop.md
