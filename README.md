@@ -1,7 +1,7 @@
 # group-project
 
 # Members
-- 
+
 Isabella Livingston
 - Major: Computer Science
 - Year: Senior
