@@ -19,8 +19,8 @@
 
 ### Megan Noble
 
-- **_Major:_** 
-- **_Year:_**
+- **_Major:_** Computer Science
+- **_Year:_** Masters - final year
 
 ### Ben Jeffers
 
