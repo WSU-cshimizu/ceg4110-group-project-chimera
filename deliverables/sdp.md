@@ -31,7 +31,7 @@ We will call an ad-hoc meeting as needed for specific issues or in the case of a
 ### Communication mechanism (s) for outside of meeting
 
 For communication outside of meetings, we will use Discord to coordinate and discuss any project updates or questions.
-Also, team members are expected to respond to discord messages within 2 hours during weekday evenings. (6PM – 10PM). This ensures prompt communication and decision-making when not in meetings.
+Also, team members are expected to respond to discord messages within 2 hours during weekday evenings. (6PM – 10PM). This ensures effectient communication and decision-making when not in meetings.
 
 ## Timeline
 
