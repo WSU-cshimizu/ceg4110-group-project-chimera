@@ -5,7 +5,7 @@
 ### Isabella Livingston
 
 - **_Major:_** Computer Science
-- **_Year:_** Senior
+- **_Year:_** Undergrad - Senior
 
 ### Aayush Neupane
 
