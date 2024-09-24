@@ -24,8 +24,8 @@
 
 ### Ben Jeffers
 
-- **_Major:_** 
-- **_Year:_** 
+- **_Major:_** Bachlors of Computer Science
+- **_Year:_** Junior
 
 
 ### Files to Grade
