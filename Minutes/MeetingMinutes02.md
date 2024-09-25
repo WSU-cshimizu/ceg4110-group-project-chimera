@@ -10,15 +10,16 @@
 ##  Agenda
 9/10/2024:
 - Working on 
+- Sent out JIRA link to team members.
 
 9/12/2024:
-
+- Configuring the JIRA timeline.
+- Creating Gannt Chart
 
 
 ##  Notes/Comments
-- The team spent time brainstorming potential project ideas and discussing possible roles for each team member.
-- Ideas were evaluated based on feasibility, interest, and relevance to the overall project goals.
-- Initial roles were assigned to each member based on their strengths and interests.
+- Sent out JIRA link to team members.
+
 
 ##  Action Items
 
