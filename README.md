@@ -10,12 +10,12 @@
 ### Aayush Neupane
 
 - **_Major:_** Computer Science (MSc)
-- **_Year:_** Senior
+- **_Year:_** Masters - First year
 
 ### Jacob Hackman
 
 - **_Major:_** Computer Science
-- **_Year:_** 
+- **_Year:_**
 
 ### Megan Noble
 
@@ -26,7 +26,6 @@
 
 - **_Major:_** Bachlors of Computer Science
 - **_Year:_** Junior
-
 
 ### Files to Grade
 
