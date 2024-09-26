@@ -3,7 +3,7 @@
 - **Guest Lecturer:** Tim Skrinak, Niclas Rue
 - **Company:** Dayton Freight Lines (DFL)
 - **Date:** September 26 2024
-  **Contact:** tskrinak@daytonfreight.com(Tim Skrinak), nrue@daytonfreight.com(Niclas Rue)
+- **Contact:** tskrinak@daytonfreight.com(Tim Skrinak), nrue@daytonfreight.com(Niclas Rue)
 
 ## Pertinent Questions
 
