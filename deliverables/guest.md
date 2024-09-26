@@ -7,8 +7,9 @@
 
 ## Pertinent Questions
 
-- Question 1:
-- Question 2:
+* Question 1: Are there any moments when priortizing work, you do not have to prioritize cost and revenue?
+    * Answer: Yes, companies that have a longer relationship with the company will be prioritized first.
+* Question 2:
 
 ## Lessons Learned
 
