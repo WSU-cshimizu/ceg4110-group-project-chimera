@@ -4,13 +4,29 @@
 
 ### Isabella Livingston
 
-- **_Major:_** Computer Science
+- **_Major:_** Bachlors of Computer Science
 - **_Year:_** Senior
 
 ### Aayush Neupane
 
 - **_Major:_** Computer Science (MSc)
 - **_Year:_** Senior
+
+### Jacob Hackman
+
+- **_Major:_** Computer Science
+- **_Year:_** 
+
+### Megan Noble
+
+- **_Major:_** Computer Science
+- **_Year:_** Masters - final year
+
+### Ben Jeffers
+
+- **_Major:_** Bachlors of Computer Science
+- **_Year:_** Junior
+
 
 ### Files to Grade
 
