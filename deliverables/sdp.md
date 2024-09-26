@@ -50,7 +50,7 @@ Also, team members are expected to respond to discord messages within 2 hours du
 ### Design Specification
 
 - Date: End of week 6 (10/06/24)
-  -Description : The design specification will provide a detailed blueprint for how the C.H.I.M.E.R.A. system will be built. It will include database schema designs for storing supernatural entity data, the user interface design for report submission, and the architecture of the comparison system. The document will also cover the interactions between various components, ensuring the system's overall functionality.
+- Description : The design specification will provide a detailed blueprint for how the C.H.I.M.E.R.A. system will be built. It will include database schema designs for storing supernatural entity data, the user interface design for report submission, and the architecture of the comparison system. The document will also cover the interactions between various components, ensuring the system's overall functionality.
 
 ### Milestones (i.e., "Checkins")
 
