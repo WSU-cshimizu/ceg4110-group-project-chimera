@@ -48,4 +48,5 @@ Understanding why a task is being performed is crucial for writing meaningful us
 When creating a user story, define a checklist of acceptance criteria to ensure that requirements are met at both the business and development levels. This helps determine when the work is complete.
 
 ## Signatures
-Isabella Livingston, Jacob Hackman
+Isabella Livingston, Jacob Hackman 
+Ben Jeffers
