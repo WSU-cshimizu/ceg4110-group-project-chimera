@@ -15,7 +15,7 @@
 ### Jacob Hackman
 
 - **_Major:_** Computer Science
-- **_Year:_**
+- **_Year:_** - Final Year
 
 ### Megan Noble
 
