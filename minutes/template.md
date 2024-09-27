@@ -14,7 +14,8 @@
 ##  Action Items
 
 ###  01:  Submit the model for verification
-- assigned to everyone
+- Assigned to: Entire team
+- Done: 
 
 ###  02:  Follow up on feedback for model verification
 - assigned to everyone
