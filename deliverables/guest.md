@@ -8,8 +8,9 @@
 ## Pertinent Questions
 
 * Question 1: Are there any moments when priortizing work, you do not have to prioritize cost and revenue?
-    * Answer: Yes, companies that have a longer relationship with the company will be prioritized first.
-* Question 2:
+    * Answer: Yes, stakeholders that have a longer relationship with the company will be prioritized first.
+* Question 2: How do you determine the ROI for subjective measures like user experience?
+    * Answer: User experience changes can be quantified more than you might think. For example, moving a button 50 pixels hardly takes up the developer's time. 
 
 ## Lessons Learned
 
@@ -48,4 +49,4 @@ Understanding why a task is being performed is crucial for writing meaningful us
 When creating a user story, define a checklist of acceptance criteria to ensure that requirements are met at both the business and development levels. This helps determine when the work is complete.
 
 ## Signatures
-Isabella Livingston, Jacob Hackman, Ben Jeffers,
+Isabella Livingston, Jacob Hackman, Ben Jeffers, Megan Noble
