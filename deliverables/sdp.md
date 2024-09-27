@@ -8,8 +8,8 @@ All group members are available to meet after 6 PM on weekdays as needed and are
 
 We have decided to establish two different meeting locations for in-person collaboration and use Discord for remote meetings:
 
-- Fawcett Hall 204 (After class): This location is conveniently located near our classroom, allowing us to easily transition from class to project work. It is ideal for casual discussions and quick updates when class is dismissed early.
-- Library Annex 025 (Help Desk Lounge): This location is chosen for focused meetings and critical decision-making tasks, such as coding, debugging, or hands-on activities. The space provides a quieter, tech-equipped environment that facilitates deeper collaboration on key project milestones.
+- Fawcett Hall 204 (After class): Thhis location is conveniently located near our classroom, allowing us to easily transition from class to project work. It is ideal for casual discussions and quick updates when class is dismissed early. This allows us to use post-class time efficiently and reduces disruptions to team members' schedules.
+- Library Annex 025 (Help Desk Lounge): This location is chosen for focused meetings and critical decision-making tasks, such as coding, debugging, or hands-on activities. The space provides a quieter, tech-equipped environment that facilitates deeper collaboration on key project milestones. It’s an ideal space for group activities that require attention and the use of shared technical resources.
 
 ### Meeting Time(s)
 
