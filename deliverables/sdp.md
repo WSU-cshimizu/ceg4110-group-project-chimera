@@ -35,24 +35,24 @@ Also, team members are expected to respond to discord messages within 2 hours du
 
 ## Timeline
 
-![image](./Refined_Gantt_Chart.png)
+![image](./gantt.png)
 
 ## MVSs
-- Date: End of week 4 (09/22/24)
+- Date: End of week 5 (09/29/24)
 - Description: Finalize the analysis and specifications for the project, defining the scope that will deliver the Minimum Viable Product (MVP).
 
 ## Requirement Specification
-- Date: End of week 5 (09/29/24)
+- Date: End of week 6 (10/06/24)
 - Description: Define specific functional and non-functional requirements, including data processing and algorithms for report comparison.
 
 ## Design Specification
-- Date: End of week 6 (10/06/24)
+- Date: End of week 7 (10/13/24)
 - Description: Detailed system design, including database schemas, UI design, and architecture.
 
 ### Milestones (i.e., "Check-ins")
 
 - Milestone 1: Requirements and Design Completion
-  - Date: End of Week 6 (10/06/24)
+  - Date: End of Week 7 (10/13/24)
   - Description: Finalize and upload all specification and design documents.
 
 - Milestone 2: Core Functionality Implemented
@@ -68,7 +68,7 @@ Also, team members are expected to respond to discord messages within 2 hours du
   - Description: Deliver the MVP with fully functional and tested core features.
 
 ## Detailed Activities Between Milestones
-Between Milestone 1 (Week 6) and Milestone 2 (Week 10):
+Between Milestone 1 (Week 7) and Milestone 2 (Week 10):
 - Writing: Backend API development and basic front-end interfaces.
 - Testing: Early unit testing of individual components to catch and fix issues before integration.
 - Discussion: Team discussions every week to evaluate the design implementation, alignment, and incorporate any necessary revisions based on early feedback.
