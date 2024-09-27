@@ -16,7 +16,7 @@ We have decided to establish two different meeting locations for in-person colla
 - Fawcett Hall :
   If our class is dismissed early, we will use the remaining time to discuss project updates and progress. If class runs its full length, we will hold a virtual meeting on Discord from 6:30 PM to 7:30 PM on Tuesdays and Thursdays to ensure we stay on track. This schedule accommodates all members' availability and offers a balance between in-person and remote work.
 - Library Annex 025 :
-  For critical decision-making and hands-on activities, we will meet in person at the Library Annex (Room 025). These meetings will be scheduled in advance and reserved for key project milestones or tasks that require group collaboration. The location provides access to essential resources and tools needed for in-depth project work.
+  For critical decision-making and hands-on activities, we will meet in person at the Library Annex (Room 025). These meetings will be scheduled in advance and reserved for key project milestones or tasks that require group collaboration. The location provides access to resources and tools needed for in-depth project work.
 
 ### Meeting Cadence
 
@@ -37,39 +37,50 @@ Also, team members are expected to respond to discord messages within 2 hours du
 
 ![image](./Refined_Gantt_Chart.png)
 
-### MVSs
-
+## MVSs
 - Date: End of week 4 (09/22/24)
-- Description: Finalize the analysis and specifications for the project, defining the scope that will deliver the minimum viable product (MVP).
+- Description: Finalize the analysis and specifications for the project, defining the scope that will deliver the Minimum Viable Product (MVP).
 
-### Requirement Specification
-
+## Requirement Specification
 - Date: End of week 5 (09/29/24)
-- Description - This document will detail the specific functional and non-functional requirements of the C.H.I.M.E.R.A. system. It will define how data should be collected, stored, and processed, as well as the necessary algorithms for comparing student reports to known supernatural entities. This stage will ensure all technical and user-based needs are clearly outlined for development.
+- Description: Define specific functional and non-functional requirements, including data processing and algorithms for report comparison.
 
-### Design Specification
-
+## Design Specification
 - Date: End of week 6 (10/06/24)
-- Description : The design specification will provide a detailed blueprint for how the C.H.I.M.E.R.A. system will be built. It will include database schema designs for storing supernatural entity data, the user interface design for report submission, and the architecture of the comparison system. The document will also cover the interactions between various components, ensuring the system's overall functionality.
+- Description: Detailed system design, including database schemas, UI design, and architecture.
 
-### Milestones (i.e., "Checkins")
+### Milestones (i.e., "Check-ins")
 
-Milestone 1: Requirements and Design Completion
+- Milestone 1: Requirements and Design Completion
+  - Date: End of Week 6 (10/06/24)
+  - Description: Finalize and upload all specification and design documents.
 
-- Date: End of week 6 (10/06/24)
-- Description: This milestone marks the completion of the planning phase for the C.H.I.M.E.R.A. system. All requirements and design documents, including the detailed specifications for how the system will function, will be finalized and uploaded. The documents will outline the necessary features, database structure, and overall architecture, ensuring a clear roadmap for development.
+- Milestone 2: Core Functionality Implemented
+  - Date: End of Week 10 (11/01/24)
+  - Description: Implement core features, including backend APIs and a basic front-end.
 
-Milestone 2: Core Functionality Implemented
+- Milestone 3: Integration and Testing
+  - Date: End of Week 12 (11/17/24)
+  - Description: Complete integration of all components and begin thorough testing.
 
-- Date: End of Week 10 (11/01/24)
-- Description: This milestone focuses on the initial implementation of C.H.I.M.E.R.A.’s core functionalities. The backend APIs, which will handle data collection and comparisons of supernatural reports, will be developed. Additionally, a basic front-end interface will be set up, allowing users to start interacting with the system.
+- Milestone 4: Final MVP Version
+  - Date: End of Week 12 (11/17/24)
+  - Description: Deliver the MVP with fully functional and tested core features.
 
-Milestone 3: Integration and Testing
+## Detailed Activities Between Milestones
+Between Milestone 1 (Week 6) and Milestone 2 (Week 10):
+- Writing: Backend API development and basic front-end interfaces.
+- Testing: Early unit testing of individual components to catch and fix issues before integration.
+- Discussion: Team discussions every week to evaluate the design implementation, alignment, and incorporate any necessary revisions based on early feedback.
+- Feedback and Revisions: Weekly feedback loops will allow the team to address potential issues early in the development process and revise the codebase and design.
 
-- Date: End of Week 12 (11/17/24)
-- Description: By this milestone, all components of the C.H.I.M.E.R.A. system will be fully integrated, including the backend, front-end, and database. Comprehensive testing will begin, with a focus on identifying and fixing bugs, ensuring the system functions as expected across different scenarios and user inputs.
+Between Milestone 2 (Week 10) and Milestone 3 (Week 12):
+- Integration: Bringing together all parts of the system (backend, frontend, database) for full system testing.
+- Testing: Conducting end-to-end testing and addressing major bugs that affect the integration.
+- Documentation: Updating and refining system documentation, focusing on completeness and accuracy.
+- Discussion and Feedback: Continuous review meetings to address integration challenges, gather feedback, and improve system robustness.
 
-Milestone 4: Final MVP Version
-
-- Date: End of Week 12 (11/17/24)
-- Description: This milestone represents the delivery of the Minimum Viable Product (MVP) for C.H.I.M.E.R.A. The core features will be fully implemented, integrated, and tested, providing a working system that can collect, analyze, and compare supernatural reports. This version will be functional and ready for further refinement or expansion based on feedback.
+Between Milestone 3 (Week 12) and Milestone 4 (Week 12):
+- Debugging: Final debugging efforts and overall system polishing to ensure a smooth user experience.
+- Testing: Conducting feedback sessions with test users to gather real-world input and make necessary adjustments.
+- Presentation Preparation: Preparing the final presentation and demo, ensuring that all team members understand the project thoroughly.
