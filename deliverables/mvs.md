@@ -50,14 +50,14 @@ We've set out to create a system that can collect reports of supernatural distur
 ## Acceptance Criteria
 
 1. User Report Submission   
-    Users can submit reports of disturbances through a clearly labeled form. Submitted reports are stored in the database and can be retrieved by authorized personnel.
+    * Users can submit reports of disturbances through a clearly labeled form. Submitted reports are stored in the database and can be retrieved by authorized personnel.
 2. Admin/Moderator Portal
-    Admins can log in securely with unique credentials and can edit and delete user reports.
+    * Admins can log in securely with unique credentials and can edit and delete user reports.
 3. Comparative Analysis Tools
-    The system can analyze submitted reports against known entity data within a reasonable amount of time. The analysis tool accurately matches user reports with known entities most of the time when using valid data. Users are provided with feedback on the results of the analysis, including any matches found or suggestions for further investigation.
+    * The system can analyze submitted reports against known entity data within a reasonable amount of time. The analysis tool accurately matches user reports with known entities most of the time when using valid data. Users are provided with feedback on the results of the analysis, including any matches found or suggestions for further investigation.
 4. Database Functionality
-    The database must store all user reports and entity information reliably, with no data loss. Queries for retrieving user reports or entity data should return results within a few seconds.
+    * The database must store all user reports and entity information reliably, with no data loss. Queries for retrieving user reports or entity data should return results within a few seconds.
 5. Front-End User Interface
-    The UI must adhere to Material UI design guidelines for consistency and usability. Users should be able to navigate the site easily, with clear menus and options. All text must be readable, with a minimum font size defined, and color contrast ratios meeting accessibility standards.
+    * The UI must adhere to Material UI design guidelines for consistency and usability. Users should be able to navigate the site easily, with clear menus and options. All text must be readable, with a minimum font size defined, and color contrast ratios meeting accessibility standards.
 6. Testing and Quality Assurance
-    All tests pass without critical errors before deployment.
+    * All tests pass without critical errors before deployment.
