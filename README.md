@@ -33,6 +33,6 @@
 - **_Software Development Plan_** for grading is located in deliverables/sdp.md this will also reference Gantt_Jira.png in the deliverables directory.
 - **_User Story Compendium_** for grading is located in deliverables/user-stories.md.
 - **_Guest Lecture_** for grading is located in deliverables/guest.md.
-- **_Meeting Minutes** for grading is located in minutes folder.
+- **_Meeting Minutes_** for grading is located in minutes folder.
 
 
