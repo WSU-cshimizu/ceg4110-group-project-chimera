@@ -24,7 +24,7 @@ _As a user, I want to be able to submit reports of my paranormal experience, so 
 
 _As a user, I want to be able to see reports of other people's entity sightings, so that I can stay informed about what's going on._
 
-1. User Acces to Sighting Reports
+1. User Access to Sighting Reports
   1. The system must allow users to browse through reports submitted by others without needing to submit a remport themselves.
   2. Users must be able to search for specific reports based on keywords (such as the entity name, location, or date of the sighting).
   3. Users must be able to filter report based on criteria such as:
@@ -46,12 +46,22 @@ _As a user, I want to be able to see reports of other people's entity sightings,
   1. Registered users must have the ability to comment on other users' reports.
   2. Users should be able to report inappropriate content within a report to the system administrators.
 
-## User Story 3
-_As a user, I want to be able to view a dictionary of all known entities, so that I can learn more about them and compare my experiences._
-1. Requirement 3.1
-  1. Requirement 3.1.1
-2. Requirement 3.2
 
+## User Story 3
+
+_As a user, I want to be able to view a dictionary of all known entities, so that I can learn more about them and compare my experiences._
+
+1. The system must allow users to view a dictionary of all entities described in the database.
+   1. The system must allow users to browse through the dictionary without needing to submit a report.
+   2. Users must be able to search for specific entities based on keywords (such as the entity name, abilities, or details of description).
+2. The dictionary page should include details for:
+  - **Name of Entity Type** 
+  - **Details of Entity Origin** Historical details regarding the entity such as how it came to be, etc
+  - **Entity Abilities** What the entity is able to do which is unique from other entities
+  - **Description of Entity Behavior** How the entity usually reacts in it's enviroment.
+  - **Description of Entity Appearance** What the entity is reported to look like usually.
+  - **Entity Known Evidence** such as UV, EMF5, Ghost Writing, D.O.T.S, Ghost Orbs, Spirit Box, and Freezing Temperatures
+    
 ## User Story 4
 _As a user, I want to be able to see possible entities that match my report, to better understand what I've experienced._
 1. Requirement 4.1
@@ -60,9 +70,13 @@ _As a user, I want to be able to see possible entities that match my report, to 
 
 ## User Story 5
 _As an admin user, I want to have special access to manage user reports, so that I ensure accurate and relevant information._
-1. Requirement 5.1
-  1. Requirement 5.1.1
-2. Requirement 5.2
+
+1. The system must allow admins to delete/remove reports from the list of viewable reports.
+2. Deleted reports will not remove the report from a database but will replace the reports with nulls.
+3. Nullified reports will not contribute to the comparison analysis tools.
+4. Nullified reports will be hidden from view of all users other than admins.
+5. Nullified reports will be fully nulled other than the report ID.
+
 
 ## User Story 6
 _As a backend developer of comparative analysis tools, I would like to be able to see the relationships between our different entities, reports, and locations so I can correlate the acquired data._
