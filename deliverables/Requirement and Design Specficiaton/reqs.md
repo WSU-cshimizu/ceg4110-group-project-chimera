@@ -9,7 +9,6 @@ _As a user, I want to be able to submit reports of my paranormal experience, so 
    2. The system must provide a secure login system for users to access the report submission feature.
    3. Users must be able to reset their password in case of loss.
 2. Report Submission
-
 - The system must allow users to submit reports of their paranormal experiences.
 - The submission form should include fields for:
   - **Title of Experience** (text field, mandatory)
@@ -25,9 +24,27 @@ _As a user, I want to be able to submit reports of my paranormal experience, so 
 
 _As a user, I want to be able to see reports of other people's entity sightings, so that I can stay informed about what's going on._
 
-1. Requirement 2.1
-1. Requirement 2.1.1
-1. Requirement 2.2
+1. User Acces to Sighting Reports
+  1. The system must allow users to browse through reports submitted by others without needing to submit a remport themselves.
+  2. Users must be able to search for specific reports based on keywords (such as the entity name, location, or date of the sighting).
+  3. Users must be able to filter report based on criteria such as:
+    - Date of Report
+    - Location
+    - Entity Type
+    - Most Recent or Most Popular Reports
+  4. Reports must be displayed in a user friendly format that includes key details such as:
+    - Title of the report
+    - Date and Time of the sighting
+    - Location of the sighting
+    - Entity Description
+    - Additional Evidence (If available: images, videos, audio files)
+2. Report Details
+  1. Users must be able to click on a report to view full details, including the complete description of the sighting and any additional evidence.
+  2. The system must provide a feature to upvote or favorite reports that users find particularly useful or interesting.
+  3. Users should be able to share reports via social media or direct links.
+3. User Integration with Reports
+  1. Registered users must have the ability to comment on other users' reports.
+  2. Users should be able to report inappropriate content within a report to the system administrators.
 
 ## User Story 3
 _As a user, I want to be able to view a dictionary of all known entities, so that I can learn more about them and compare my experiences._
