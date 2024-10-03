@@ -11,13 +11,21 @@
 10/01/2024:
 - Creating Swim Charts
 
+10/03/2024:
+- Working on Reqirements Specification
+
 ##  Notes/Comments
 - The design and model is complete and the generations code part of it.
 - Figure out: Put the code somewhere in an actual database mangagement simulation, put it in and fill it
+
+
+
+
 
 ##  Action Items
 
 ###  01:  Finish Design and Model
 - Assigned to: Jacob Hackman
 
-
+-- add ing user stories to requirements page
+-- adding requirements
