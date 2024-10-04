@@ -30,22 +30,20 @@ _As a user, I want to be able to see reports of other people's entity sightings,
 1. Users must be able to search for specific reports based on keywords (such as the entity name, location, or date of the sighting).
 1. Users must be able to filter report based on criteria such as:
 
+   - Date of Report
+   - Location
+   - Entity Type
+   - Most Recent or Most Popular Reports
 
-    - Date of Report
-    - Location
-    - Entity Type
-    - Most Recent or Most Popular Reports
+1. Reports must be displayed in a user friendly format that includes key details such as:
 
-4. Reports must be displayed in a user friendly format that includes key details such as:
+   - Title of the report
+   - Date and Time of the sighting
+   - Location of the sighting
+   - Entity Description
+   - Additional Evidence (If available: images, videos, audio files)
 
-
-    - Title of the report
-    - Date and Time of the sighting
-    - Location of the sighting
-    - Entity Description
-    - Additional Evidence (If available: images, videos, audio files)
-
-2. Report Details
+1. Report Details
 1. Users must be able to click on a report to view full details, including the complete description of the sighting and any additional evidence.
 1. The system must provide a feature to upvote or favorite reports that users find particularly useful or interesting.
 1. Users should be able to share reports via social media or direct links.
@@ -114,14 +112,11 @@ _As a database designer, I want to understand the data that we're interested in 
 ## User Story 9
 
 _As a frontend developer, I want to design a user-friendly interface that allows users to input relevant data, so that the information can be collected accurately and efficiently._
-**9.1**  
-The interface should be intuitive and easy to navigate.
+**9.1** The interface should be intuitive and easy to navigate.
 
-**9.1.1**  
-The interface must provide clear labels and placeholders for input fields to guide users through the data entry process.
+**9.1.1** The interface must provide clear labels and placeholders for input fields to guide users through the data entry process.
 
-**9.2**  
-The interface should implement real-time validation to ensure that data is accurate and formatted correctly before submission.
+**9.2** The interface should implement real-time validation to ensure that data is accurate and formatted correctly before submission.
 
 ## User Story 10
 
