@@ -24,7 +24,7 @@ _As a user, I want to be able to submit reports of my paranormal experience, so 
 - **Additional Evidence** such as images, videos, or audio files (optional, max size 10 MB)
 - **Witnesses** (optional list of witness names or details)
 
-  1.2.3 Users must have the ability to edit or delete their submitted reports.
+1.2.3 Users must have the ability to edit or delete their submitted reports.
 
 ## User Story 2
 
