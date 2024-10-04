@@ -30,17 +30,18 @@ _As a user, I want to be able to submit reports of my paranormal experience, so 
 
 _As a user, I want to be able to see reports of other people's entity sightings, so that I can stay informed about what's going on._
 
-1. User Access to Sighting Reports
-1. The system must allow users to browse through reports submitted by others without needing to submit a remport themselves.
-1. Users must be able to search for specific reports based on keywords (such as the entity name, location, or date of the sighting).
-1. Users must be able to filter report based on criteria such as:
+### 2.1 User Access to Sighting Reports
+
+&emsp;**2.1.1** The system must allow users to browse through reports submitted by others without needing to submit a remport themselves.
+&emsp;**2.1.2** Users must be able to search for specific reports based on keywords (such as the entity name, location, or date of the sighting).
+&emsp;**2.1.3** Users must be able to filter report based on criteria such as:
 
    - Date of Report
    - Location
    - Entity Type
    - Most Recent or Most Popular Reports
 
-1. Reports must be displayed in a user friendly format that includes key details such as:
+&emsp;**2.1.4** Reports must be displayed in a user friendly format that includes key details such as:
 
    - Title of the report
    - Date and Time of the sighting
@@ -48,13 +49,14 @@ _As a user, I want to be able to see reports of other people's entity sightings,
    - Entity Description
    - Additional Evidence (If available: images, videos, audio files)
 
-1. Report Details
-1. Users must be able to click on a report to view full details, including the complete description of the sighting and any additional evidence.
-1. The system must provide a feature to upvote or favorite reports that users find particularly useful or interesting.
-1. Users should be able to share reports via social media or direct links.
-1. User Integration with Reports
-1. Registered users must have the ability to comment on other users' reports.
-1. Users should be able to report inappropriate content within a report to the system administrators.
+### 2.2 Report Details
+
+&emsp;**2.2.1** Users must be able to click on a report to view full details, including the complete description of the sighting and any additional evidence.
+&emsp;**2.2.2** The system must provide a feature to upvote or favorite reports that users find particularly useful or interesting.
+&emsp;**2.2.3** Users should be able to share reports via social media or direct links.
+&emsp;**2.2.4** User Integration with Reports
+&emsp;**2.2.5** Registered users must have the ability to comment on other users' reports.
+&emsp;**2.2.6** Users should be able to report inappropriate content within a report to the system administrators.
 
 ## User Story 3
 
