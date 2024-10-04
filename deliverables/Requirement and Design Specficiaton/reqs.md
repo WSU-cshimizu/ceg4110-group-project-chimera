@@ -112,8 +112,8 @@ _As a database designer, I want to understand the data that we're interested in 
 ## User Story 9
 
 _As a frontend developer, I want to design a user-friendly interface that allows users to input relevant data, so that the information can be collected accurately and efficiently._
-**9.1** The interface should be intuitive and easy to navigate.
 
+**9.1** The interface should be intuitive and easy to navigate.
 **9.1.1** The interface must provide clear labels and placeholders for input fields to guide users through the data entry process.
 
 **9.2** The interface should implement real-time validation to ensure that data is accurate and formatted correctly before submission.
