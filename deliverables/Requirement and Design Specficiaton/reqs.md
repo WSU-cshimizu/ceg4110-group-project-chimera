@@ -100,7 +100,21 @@ _As a user, I want to be able to see possible entities that match my report, to 
 &emsp;&emsp;- **Associated Reports**  
 &emsp;&emsp;- **Likelihood Score** (Percentage match based on report details)  
 
-### 4.2 Entity Details  
+### 4.2 Entity Information Display  
+
+&emsp;**4.2.1** Users must be able to click on a potential match to view more details about the entity, including:  
+
+&emsp;&emsp;- **Historical Background** (if available)  
+&emsp;&emsp;- **Previous Sightings** (with links to related reports)  
+&emsp;&emsp;- **Phyiscal or Behavioural Traits** of the entity  
+&emsp;&emsp;- **Any Known Evidence** (photos, videos, descriptions from witnesses)  
+
+&emsp;**4.2.2** Users should be able to compare multiple entities side-by-side to determine the best match  
+
+### 4.3 User Feedback on Matches  
+
+&emsp;**4.3.1** Users must be able to provide feedback on the accuracy of the entity matches by selecting options such as "Very Accurate", "Somewhat Accurate", "Not Accurate"  
+&emsp;**4.3.2** Users should have the option to suggest new entities if they believe none of the matches are correct. These suggestions can be reviewed by the system administrators.  
 
 ## User Story 5
 
