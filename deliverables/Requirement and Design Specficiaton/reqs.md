@@ -32,7 +32,7 @@ _As a user, I want to be able to see reports of other people's entity sightings,
 
 ### 2.1 User Access to Sighting Reports
 
-&emsp;**2.1.1** The system must allow users to browse through reports submitted by others without needing to submit a remport themselves.  
+&emsp;**2.1.1** The system must allow users to browse through reports submitted by others without needing to submit a report themselves.  
 &emsp;**2.1.2** Users must be able to search for specific reports based on keywords (such as the entity name, location, or date of the sighting).  
 
 &emsp;**2.1.3** Users must be able to filter report based on criteria such as:
