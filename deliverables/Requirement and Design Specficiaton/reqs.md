@@ -16,13 +16,13 @@ _As a user, I want to be able to submit reports of my paranormal experience, so 
 
 &emsp;**1.2.2** The submission form should include the following fields:
 
-&emsp;- **Title of Experience** (text field, mandatory)
-&emsp;- **Date and Time** of the experience (date and time picker, mandatory)
-&emsp;- **Location** of the experience (text field, mandatory)
-&emsp;- **Description** of the experience (rich text editor or multiline text field, mandatory)
-&emsp;- **Entity Description** (if applicable: text field, optional)
-&emsp;- **Additional Evidence** such as images, videos, or audio files (optional, max size 10 MB)
-&emsp;- **Witnesses** (optional list of witness names or details)
+&emsp;&emsp;- **Title of Experience** (text field, mandatory)  
+&emsp;&emsp;- **Date and Time** of the experience (date and time picker, mandatory)  
+&emsp;&emsp;- **Location** of the experience (text field, mandatory)  
+&emsp;&emsp;- **Description** of the experience (rich text editor or multiline text field, mandatory)  
+&emsp;&emsp;- **Entity Description** (if applicable: text field, optional)  
+&emsp;&emsp;- **Additional Evidence** such as images, videos, or audio files (optional, max size 10 MB)  
+&emsp;&emsp;- **Witnesses** (optional list of witness names or details)
 
 &emsp;**1.2.3** Users must have the ability to edit or delete their submitted reports.
 
