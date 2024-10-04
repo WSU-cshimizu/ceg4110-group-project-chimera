@@ -115,7 +115,7 @@ _As a frontend developer, I want to design a user-friendly interface that allows
 
 **9.1** The interface should be intuitive and easy to navigate.
 
-  **9.1.1** The interface must provide clear labels and placeholders for input fields to guide users through the data entry process.
+    **9.1.1** The interface must provide clear labels and placeholders for input fields to guide users through the data entry process.
 
 **9.2** The interface should implement real-time validation to ensure that data is accurate and formatted correctly before submission.
 
