@@ -55,7 +55,7 @@ _As a user, I want to be able to see reports of other people's entity sightings,
 &emsp;**2.2.1** Users must be able to click on a report to view full details, including the complete description of the sighting and any additional evidence.  
 &emsp;**2.2.2** The system must provide a feature to upvote or favorite reports that users find particularly useful or interesting.  
 &emsp;**2.2.3** Users should be able to share reports via social media or direct links.  
-&emsp;**2.2.4** User Integration with Reports  
+&emsp;**2.2.4** User Integration with Reports.  
 &emsp;**2.2.5** Registered users must have the ability to comment on other users' reports.  
 &emsp;**2.2.6** Users should be able to report inappropriate content within a report to the system administrators.  
 
@@ -113,18 +113,18 @@ _As a user, I want to be able to see possible entities that match my report, to 
 
 ### 4.3 User Feedback on Matches  
 
-&emsp;**4.3.1** Users must be able to provide feedback on the accuracy of the entity matches by selecting options such as "Very Accurate", "Somewhat Accurate", "Not Accurate"  
+&emsp;**4.3.1** Users must be able to provide feedback on the accuracy of the entity matches by selecting options such as "Very Accurate", "Somewhat Accurate", "Not Accurate".  
 &emsp;**4.3.2** Users should have the option to suggest new entities if they believe none of the matches are correct. These suggestions can be reviewed by the system administrators.  
 
 ## User Story 5
 
 _As an admin user, I want to have special access to manage user reports, so that I ensure accurate and relevant information._
 
-1. The system must allow admins to delete/remove reports from the list of viewable reports.
-2. Deleted reports will not remove the report from a database but will replace the reports with nulls.
-3. Nullified reports will not contribute to the comparison analysis tools.
-4. Nullified reports will be hidden from view of all users other than admins.
-5. Nullified reports will be fully nulled other than the report ID.
+&emsp;**5.1.1** The system must allow admins to delete/remove reports from the list of viewable reports.  
+&emsp;**5.1.2** Deleted reports will not remove the report from a database but will replace the reports with nulls.  
+&emsp;**5.1.3** Nullified reports will not contribute to the comparison analysis tools.  
+&emsp;**5.1.4** Nullified reports will be hidden from view of all users other than admins.  
+&emsp;**5.1.5** Nullified reports will be fully nulled other than the report ID.  
 
 ## User Story 6
 
