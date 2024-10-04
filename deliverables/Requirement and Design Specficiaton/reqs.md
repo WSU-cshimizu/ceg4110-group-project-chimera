@@ -34,20 +34,21 @@ _As a user, I want to be able to see reports of other people's entity sightings,
 
 &emsp;**2.1.1** The system must allow users to browse through reports submitted by others without needing to submit a remport themselves.  
 &emsp;**2.1.2** Users must be able to search for specific reports based on keywords (such as the entity name, location, or date of the sighting).  
+
 &emsp;**2.1.3** Users must be able to filter report based on criteria such as:
 
-   - Date of Report
-   - Location
-   - Entity Type
-   - Most Recent or Most Popular Reports
+&emsp;&emsp;- **Date of Report**  
+&emsp;&emsp;- **Location**  
+&emsp;&emsp;- **Entity Type**  
+&emsp;&emsp;- **Most Recent or Most Popular Reports**  
 
 &emsp;**2.1.4** Reports must be displayed in a user friendly format that includes key details such as:
 
-&emsp;&emsp;- **Title** of the report
-&emsp;&emsp;- **Date and Time** of the sighting
-&emsp;&emsp;- **Location** of the sighting
-&emsp;&emsp;- **Entity Description**
-&emsp;&emsp;- ** Additional Evidence** (If available: images, videos, audio files)
+&emsp;&emsp;- **Title** of the report  
+&emsp;&emsp;- **Date and Time** of the sighting  
+&emsp;&emsp;- **Location** of the sighting  
+&emsp;&emsp;- **Entity Description**  
+&emsp;&emsp;- ** Additional Evidence** (If available: images, videos, audio files)  
 
 ### 2.2 Report Details
 
