@@ -63,23 +63,28 @@ _As a user, I want to be able to see reports of other people's entity sightings,
 
 _As a user, I want to be able to view a dictionary of all known entities, so that I can learn more about them and compare my experiences._
 
-1. The system must allow users to view a dictionary of all entities described in the database.
-   1. The system must allow users to browse through the dictionary without needing to submit a report.
-   2. Users must be able to search for specific entities based on keywords (such as the entity name, abilities, or details of description).
-2. The dictionary page should include details for:
+### 3.1 Entity Dictionary Access  
 
-- **Name of Entity Type**
-- **Details of Entity Origin** Historical details regarding the entity such as how it came to be, etc
-- **Entity Abilities** What the entity is able to do which is unique from other entities
-- **Description of Entity Behavior** How the entity usually reacts in it's enviroment.
-- **Description of Entity Appearance** What the entity is reported to look like usually.
-- **Entity Known Evidence** such as UV, EMF5, Ghost Writing, D.O.T.S, Ghost Orbs, Spirit Box, and Freezing Temperatures
+&emsp;**3.1.1** The system must allow users to view a dictionary of all entities described in the database.  
+&emsp;**3.1.2** The system must allow users to browse through the dictionary without needing to submit a report.  
+&emsp;**3.1.3** Users must be able to search for specific entities based on keywords (such as the entity name, abilities, or details of description).  
+
+### 3.2 Entity Dictionary Details  
+
+&emsp;**3.2.1** The dictionary page should include details for:  
+
+&emsp;&emsp;- **Name of Entity Type**  
+&emsp;&emsp;- **Details of Entity Origin**: Historical details regarding the entity such as how it came to be and its lore.  
+&emsp;&emsp;- **Entity Abilities**: What the entity is able to do which is unique from other entities  
+&emsp;&emsp;- **Description of Entity Behavior**: How the entity usually reacts in it's enviroment.  
+&emsp;&emsp;- **Description of Entity Appearance**: What the entity is reported to look like usually.  
+&emsp;&emsp;- **Entity Known Evidence**: such as UV, EMF5, Ghost Writing, D.O.T.S, Ghost Orbs, Spirit Box, and Freezing Temperatures  
 
 ## User Story 4
 
 _As a user, I want to be able to see possible entities that match my report, to better understand what I've experienced._
 
-### 4.1 Entity Matching
+### 4.1 Entity Matching  
 
 &emsp;**4.1.1** The system must analyze the user's submitted report and compare it against a database of known entities.  
 
