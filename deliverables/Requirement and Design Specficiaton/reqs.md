@@ -78,20 +78,29 @@ _As a user, I want to be able to view a dictionary of all known entities, so tha
 ## User Story 4
 
 _As a user, I want to be able to see possible entities that match my report, to better understand what I've experienced._
-1. Entity Matching
-  1. The system must analyze the user's submitted report and compare it against a database of known entities.
-  2. The system must use key details from the report, such as:
-    - Entity Description (Ex: apperance, behavior, abilities)
-    - Location
-    - Date and Time of the sighting
-    - Additinal Evidence (Images, Videos, Audio Files)
-  3. The system must provide a list of possible entities that are similar to the report.
-  4. The potential matches must include:
-    - Entity Name
-    - Description of Entity (appearance, behavior, sightings history)
-    - Known Locations
-    - Associated Reports
-    - Likelihood Score (Ex: Percentage match based on report details)
+
+### 4.1 Entity Matching
+
+&emsp;**4.1.1** The system must analyze the user's submitted report and compare it against a database of known entities.  
+
+&emsp;**4.1.2** The system must use key details from the report, such as:  
+
+&emsp;&emsp;- **Entity Description** (apperance, behavior, abilities)  
+&emsp;&emsp;- **Location**  
+&emsp;&emsp;- **Date and Time** of the sighting  
+&emsp;&emsp;- **Additinal Evidence** (Images, Videos, Audio Files)  
+
+&emsp;**4.1.3** The system must provide a list of possible entities that are similar to the report.  
+
+&emsp;**4.1.4** The potential matches must include:  
+
+&emsp;&emsp;- **Entity Name**  
+&emsp;&emsp;- **Description of Entity** (appearance, behavior, sightings history)  
+&emsp;&emsp;- **Known Locations**  
+&emsp;&emsp;- **Associated Reports**  
+&emsp;&emsp;- **Likelihood Score** (Percentage match based on report details)  
+
+### 4.2 Entity Details  
 
 ## User Story 5
 
