@@ -75,10 +75,20 @@ _As a user, I want to be able to view a dictionary of all known entities, so tha
 ## User Story 4
 
 _As a user, I want to be able to see possible entities that match my report, to better understand what I've experienced._
-
-1. Requirement 4.1
-1. Requirement 4.1.1
-1. Requirement 4.2
+1. Entity Matching
+  1. The system must analyze the user's submitted report and compare it against a database of known entities.
+  2. The system must use key details from the report, such as:
+    - Entity Description (Ex: apperance, behavior, abilities)
+    - Location
+    - Date and Time of the sighting
+    - Additinal Evidence (Images, Videos, Audio Files)
+  3. The system must provide a list of possible entities that are similar to the report.
+  4. The potential matches must include:
+    - Entity Name
+    - Description of Entity (appearance, behavior, sightings history)
+    - Known Locations
+    - Associated Reports
+    - Likelihood Score (Ex: Percentage match based on report details)
 
 ## User Story 5
 
