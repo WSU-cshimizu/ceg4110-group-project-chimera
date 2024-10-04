@@ -125,8 +125,10 @@ _As a user, I want to be able to see possible entities that match my report, to 
 
 _As an admin user, I want to have special access to manage user reports, so that I ensure accurate and relevant information._
 
-&emsp;**5.1.1** The system must allow admins to delete/remove reports from the list of viewable reports.  
-&emsp;**5.1.2** Deleted reports will not remove the report from a database but will replace the reports with nulls.  
+### 5.1 Admin Access to Manage Reports  
+
+&emsp;**5.1.1** The system must allow admins to delete or remove reports from the list of viewable reports.  
+&emsp;**5.1.2** Deleted reports will not remove the report from a database but be nullified, replacing their contents with null values.  
 &emsp;**5.1.3** Nullified reports will not contribute to the comparison analysis tools.  
 &emsp;**5.1.4** Nullified reports will be hidden from view of all users other than admins.  
 &emsp;**5.1.5** Nullified reports will be fully nulled other than the report ID.  
