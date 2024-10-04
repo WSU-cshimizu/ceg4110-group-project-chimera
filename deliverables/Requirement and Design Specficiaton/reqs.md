@@ -48,16 +48,16 @@ _As a user, I want to be able to see reports of other people's entity sightings,
 &emsp;&emsp;- **Date and Time** of the sighting  
 &emsp;&emsp;- **Location** of the sighting  
 &emsp;&emsp;- **Entity Description**  
-&emsp;&emsp;- ** Additional Evidence** (If available: images, videos, audio files)  
+&emsp;&emsp;- **Additional Evidence** (If available: images, videos, audio files)  
 
 ### 2.2 Report Details
 
-&emsp;**2.2.1** Users must be able to click on a report to view full details, including the complete description of the sighting and any additional evidence.
-&emsp;**2.2.2** The system must provide a feature to upvote or favorite reports that users find particularly useful or interesting.
-&emsp;**2.2.3** Users should be able to share reports via social media or direct links.
-&emsp;**2.2.4** User Integration with Reports
-&emsp;**2.2.5** Registered users must have the ability to comment on other users' reports.
-&emsp;**2.2.6** Users should be able to report inappropriate content within a report to the system administrators.
+&emsp;**2.2.1** Users must be able to click on a report to view full details, including the complete description of the sighting and any additional evidence.  
+&emsp;**2.2.2** The system must provide a feature to upvote or favorite reports that users find particularly useful or interesting.  
+&emsp;**2.2.3** Users should be able to share reports via social media or direct links.  
+&emsp;**2.2.4** User Integration with Reports  
+&emsp;**2.2.5** Registered users must have the ability to comment on other users' reports.  
+&emsp;**2.2.6** Users should be able to report inappropriate content within a report to the system administrators.  
 
 ## User Story 3
 
