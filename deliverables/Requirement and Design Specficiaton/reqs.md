@@ -6,25 +6,25 @@ _As a user, I want to be able to submit reports of my paranormal experience, so 
 
 ### 1.1 User Registration and Authentication
 
-1.1.1 The system must allow users to register with a valid email and create a password.  
-1.1.2 The system must provide a secure login system for users to access the report submission feature.  
-1.1.3 Users must be able to reset their password in case of loss.
+&emsp;**1.1.1** The system must allow users to register with a valid email and create a password.  
+&emsp;**1.1.2** The system must provide a secure login system for users to access the report submission feature.  
+&emsp;**1.1.3** Users must be able to reset their password in case of loss.
 
 ### 1.2 Report Submission
 
-1.2.1 The system must allow users to submit reports of their paranormal experiences.
+&emsp;**1.2.1** The system must allow users to submit reports of their paranormal experiences.
 
-1.2.2 The submission form should include the following fields:
+&emsp;**1.2.2** The submission form should include the following fields:
 
-- **Title of Experience** (text field, mandatory)
-- **Date and Time** of the experience (date and time picker, mandatory)
-- **Location** of the experience (text field, mandatory)
-- **Description** of the experience (rich text editor or multiline text field, mandatory)
-- **Entity Description** (if applicable: text field, optional)
-- **Additional Evidence** such as images, videos, or audio files (optional, max size 10 MB)
-- **Witnesses** (optional list of witness names or details)
+&emsp;- **Title of Experience** (text field, mandatory)
+&emsp;- **Date and Time** of the experience (date and time picker, mandatory)
+&emsp;- **Location** of the experience (text field, mandatory)
+&emsp;- **Description** of the experience (rich text editor or multiline text field, mandatory)
+&emsp;- **Entity Description** (if applicable: text field, optional)
+&emsp;- **Additional Evidence** such as images, videos, or audio files (optional, max size 10 MB)
+&emsp;- **Witnesses** (optional list of witness names or details)
 
-1.2.3 Users must have the ability to edit or delete their submitted reports.
+&emsp;**1.2.3** Users must have the ability to edit or delete their submitted reports.
 
 ## User Story 2
 
