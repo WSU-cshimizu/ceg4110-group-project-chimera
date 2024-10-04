@@ -10,7 +10,7 @@ _As a user, I want to be able to submit reports of my paranormal experience, so 
 1.1.2 The system must provide a secure login system for users to access the report submission feature.  
 1.1.3 Users must be able to reset their password in case of loss.
 
-### 1.2. Report Submission
+### 1.2 Report Submission
 
 1.2.1 The system must allow users to submit reports of their paranormal experiences.
 
