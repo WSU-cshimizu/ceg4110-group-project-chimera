@@ -171,9 +171,16 @@ _As a frontend developer, I want to design a user-friendly interface that allows
 
 _As a frontend developer, I want to implement validation rules for user inputs, so that only valid and clean data is sent to the backend for processing._
 
-1. Requirement 10.1
-1. Requirement 10.1.1
-1. Requirement 10.2
+### 10.1 Input Validation
+
+&emsp;**10.1.1** The system must validate all input fields for:
+
+&emsp;&emsp;- **Required Fields**: Ensure mandatory fields are filled.  
+&emsp;&emsp;- **Format Checks**: Validate email formats, date/time formats, and file types for evidence uploads.  
+
+### 10.2 Error Handling
+
+&emsp;**10.2.1** The system should provide user-friendly error messages for any validation failures, indicating what needs to be corrected.
 
 ## User Story 11
 
