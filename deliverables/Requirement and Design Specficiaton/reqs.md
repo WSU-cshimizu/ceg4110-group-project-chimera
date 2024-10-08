@@ -189,3 +189,16 @@ _As a frontend developer, I want to be able to interface with the backend, so th
 1. Requirement 11.1
 1. Requirement 11.1.1
 1. Requirement 11.2
+
+## User Story 12
+
+_As a tester, I want to verify that the system can compare student reports against the database of known supernatural entities to identify potential matches._
+
+1. Requirement 12.1
+
+## User Story 13
+
+_As a tester, I want to verify that the software is intuitive and user-friendly, and that all validations are properly enforced to ensure effective error handling and smooth user interactions.
+
+1. Requirement 13.1
+   
