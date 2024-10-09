@@ -139,10 +139,12 @@ _As a backend developer of comparative analysis tools, I would like to be able t
 
 ### 6.1 Entity-Report Relationships
 &emsp;**6.1.1** The system shall maintain a database of relationships between reports and their corresponding entities.
+
 &emsp;**6.1.2** The system shall provide tools for visualizing these relationships through diagrams or tables for analysis.
 
 ### 6.2 Location Data
 &emsp;**6.2.1** The system shall track the geographical distribution of reports to identify hotspots for entity sightings.
+
 &emsp;**6.2.2** The system shall allow for location-based filtering and reporting tools.
 
 ## User Story 7
@@ -151,6 +153,7 @@ _As a backend developer, I want to be able to interface with the database and fr
 
 ### 7.1 Database Interaction
 &emsp;**7.1.1** The system shall provide an API for the frontend to communicate with the database.
+
 &emsp;**7.1.2** The API shall allow for CRUD (Create, Read, Update, Delete) operations on reports, entities, and user data.
 
 ### 7.2 Data Validation
@@ -162,10 +165,12 @@ _As a database designer, I want to understand the data that we're interested in 
 
 ### 8.1 Data Collection Requirements
 &emsp;**8.1.1** The database schema shall include tables for users, reports, known entities, and locations.
+
 &emsp;**8.1.2** Each table shall have clearly defined relationships to ensure data integrity.
 
 ### 8.2 Schema Design
 &emsp;**8.2.1** The schema shall be designed using appropriate data types (e.g., VARCHAR, TEXT, DATETIME, BLOB) based on the nature of the data being collected.
+
 &emsp;**8.2.2** The schema shall include indexing on frequently searched fields (e.g., entity name, report date) to optimize performance.
 
 ## User Story 9
@@ -174,10 +179,12 @@ _As a frontend developer, I want to design a user-friendly interface that allows
 
 ### 9.1 User Interface Design
 &emsp;**9.1.1** The interface shall be intuitive and easy to navigate.
+
 &emsp;**9.1.2** The interface shall provide clear labels and placeholders for input fields to guide users through the data entry process.
 
 ### 9.2 Real-time Validation
 &emsp;**9.2.1** The interface shall implement real-time validation to ensure that data is accurate and formatted correctly before submission.
+
 &emsp;**9.2.2** Users shall be alerted to any issues with their input as they fill out the form.
 
 ## User Story 10
@@ -187,7 +194,9 @@ _As a frontend developer, I want to implement validation rules for user inputs, 
 ### 10.1 Input Validation
 
 &emsp;**10.1.1** The system shall validate all input fields for:
+
 &emsp;&emsp;- **Required Fields**: The system shall ensure mandatory fields are filled.  
+
 &emsp;&emsp;- **Format Checks**: The system shall validate email formats, date/time formats, and file types for evidence uploads.  
 
 ### 10.2 Error Handling
@@ -200,10 +209,12 @@ _As a frontend developer, I want to be able to interface with the backend, so th
 
 ### 11.1 API Integration
 &emsp;**11.1.1** The frontend shall communicate with the backend API to retrieve user data, reports, and entity information.
+
 &emsp;**11.1.2** The system shall handle API responses and update the user interface accordingly.
 
 ### 11.2 Data Synchronization
 &emsp;**11.2.1** The system shall ensure that the frontend displays the most current data from the backend.
+
 &emsp;**11.2.2** The system shall implement caching strategies where appropriate to improve performance.
 
 ## User Story 12 Testing
@@ -212,6 +223,7 @@ _As a tester, I want to verify that the system can compare student reports again
 
 ### 12.1 Match Verification
 &emsp;**12.1.1** Test cases shall be created to ensure that the matching algorithm produces accurate results based on varied user report scenarios.
+
 &emsp;**12.1.2** The system shall ensure that any updates or changes made to the database are reflected accurately in the entity matching results.
 
 ## User Story 13 Testing
@@ -220,8 +232,10 @@ _As a tester, I want to verify that the software is intuitive and user-friendly,
 
 ### 13.1 Usability Testing
 &emsp;**13.1.1** The testers shall conduct usability tests to gather feedback on the user interface and overall experience. 
+
 &emsp;**13.1.2** The system shall be evaluated based on user feedback to identify any pain points in the user journey.
 
 ### 13.2 Validation Testing
 &emsp;**13.2.1** Test cases shall be designed to ensure all validation rules are enforced before data is sent to the backend.
+
 &emsp;**13.2.2** The system shall be tested to confirm that appropriate error messages are displayed when validation fails.
