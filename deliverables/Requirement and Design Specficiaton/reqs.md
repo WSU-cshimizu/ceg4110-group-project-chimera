@@ -137,11 +137,11 @@ _As an admin user, I want to have special access to manage user reports, so that
 
 _As a backend developer of comparative analysis tools, I would like to be able to see the relationships between our different entities, reports, and locations so I can correlate the acquired data._
 
-## 6.1 Entity-Report Relationships
+### 6.1 Entity-Report Relationships
 &emsp;**6.1.1** The system shall maintain a database of relationships between reports and their corresponding entities.
 &emsp;**6.1.2** The system shall provide tools for visualizing these relationships through diagrams or tables for analysis.
 
-## 6.2 Location Data
+### 6.2 Location Data
 &emsp;**6.2.1** The system shall track the geographical distribution of reports to identify hotspots for entity sightings.
 &emsp;**6.2.2** The system shall allow for location-based filtering and reporting tools.
 
@@ -149,22 +149,22 @@ _As a backend developer of comparative analysis tools, I would like to be able t
 
 _As a backend developer, I want to be able to interface with the database and frontend, so that data can flow back and forth between them._
 
-## 7.1 Database Interaction
+### 7.1 Database Interaction
 &emsp;**7.1.1** The system shall provide an API for the frontend to communicate with the database.
 &emsp;**7.1.2** The API shall allow for CRUD (Create, Read, Update, Delete) operations on reports, entities, and user data.
 
-## 7.2 Data Validation
+### 7.2 Data Validation
 &emsp;**7.2.1** The system shall ensure that all data sent to the database adheres to specified validation rules before being stored.
 
 ## User Story 8
 
 _As a database designer, I want to understand the data that we're interested in collecting, so that I can determine data types and create a schema._
 
-## 8.1 Data Collection Requirements
+### 8.1 Data Collection Requirements
 &emsp;**8.1.1** The database schema shall include tables for users, reports, known entities, and locations.
 &emsp;**8.1.2** Each table shall have clearly defined relationships to ensure data integrity.
 
-## 8.2 Schema Design
+### 8.2 Schema Design
 &emsp;**8.2.1** The schema shall be designed using appropriate data types (e.g., VARCHAR, TEXT, DATETIME, BLOB) based on the nature of the data being collected.
 &emsp;**8.2.2** The schema shall include indexing on frequently searched fields (e.g., entity name, report date) to optimize performance.
 
@@ -172,11 +172,13 @@ _As a database designer, I want to understand the data that we're interested in 
 
 _As a frontend developer, I want to design a user-friendly interface that allows users to input relevant data, so that the information can be collected accurately and efficiently._
 
-**9.1** The interface shall be intuitive and easy to navigate.
+### 9.1 User Interface Design
+&emsp;**9.1.1** The interface shall be intuitive and easy to navigate.
+&emsp;**9.1.2** The interface shall provide clear labels and placeholders for input fields to guide users through the data entry process.
 
-&emsp;**9.1.1** The interface shall provide clear labels and placeholders for input fields to guide users through the data entry process.
-
-**9.2** The interface shall implement real-time validation to ensure that data is accurate and formatted correctly before submission.
+### 9.2 Real-time Validation
+&emsp;**9.2.1** The interface shall implement real-time validation to ensure that data is accurate and formatted correctly before submission.
+&emsp;**9.2.2** Users shall be alerted to any issues with their input as they fill out the form.
 
 ## User Story 10
 
@@ -185,7 +187,6 @@ _As a frontend developer, I want to implement validation rules for user inputs, 
 ### 10.1 Input Validation
 
 &emsp;**10.1.1** The system shall validate all input fields for:
-
 &emsp;&emsp;- **Required Fields**: The system shall ensure mandatory fields are filled.  
 &emsp;&emsp;- **Format Checks**: The system shall validate email formats, date/time formats, and file types for evidence uploads.  
 
@@ -197,13 +198,13 @@ _As a frontend developer, I want to implement validation rules for user inputs, 
 
 _As a frontend developer, I want to be able to interface with the backend, so that I can access the data to display to the user._
 
-## 11.1 API Integration
-&emsp;**11.1.1*** The frontend shall communicate with the backend API to retrieve user data, reports, and entity information.
-&emsp;**11.1.2*** The system shall handle API responses and update the user interface accordingly.
+### 11.1 API Integration
+&emsp;**11.1.1** The frontend shall communicate with the backend API to retrieve user data, reports, and entity information.
+&emsp;**11.1.2** The system shall handle API responses and update the user interface accordingly.
 
-## 11.2 Data Synchronization
-&emsp;**11.2.1*** The system shall ensure that the frontend displays the most current data from the backend.
-&emsp;**11.2.2*** The system shall implement caching strategies where appropriate to improve performance.
+### 11.2 Data Synchronization
+&emsp;**11.2.1** The system shall ensure that the frontend displays the most current data from the backend.
+&emsp;**11.2.2** The system shall implement caching strategies where appropriate to improve performance.
 
 ## User Story 12 Testing
 
