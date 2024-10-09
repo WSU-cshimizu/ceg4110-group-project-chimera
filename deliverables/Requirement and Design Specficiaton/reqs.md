@@ -137,25 +137,36 @@ _As an admin user, I want to have special access to manage user reports, so that
 
 _As a backend developer of comparative analysis tools, I would like to be able to see the relationships between our different entities, reports, and locations so I can correlate the acquired data._
 
-1. Requirement 6.1
-1. Requirement 6.1.1
-1. Requirement 6.2
+## 6.1 Entity-Report Relationships
+&emsp;**6.1.1** The system shall maintain a database of relationships between reports and their corresponding entities.
+&emsp;**6.1.2** The system shall provide tools for visualizing these relationships through diagrams or tables for analysis.
+
+## 6.2 Location Data
+&emsp;**6.2.1** The system shall track the geographical distribution of reports to identify hotspots for entity sightings.
+&emsp;**6.2.2** The system shall allow for location-based filtering and reporting tools.
 
 ## User Story 7
 
 _As a backend developer, I want to be able to interface with the database and frontend, so that data can flow back and forth between them._
 
-1. Requirement 7.1
-1. Requirement 7.1.1
-1. Requirement 7.2
+## 7.1 Database Interaction
+&emsp;**7.1.1** The system shall provide an API for the frontend to communicate with the database.
+&emsp;**7.1.2** The API shall allow for CRUD (Create, Read, Update, Delete) operations on reports, entities, and user data.
+
+## 7.2 Data Validation
+&emsp;**7.2.1** The system shall ensure that all data sent to the database adheres to specified validation rules before being stored.
 
 ## User Story 8
 
 _As a database designer, I want to understand the data that we're interested in collecting, so that I can determine data types and create a schema._
 
-1. Requirement 8.1
-1. Requirement 8.1.1
-1. Requirement 8.2
+## 8.1 Data Collection Requirements
+&emsp;**8.1.1** The database schema shall include tables for users, reports, known entities, and locations.
+&emsp;**8.1.2** Each table shall have clearly defined relationships to ensure data integrity.
+
+## 8.2 Schema Design
+&emsp;**8.2.1** The schema shall be designed using appropriate data types (e.g., VARCHAR, TEXT, DATETIME, BLOB) based on the nature of the data being collected.
+&emsp;**8.2.2** The schema shall include indexing on frequently searched fields (e.g., entity name, report date) to optimize performance.
 
 ## User Story 9
 
@@ -186,14 +197,19 @@ _As a frontend developer, I want to implement validation rules for user inputs, 
 
 _As a frontend developer, I want to be able to interface with the backend, so that I can access the data to display to the user._
 
-1. Requirement 11.1
-1. Requirement 11.1.1
-1. Requirement 11.2
+## 11.1 API Integration
+&emsp;**11.1.1*** The frontend shall communicate with the backend API to retrieve user data, reports, and entity information.
+&emsp;**11.1.2*** The system shall handle API responses and update the user interface accordingly.
+
+## 11.2 Data Synchronization
+&emsp;**11.2.1*** The system shall ensure that the frontend displays the most current data from the backend.
+&emsp;**11.2.2*** The system shall implement caching strategies where appropriate to improve performance.
 
 ## User Story 12 Testing
 
 _As a tester, I want to verify that the system can compare student reports against the database of known supernatural entities to identify potential matches._
 
+### 12.1 Match Verification
 &emsp;**12.1.1** Test cases shall be created to ensure that the matching algorithm produces accurate results based on varied user report scenarios.
 &emsp;**12.1.2** The system shall ensure that any updates or changes made to the database are reflected accurately in the entity matching results.
 
@@ -201,8 +217,10 @@ _As a tester, I want to verify that the system can compare student reports again
 
 _As a tester, I want to verify that the software is intuitive and user-friendly, and that all validations are properly enforced to ensure effective error handling and smooth user interactions._
 
+### 13.1 Usability Testing
 &emsp;**13.1.1** The testers shall conduct usability tests to gather feedback on the user interface and overall experience. 
 &emsp;**13.1.2** The system shall be evaluated based on user feedback to identify any pain points in the user journey.
 
+### 13.2 Validation Testing
 &emsp;**13.2.1** Test cases shall be designed to ensure all validation rules are enforced before data is sent to the backend.
 &emsp;**13.2.2** The system shall be tested to confirm that appropriate error messages are displayed when validation fails.
