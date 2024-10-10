@@ -118,8 +118,8 @@ _As a user, I want to be able to see possible entities that match my report, to 
 
 ### 4.3 User Feedback on Matches  
 
-&emsp;**4.3.1** Users shall be able to provide feedback on the accuracy of the entity matches by selecting options such as "Very Accurate", "Somewhat Accurate", "Not Accurate".  
-&emsp;**4.3.2** Users shall have the option to suggest new entities if they believe none of the matches are correct. These suggestions can be reviewed by the system administrators.  
+&emsp; **4.3.1** Users shall be able to provide feedback on the accuracy of the entity matches by selecting options such as "Very Accurate", "Somewhat Accurate", "Not Accurate".  
+&emsp; **4.3.2** Users shall have the option to suggest new entities if they believe none of the matches are correct. These suggestions can be reviewed by the system administrators.  
 
 ## User Story 5
 
@@ -140,6 +140,7 @@ _As a backend developer of comparative analysis tools, I would like to be able t
 ### 6.1 Entity-Report Relationships
 &emsp;**6.1.1** The system shall maintain a database of relationships between reports and their corresponding entities. 
 &emsp;**6.1.2** The system shall provide tools for visualizing these relationships through diagrams or tables for analysis. 
+
 
 ### 6.2 Location Data
 &emsp;**6.2.1** The system shall track the geographical distribution of reports to identify hotspots for entity sightings. 
