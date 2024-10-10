@@ -138,8 +138,8 @@ _As an admin user, I want to have special access to manage user reports, so that
 _As a backend developer of comparative analysis tools, I would like to be able to see the relationships between our different entities, reports, and locations so I can correlate the acquired data._
 
 ### 6.1 Entity-Report Relationships
-&emsp;**6.1.1** The system shall maintain a database of relationships between reports and their corresponding entities. 
-&emsp;**6.1.2** The system shall provide tools for visualizing these relationships through diagrams or tables for analysis. 
+&emsp; **6.1.1** The system shall maintain a database of relationships between reports and their corresponding entities. 
+&emsp; **6.1.2** The system shall provide tools for visualizing these relationships through diagrams or tables for analysis. 
 
 
 ### 6.2 Location Data
