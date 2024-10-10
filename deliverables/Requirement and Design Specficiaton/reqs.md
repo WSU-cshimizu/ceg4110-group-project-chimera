@@ -139,6 +139,7 @@ _As a backend developer of comparative analysis tools, I would like to be able t
 
 ### 6.1 Entity-Report Relationships
 &emsp; **6.1.1** The system shall maintain a database of relationships between reports and their corresponding entities. 
+
 &emsp; **6.1.2** The system shall provide tools for visualizing these relationships through diagrams or tables for analysis. 
 
 
