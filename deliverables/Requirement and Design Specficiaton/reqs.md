@@ -144,7 +144,7 @@ _As a backend developer of comparative analysis tools, I would like to be able t
 
 ### 6.2 Location Data
 
-&emsp;**6.2.1** The system shall track the geographical distribution of reports to identify hotspots for entity sightings.
+&emsp;**6.2.1** The system shall track the geographical distribution of reports to identify hotspots for entity sightings.  
 &emsp;**6.2.2** The system shall allow for location-based filtering and reporting tools.
 
 ## User Story 7
