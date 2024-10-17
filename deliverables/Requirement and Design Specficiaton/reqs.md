@@ -57,10 +57,8 @@ _As a user, I want to be able to see reports of other people's entity sightings,
 
 &emsp;**2.2.1** Users shall be able to click on a report to view full details, including the complete description of the sighting and any additional evidence.  
 &emsp;**2.2.2** The system shall provide a feature to upvote or favorite reports that users find particularly useful or interesting.  
-&emsp;**2.2.3** Users shall be able to to share reports via social media or direct links.  
-&emsp;**2.2.4** Users shall be integrated with Reports.  
-&emsp;**2.2.5** Registered users shall have the ability to comment on other users' reports.  
-&emsp;**2.2.6** Users shall be able to report inappropriate content within a report to the system administrators.
+&emsp;**2.2.3** Users shall be integrated with Reports.  
+&emsp;**2.2.4** Users shall be able to report inappropriate content within a report to the system administrators.
 
 ## User Story 3
 
