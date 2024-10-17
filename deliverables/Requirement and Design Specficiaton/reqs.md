@@ -28,7 +28,7 @@ _As a user, I want to be able to submit reports of my paranormal experience, so 
 
 ### Data Flow Diagram
 
-![image](../Images/UserStory1.jpg)
+![image](../Images/UserStory1.png)
 
 ## User Story 2
 
