@@ -84,6 +84,9 @@ _As a user, I want to be able to view a dictionary of all known entities, so tha
 &emsp;&emsp;- **Description of Entity Appearance**: What the entity is reported to look like usually.  
 &emsp;&emsp;- **Entity Known Evidence**: such as UV, EMF5, Ghost Writing, D.O.T.S, Ghost Orbs, Spirit Box, and Freezing Temperatures
 
+### Data Flow Diagram
+![User Stories 3](https://github.com/user-attachments/assets/919c4bd4-f775-4cc9-b584-26177fe95583)
+
 ## User Story 4
 
 _As a user, I want to be able to see possible entities that match my report, to better understand what I've experienced._
