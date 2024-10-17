@@ -60,6 +60,9 @@ _As a user, I want to be able to see reports of other people's entity sightings,
 &emsp;**2.2.3** Users shall be integrated with Reports.  
 &emsp;**2.2.4** Users shall be able to report inappropriate content within a report to the system administrators.
 
+### Data Flow Diagram
+![User Stories 2](https://github.com/user-attachments/assets/2ee8c105-45ab-4a83-853e-bb26fedd6c2e)
+
 ## User Story 3
 
 _As a user, I want to be able to view a dictionary of all known entities, so that I can learn more about them and compare my experiences._
