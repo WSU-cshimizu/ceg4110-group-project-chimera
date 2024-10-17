@@ -27,7 +27,8 @@ _As a user, I want to be able to submit reports of my paranormal experience, so 
 &emsp;**1.2.3** Users shall have the ability to edit or delete their submitted reports.
 
 ### Data Flow Diagram
-![image](../Images/UserStory1.png)
+
+![image](../Images/UserStory1.jpg)
 
 ## User Story 2
 
@@ -242,7 +243,4 @@ _As a tester, I want to verify that the software is intuitive and user-friendly,
 &emsp;**13.2.1** Test cases shall be designed to ensure all validation rules are enforced before data is sent to the backend.  
 &emsp;**13.2.2** The system shall be tested to confirm that appropriate error messages are displayed when validation fails.
 
-
 # Design Specification
-
-
