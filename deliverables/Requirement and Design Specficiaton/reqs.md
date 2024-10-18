@@ -168,6 +168,9 @@ _As a backend developer, I want to be able to interface with the database and fr
 
 &emsp;**7.2.1** The system shall ensure that all data sent to the database adheres to specified validation rules before being stored.
 
+### Data Flow Diagram
+![UserStory7 drawio](https://github.com/user-attachments/assets/4516c0ca-ddd4-4047-91fb-46692faa41c2)
+
 ## User Story 8
 
 _As a database designer, I want to understand the data that we're interested in collecting, so that I can determine data types and create a schema._
