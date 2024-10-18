@@ -61,7 +61,7 @@ _As a user, I want to be able to see reports of other people's entity sightings,
 &emsp;**2.2.4** Users shall be able to report inappropriate content within a report to the system administrators.
 
 ### Data Flow Diagram
-![UserStory2 drawio](https://github.com/user-attachments/assets/a8e310be-cc42-43f3-a0ee-c7c795a4bdd9)
+![UserStory2 drawio (1)](https://github.com/user-attachments/assets/d4cbc76b-0433-485b-90f2-aad50809ec72)
 
 ## User Story 3
 
