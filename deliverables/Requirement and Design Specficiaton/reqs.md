@@ -86,7 +86,7 @@ _As a user, I want to be able to view a dictionary of all known entities, so tha
 &emsp;&emsp;- **Entity Known Evidence**: such as UV, EMF5, Ghost Writing, D.O.T.S, Ghost Orbs, Spirit Box, and Freezing Temperatures
 
 ### Data Flow Diagram
-![User Stories 3](https://github.com/user-attachments/assets/919c4bd4-f775-4cc9-b584-26177fe95583)
+![UserStory3 drawio](https://github.com/user-attachments/assets/b99db826-9ff1-4e3e-a112-c2fb0a7df705)
 
 ## User Story 4
 
