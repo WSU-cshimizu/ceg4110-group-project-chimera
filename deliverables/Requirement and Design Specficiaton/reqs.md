@@ -149,6 +149,9 @@ _As a backend developer of comparative analysis tools, I would like to be able t
 &emsp;**6.1.1** The system shall maintain a database of relationships between reports and their corresponding entities.  
 &emsp;**6.1.2** The system shall provide tools for visualizing these relationships through diagrams or tables for analysis.
 
+### (Control) Flowchart Diagram
+![Compare_Report_Entity_Flow drawio](https://github.com/user-attachments/assets/8fc7dd22-1e28-4668-8279-61a81dd8d13a)
+
 ### 6.2 Location Data
 
 &emsp;**6.2.1** The system shall track the geographical distribution of reports to identify hotspots for entity sightings.  
