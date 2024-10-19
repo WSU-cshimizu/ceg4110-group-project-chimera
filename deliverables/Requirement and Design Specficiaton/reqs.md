@@ -27,7 +27,7 @@ _As a user, I want to be able to submit reports of my paranormal experience, so 
 &emsp;**1.2.3** Users shall have the ability to edit or delete their submitted reports.
 
 ### Data Flow Diagram
-![User Story 1](https://github.com/user-attachments/assets/918c7e74-d69c-400b-b208-6ff3f4b9ba42)
+![User Story 1](https://github.com/user-attachments/assets/aaf08ef6-5685-4eef-bbc6-f5084e2c36e5)
 
 ## User Story 2
 
