@@ -198,8 +198,7 @@ _As a frontend developer, I want to design a user-friendly interface that allows
 &emsp;**9.2.1** The interface shall implement real-time validation to ensure that data is accurate and formatted correctly before submission.  
 &emsp;**9.2.2** Users shall be alerted to any issues with their input as they fill out the form.
 
-### Data Flow Diagram
-![User Story 9](https://github.com/user-attachments/assets/084c8a97-7300-4f6b-bb74-2250231e3cab)
+
 
 ## User Story 10
 
@@ -214,6 +213,9 @@ _As a frontend developer, I want to implement validation rules for user inputs, 
 ### 10.2 Error Handling
 
 &emsp;**10.2.1** The system shall provide user-friendly error messages for any validation failures, indicating what needs to be corrected.
+
+### Data Flow Diagram
+![User Story 10](https://github.com/user-attachments/assets/084c8a97-7300-4f6b-bb74-2250231e3cab)
 
 ## User Story 11
 
