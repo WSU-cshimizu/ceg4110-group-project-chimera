@@ -198,6 +198,9 @@ _As a frontend developer, I want to design a user-friendly interface that allows
 &emsp;**9.2.1** The interface shall implement real-time validation to ensure that data is accurate and formatted correctly before submission.  
 &emsp;**9.2.2** Users shall be alerted to any issues with their input as they fill out the form.
 
+### Data Flow Diagram
+![User Story 9](https://github.com/user-attachments/assets/715f51ba-8b2b-47e2-8060-7d1510d92c94)
+
 ## User Story 10
 
 _As a frontend developer, I want to implement validation rules for user inputs, so that only valid and clean data is sent to the backend for processing._
