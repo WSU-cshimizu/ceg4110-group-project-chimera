@@ -128,6 +128,10 @@ _As a user, I want to be able to see possible entities that match my report, to 
 &emsp; **4.3.1** Users shall be able to provide feedback on the accuracy of the entity matches by selecting options such as "Very Accurate", "Somewhat Accurate", "Not Accurate".  
 &emsp; **4.3.2** Users shall have the option to suggest new entities if they believe none of the matches are correct. These suggestions can be reviewed by the system administrators.
 
+### Data Flow Diagram
+![UserStory4 drawio](https://github.com/user-attachments/assets/cdbcc343-7bc0-41c4-8456-1c32e388c0f3)
+
+
 ## User Story 5
 
 _As an admin user, I want to have special access to manage user reports, so that I ensure accurate and relevant information._
