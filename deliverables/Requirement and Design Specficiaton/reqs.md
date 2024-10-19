@@ -215,7 +215,7 @@ _As a frontend developer, I want to implement validation rules for user inputs, 
 &emsp;**10.2.1** The system shall provide user-friendly error messages for any validation failures, indicating what needs to be corrected.
 
 ### Data Flow Diagram
-![User Story 10](https://github.com/user-attachments/assets/fe833564-b0b5-4ae9-9417-21ab71cba1b4)
+![User Story 10](https://github.com/user-attachments/assets/868cf7e0-abdf-4920-8cea-d1752b5c103e)
 
 ## User Story 11
 
