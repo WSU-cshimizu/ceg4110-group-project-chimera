@@ -231,6 +231,9 @@ _As a frontend developer, I want to be able to interface with the backend, so th
 &emsp;**11.2.1** The system shall ensure that the frontend displays the most current data from the backend.  
 &emsp;**11.2.2** The system shall implement caching strategies where appropriate to improve performance.
 
+### Data Flow Diagram
+![User Story 11](https://github.com/user-attachments/assets/b355c172-15be-414b-86e4-d0b3b8e6c424)
+
 ## User Story 12 Testing
 
 _As a tester, I want to verify that the system can compare student reports against the database of known supernatural entities to identify potential matches._
