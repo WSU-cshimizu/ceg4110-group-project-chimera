@@ -129,8 +129,7 @@ _As a user, I want to be able to see possible entities that match my report, to 
 &emsp; **4.3.2** Users shall have the option to suggest new entities if they believe none of the matches are correct. These suggestions can be reviewed by the system administrators.
 
 ### Data Flow Diagram
-![UserStory4 drawio](https://github.com/user-attachments/assets/cdbcc343-7bc0-41c4-8456-1c32e388c0f3)
-
+![UserStory4](https://github.com/user-attachments/assets/1a9aa803-91e1-42ca-952c-6cb8a8c186e9)
 
 ## User Story 5
 
