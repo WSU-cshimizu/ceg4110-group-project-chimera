@@ -193,6 +193,9 @@ _As a database designer, I want to understand the data that we're interested in 
 &emsp;**8.2.1** The schema shall be designed using appropriate data types (e.g., VARCHAR, TEXT, DATETIME, BLOB) based on the nature of the data being collected.  
 &emsp;**8.2.2** The schema shall include indexing on frequently searched fields (e.g., entity name, report date) to optimize performance.
 
+### UML Diagram
+![UML_Class_Diagram drawio](https://github.com/user-attachments/assets/1e4dc1d6-bc6c-4796-919a-d298653524b2)
+
 ## User Story 9
 
 _As a frontend developer, I want to design a user-friendly interface that allows users to input relevant data, so that the information can be collected accurately and efficiently._
