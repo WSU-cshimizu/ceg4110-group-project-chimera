@@ -269,5 +269,3 @@ _As a tester, I want to verify that the software is intuitive and user-friendly,
 
 &emsp;**13.2.1** Test cases shall be designed to ensure all validation rules are enforced before data is sent to the backend.  
 &emsp;**13.2.2** The system shall be tested to confirm that appropriate error messages are displayed when validation fails.
-
-# Design Specification
