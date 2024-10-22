@@ -27,7 +27,7 @@ _As a user, I want to be able to submit reports of my paranormal experience, so 
 &emsp;**1.2.3** Users shall have the ability to edit or delete their submitted reports.
 
 ### Data Flow Diagram
-![UserStory1](https://github.com/user-attachments/assets/18047eea-846c-4a04-b1dd-9fe677112196)
+![User Story 1](https://github.com/user-attachments/assets/aaf08ef6-5685-4eef-bbc6-f5084e2c36e5)
 
 ## User Story 2
 
@@ -57,10 +57,11 @@ _As a user, I want to be able to see reports of other people's entity sightings,
 
 &emsp;**2.2.1** Users shall be able to click on a report to view full details, including the complete description of the sighting and any additional evidence.  
 &emsp;**2.2.2** The system shall provide a feature to upvote or favorite reports that users find particularly useful or interesting.  
-&emsp;**2.2.3** Users shall be able to to share reports via social media or direct links.  
-&emsp;**2.2.4** Users shall be integrated with Reports.  
-&emsp;**2.2.5** Registered users shall have the ability to comment on other users' reports.  
-&emsp;**2.2.6** Users shall be able to report inappropriate content within a report to the system administrators.
+&emsp;**2.2.3** Users shall be integrated with Reports.  
+&emsp;**2.2.4** Users shall be able to report inappropriate content within a report to the system administrators.
+
+### Data Flow Diagram
+![UserStory2 drawio (1)](https://github.com/user-attachments/assets/d4cbc76b-0433-485b-90f2-aad50809ec72)
 
 ## User Story 3
 
@@ -82,6 +83,9 @@ _As a user, I want to be able to view a dictionary of all known entities, so tha
 &emsp;&emsp;- **Description of Entity Behavior**: How the entity usually reacts in it's enviroment.  
 &emsp;&emsp;- **Description of Entity Appearance**: What the entity is reported to look like usually.  
 &emsp;&emsp;- **Entity Known Evidence**: such as UV, EMF5, Ghost Writing, D.O.T.S, Ghost Orbs, Spirit Box, and Freezing Temperatures
+
+### Data Flow Diagram
+![UserStory3 drawio](https://github.com/user-attachments/assets/59325699-1195-469e-b7c2-3952eec3c8df)
 
 ## User Story 4
 
@@ -124,6 +128,9 @@ _As a user, I want to be able to see possible entities that match my report, to 
 &emsp; **4.3.1** Users shall be able to provide feedback on the accuracy of the entity matches by selecting options such as "Very Accurate", "Somewhat Accurate", "Not Accurate".  
 &emsp; **4.3.2** Users shall have the option to suggest new entities if they believe none of the matches are correct. These suggestions can be reviewed by the system administrators.
 
+### Data Flow Diagram
+![UserStory4](https://github.com/user-attachments/assets/1a9aa803-91e1-42ca-952c-6cb8a8c186e9)
+
 ## User Story 5
 
 _As an admin user, I want to have special access to manage user reports, so that I ensure accurate and relevant information._
@@ -136,6 +143,9 @@ _As an admin user, I want to have special access to manage user reports, so that
 &emsp;**5.1.4** Nullified reports shall be hidden from view of all users other than admins.  
 &emsp;**5.1.5** Nullified reports shall be fully nulled other than the report ID.
 
+### Data Flow Diagram
+![UserStory5](https://github.com/user-attachments/assets/9540f3e7-9073-4f63-9c57-3997953bf1f8)
+
 ## User Story 6
 
 _As a backend developer of comparative analysis tools, I would like to be able to see the relationships between our different entities, reports, and locations so I can correlate the acquired data._
@@ -144,6 +154,9 @@ _As a backend developer of comparative analysis tools, I would like to be able t
 
 &emsp;**6.1.1** The system shall maintain a database of relationships between reports and their corresponding entities.  
 &emsp;**6.1.2** The system shall provide tools for visualizing these relationships through diagrams or tables for analysis.
+
+### (Control) Flowchart Diagram
+![Compare_Report_Entity_Flow drawio](https://github.com/user-attachments/assets/8fc7dd22-1e28-4668-8279-61a81dd8d13a)
 
 ### 6.2 Location Data
 
@@ -163,6 +176,9 @@ _As a backend developer, I want to be able to interface with the database and fr
 
 &emsp;**7.2.1** The system shall ensure that all data sent to the database adheres to specified validation rules before being stored.
 
+### Data Flow Diagram
+![UserStory7 drawio](https://github.com/user-attachments/assets/4516c0ca-ddd4-4047-91fb-46692faa41c2)
+
 ## User Story 8
 
 _As a database designer, I want to understand the data that we're interested in collecting, so that I can determine data types and create a schema._
@@ -176,6 +192,9 @@ _As a database designer, I want to understand the data that we're interested in 
 
 &emsp;**8.2.1** The schema shall be designed using appropriate data types (e.g., VARCHAR, TEXT, DATETIME, BLOB) based on the nature of the data being collected.  
 &emsp;**8.2.2** The schema shall include indexing on frequently searched fields (e.g., entity name, report date) to optimize performance.
+
+### UML Diagram
+![UML_Class_Diagram drawio](https://github.com/user-attachments/assets/1e4dc1d6-bc6c-4796-919a-d298653524b2)
 
 ## User Story 9
 
@@ -191,6 +210,9 @@ _As a frontend developer, I want to design a user-friendly interface that allows
 &emsp;**9.2.1** The interface shall implement real-time validation to ensure that data is accurate and formatted correctly before submission.  
 &emsp;**9.2.2** Users shall be alerted to any issues with their input as they fill out the form.
 
+### Data Flow Diagram
+![UserStory9](https://github.com/user-attachments/assets/1058e75a-eb17-4d6b-b52c-afee826ebb40)
+
 ## User Story 10
 
 _As a frontend developer, I want to implement validation rules for user inputs, so that only valid and clean data is sent to the backend for processing._
@@ -205,6 +227,9 @@ _As a frontend developer, I want to implement validation rules for user inputs, 
 
 &emsp;**10.2.1** The system shall provide user-friendly error messages for any validation failures, indicating what needs to be corrected.
 
+### Data Flow Diagram
+![User Story 10](https://github.com/user-attachments/assets/868cf7e0-abdf-4920-8cea-d1752b5c103e)
+
 ## User Story 11
 
 _As a frontend developer, I want to be able to interface with the backend, so that I can access the data to display to the user._
@@ -218,6 +243,9 @@ _As a frontend developer, I want to be able to interface with the backend, so th
 
 &emsp;**11.2.1** The system shall ensure that the frontend displays the most current data from the backend.  
 &emsp;**11.2.2** The system shall implement caching strategies where appropriate to improve performance.
+
+### Data Flow Diagram
+![User Story 11](https://github.com/user-attachments/assets/b355c172-15be-414b-86e4-d0b3b8e6c424)
 
 ## User Story 12 Testing
 
@@ -241,5 +269,3 @@ _As a tester, I want to verify that the software is intuitive and user-friendly,
 
 &emsp;**13.2.1** Test cases shall be designed to ensure all validation rules are enforced before data is sent to the backend.  
 &emsp;**13.2.2** The system shall be tested to confirm that appropriate error messages are displayed when validation fails.
-
-# Design Specification
