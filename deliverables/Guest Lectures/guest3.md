@@ -18,3 +18,6 @@ When it comes to project prioritization, the key factor is the balance between p
 Winsupply focuses on teaching business fundamentals. Additionally they promote career growth, by offering opportunities for employees to advance from roles like truck drivers to leadership positions, such as becoming presidents at select locations.
 
 In terms of technology, the company utilizes several tools, including CoPilot and Prisma for code security, as well as Kubernetes for containerization. These technologies help ensure secure and efficient software development and deployment processes.
+
+## Signatures
+Isabella Livingston, Jacob Hackman, Ben Jeffers, Megan Noble, Aayush Neupane
