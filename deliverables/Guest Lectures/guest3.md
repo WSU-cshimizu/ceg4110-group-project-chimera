@@ -18,6 +18,13 @@ started by 6 investors in oakwood
 teahc business fundamentals, truck drivers to a predsident on a location, 
 
 
+Outsourced company (winsupply)
+
+
+CoPilot (code security)
+Prisma (code security)
+Kubernetes (containerization)
+
 
 
 
