@@ -19,5 +19,7 @@ Winsupply focuses on teaching business fundamentals. Additionally they promote c
 
 In terms of technology, the company utilizes several tools, including CoPilot and Prisma for code security, as well as Kubernetes for containerization. These technologies help ensure secure and efficient software development and deployment processes.
 
+Mr. Schrameck suggests choosing a framework and sticking with it for the long haul, i.e., "get married to it" because it's so difficult to change frameworks and you will never get off of that hamster wheel.
+
 ## Signatures
 Isabella Livingston, Jacob Hackman, Ben Jeffers, Megan Noble, Aayush Neupane
