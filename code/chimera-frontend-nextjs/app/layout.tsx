@@ -39,7 +39,7 @@ export default function RootLayout({
         ></meta>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-800`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-customBg dark:bg-gray-800`}
       >
         <ThemeProvider>
           <NavigationBar />

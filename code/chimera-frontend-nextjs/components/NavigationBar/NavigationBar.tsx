@@ -1,33 +1,94 @@
 "use client";
 import { useTheme } from "next-themes";
+import { useRouter, usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { scroller as ScrollLink } from "react-scroll";
 
 const NavigationBar = () => {
+  const router = useRouter();
+  const pathname = usePathname();
   const { theme, setTheme } = useTheme();
+  const [scrollTarget, setScrollTarget] = useState(null);
+
+  const handleNavigation = (sectionId: any) => {
+    if (pathname === "/") {
+      // If already on the home page, scroll immediately
+      ScrollLink.scrollTo(sectionId, {
+        smooth: true,
+      });
+    } else {
+      // If not on the home page, navigate first, then scroll after a delay
+      router.push("/");
+      // Set the scroll target and navigate to the home page
+      setScrollTarget(sectionId);
+      router.push("/");
+    }
+  };
+
+  useEffect(() => {
+    if (scrollTarget) {
+      // Wait for 2 seconds, then scroll
+      const timer = setTimeout(() => {
+        ScrollLink.scrollTo(scrollTarget, {
+          smooth: true,
+        });
+        setScrollTarget(null); // Reset the scroll target after scrolling
+      }, 800);
+
+      return () => clearTimeout(timer); // Clean up timeout on unmount or dependency change
+    }
+  }, [pathname, scrollTarget]);
+
   return (
     <nav className="bg-white dark:bg-gray-800 shadow-md w-100 px-8 md:px-auto">
-      <div className="md:h-16 h-28 mx-auto md:px-4 container flex items-center justify-between flex-wrap md:flex-nowrap">
-        <div className="text-indigo-500 md:order-1 font-extrabold">
-          CHIMERA
-        </div>
+      <div
+        id="home"
+        className="md:h-16 h-28 mx-auto md:px-4 container flex items-center justify-between flex-wrap md:flex-nowrap"
+      >
+        <div className="text-indigo-500 md:order-1 font-extrabold">CHIMERA</div>
         <div className="text-gray-700 dark:text-gray-200 order-3 w-full md:w-auto md:order-2">
           <ul className="flex font-semibold justify-between">
             <li className="md:px-4 md:py-2 text-indigo-500 dark:text-indigo-400">
-              <a href="#">Home</a>
+              <span
+                onClick={() => handleNavigation("home")}
+                style={{ cursor: "pointer" }}
+              >
+                Home
+              </span>
             </li>
             <li className="md:px-4 md:py-2 hover:text-indigo-400 dark:hover:text-indigo-300">
-              <a href="#">About Us</a>
+              <span
+                onClick={() => handleNavigation("aboutUs")}
+                style={{ cursor: "pointer" }}
+              >
+                About Us
+              </span>
             </li>
-            <li className="md:px-4 md:py-2 hover:text-indigo-400 dark:hover:text-indigo-300">
+            <li
+              className="md:px-4 md:py-2 hover:text-indigo-400 dark:hover:text-indigo-300"
+              style={{ cursor: "pointer" }}
+            >
               <a href="#">Explore</a>
             </li>
-            <li className="md:px-4 md:py-2 hover:text-indigo-400 dark:hover:text-indigo-300">
-              <a href="#">Contact</a>
+            <li
+              className="md:px-4 md:py-2 hover:text-indigo-400 dark:hover:text-indigo-300"
+              style={{ cursor: "pointer" }}
+            >
+              <span
+                onClick={() => handleNavigation("contactUs")}
+                style={{ cursor: "pointer" }}
+              >
+                Contact Us
+              </span>
             </li>
           </ul>
         </div>
         <div className="order-2 md:order-3">
-          <div className="flex gap-2 ">
-            <button className="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-xl flex items-center gap-2">
+          <div className="flex gap-2">
+            <button
+              className="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-xl flex items-center gap-2"
+              onClick={() => router.push("/login-page")}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -35,9 +96,9 @@ const NavigationBar = () => {
                 fill="currentColor"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M3 3a1 1 0 011 1v12a1 1 0 11-2 0V4a1 1 0 011-1zm7.707 3.293a1 1 0 010 1.414L9.414 9H17a1 1 0 110 2H9.414l1.293 1.293a1 1 0 01-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 />
               </svg>
               <span>Login</span>
@@ -69,8 +130,6 @@ const NavigationBar = () => {
               </svg>
             </button>
           </div>
-
-          <div></div>
         </div>
       </div>
     </nav>
