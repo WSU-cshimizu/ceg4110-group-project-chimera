@@ -1,4 +1,4 @@
-# Minimum Viable Specification Draft
+# Minimum Viable Specification Overview
 
 ## Summary
 
