@@ -1,17 +1,13 @@
 const express = require('express');
-const mysql = require('mysql2');
-//const cors = require('cors');
+const mysql = require('mysql');
+const cors = require('cors');
+
+const app = express();
+app.use(cors());
+
 const dbConfig = require('./config/db.config.js');
 const db = require('./models/db');
 const router = express.Router();
-const app = express();
-
-const knownEntitiesRoutes = require('./routes/known_entities');
-
-
-app.use(express.json());
-app.use('/api', knownEntitiesRoutes);
-
 
 // Create a connection to the database
 const connection = mysql.createConnection({
@@ -20,6 +16,21 @@ const connection = mysql.createConnection({
   password: dbConfig.password,
   database: dbConfig.database
 });
+
+
+app.get('/', (req, res) => {
+  return res.json('From Backend Side');
+});
+
+
+
+const knownEntitiesRoutes = require('./routes/known_entities');
+
+
+app.use(express.json());
+app.use('/api', knownEntitiesRoutes);
+
+
 
 // Connect to database
 connection.connect((err) => {
