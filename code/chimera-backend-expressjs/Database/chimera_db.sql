@@ -1,10 +1,10 @@
 CREATE TABLE kwn_entity (
     keid           INT NOT NULL,
-    ketype         VARCHAR(20),
-    keorigin       VARCHAR(4000),
-    keabilities    VARCHAR(4000),
-    kebehavior     VARCHAR(4000),
-    keappearance   VARCHAR(4000),
+    ketype         TEXT,
+    keorigin       TEXT,
+    keabilities    TEXT,
+    kebehavior     TEXT,
+    keappearance   TEXT,
     keemf5         INT,
     keghostorbs    INT,
     kespiritbox    INT,
@@ -17,9 +17,9 @@ CREATE TABLE kwn_entity (
 
 CREATE TABLE location (
     locationid    INT NOT NULL,
-    building_name VARCHAR(4000),
+    building_name TEXT,
     room_number   INT,
-    roomdetails   VARCHAR(4000),
+    roomdetails   TEXT,
     PRIMARY KEY (locationid)
 );
 
@@ -28,12 +28,12 @@ CREATE TABLE report (
     rpt_entity_reportedentityid INT NOT NULL,
     location_locationid         INT NOT NULL,
     datetime                    DATETIME,
-    weather                     VARCHAR(4000),
-    reportedevidence            VARCHAR(4000),
-    reportedabilities           VARCHAR(4000),
-    reportedbehavior            VARCHAR(4000),
-    reportedappearance          VARCHAR(4000),
-    reportedphenomena           VARCHAR(4000),
+    weather                     TEXT,
+    reportedevidence            TEXT,
+    reportedabilities           TEXT,
+    reportedbehavior            TEXT,
+    reportedappearance          TEXT,
+    reportedphenomena           TEXT,
     user_userid                 INT NOT NULL,
     PRIMARY KEY (reportid)
 );
@@ -42,9 +42,9 @@ CREATE TABLE rpt_entity (
     rptid               INT NOT NULL,
     kwn_entity_entityid INT NOT NULL,
     location_locationid INT NOT NULL,
-    rptabilities        VARCHAR(4000),
-    rptappearance       VARCHAR(4000),
-    rptbehavior         VARCHAR(4000),
+    rptabilities        TEXT,
+    rptappearance       TEXT,
+    rptbehavior         TEXT,
     rptemf5             INT,
     rptghostorbs        INT,
     rptspiritbox        INT,
@@ -57,7 +57,7 @@ CREATE TABLE rpt_entity (
 
 CREATE TABLE users (
     userid    INT NOT NULL,
-    useremail VARCHAR(4000),
+    useremail TEXT,
     PRIMARY KEY (userid)
 );
 
