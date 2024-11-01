@@ -23,9 +23,21 @@ FLUSH PRIVILEGES;
 ```
 
 3. Import the database schema:
-```
+```bash
 mysql -u chimera_user -p chimera_db < Database/chimera_db.sql
 ```
+
+Interact with database table:
+'''bash 
+mysql -u chimera_user -p chimera_db
+'''
+(Enter password: 1234)
+
+Launch Express.js server:
+```bash
+node index.js
+```
+
 
 -------------------------------------------------------------------------------
 
