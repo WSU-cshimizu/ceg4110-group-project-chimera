@@ -38,7 +38,6 @@ Launch Express.js server:
 node index.js
 ```
 
-
 -------------------------------------------------------------------------------
 
 1. If you add/delete/manipulate the datbase, run the following command to update the database:
