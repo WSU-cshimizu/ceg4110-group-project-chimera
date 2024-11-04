@@ -31,7 +31,7 @@ const LandingPage = () => {
 
   return (
     <>
-      <div className="mt-3 min-h-[90vh] flex bg-customBg dark:bg-gray-800 text-gray-900 dark:text-gray-200 dark:border-gray-600 p-6">
+      <div className="mt-[65px] min-h-[90vh] flex bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 dark:border-gray-600 p-6">
         <div className="min-h-full w-[50vh] flex-grow flex flex-col items-center justify-center text-center p-6">
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">
             Are You Ready to Face the Unexplained?

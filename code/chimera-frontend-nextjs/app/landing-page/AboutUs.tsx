@@ -16,8 +16,7 @@ const AboutUs = () => {
               <p className="mt-4 text-gray-900 dark:text-gray-200 text-lg">
                 WSU students, faculty, and staff have reported strange
                 disturbances across the campus and surrounding areas. Campus
-                police, maintnence, and custodial staff’s investigations have
-                all turned up inconclusive information regarding these
+                police, maintnence, and custodial staff’slusive information regarding these
                 disturbances. We believe these disturbances are of the
                 supernatural nature. The goal of C.H.I.M.E.R.A. is to compile
                 all known supernatural entity data and compare reports from
@@ -35,9 +34,9 @@ const AboutUs = () => {
             </div>
             <div className="mt-12 md:mt-0">
               <img
-                src="https://images.unsplash.com/photo-1531973576160-7125cd663d86"
+                src="AboutUs.png"
                 alt="About Us Image"
-                className="object-cover rounded-lg shadow-md"
+                className="rounded-lg shadow-md"
               />
             </div>
           </div>

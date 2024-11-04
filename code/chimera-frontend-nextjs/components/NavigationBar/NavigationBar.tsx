@@ -40,7 +40,7 @@ const NavigationBar = () => {
   }, [pathname, scrollTarget]);
 
   return (
-    <nav className="bg-white dark:bg-gray-800 shadow-md w-100 px-8 md:px-auto">
+    <nav className="bg-white dark:bg-gray-800 shadow-md w-100 px-8 md:px-auto fixed w-full z-[100000000] top-0">
       <div
         id="home"
         className="md:h-16 h-28 mx-auto md:px-4 container flex items-center justify-between flex-wrap md:flex-nowrap"
@@ -66,9 +66,12 @@ const NavigationBar = () => {
             </li>
             <li
               className="md:px-4 md:py-2 hover:text-indigo-400 dark:hover:text-indigo-300"
+              onClick={() => {
+                router.push("/explore");
+              }}
               style={{ cursor: "pointer" }}
             >
-              <a href="#">Explore</a>
+              Explore
             </li>
             <li
               className="md:px-4 md:py-2 hover:text-indigo-400 dark:hover:text-indigo-300"
