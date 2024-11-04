@@ -1,6 +1,6 @@
 module.exports = {
     host: "localhost",
     user: "chimera_user",
-    password: "",
+    password: "1234",
     database: "chimera_db"
   };

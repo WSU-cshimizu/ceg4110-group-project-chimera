@@ -1,6 +1,7 @@
 # Meeting Minutes
 
 ##  Attendees
+9/05/2024:
 * Aayush Neupane
 * Ben Jeffers
 * Isabella Livingston
