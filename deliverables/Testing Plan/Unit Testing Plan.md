@@ -14,24 +14,24 @@ The primary objective of this testing plan is to ensure the application meets th
 
 ## Coverage
 
-## Form Validations:
+# Form Validations:
 - Ensure all required fields (e.g., report details, user information) are validated before submission.
 - Validate input data types (e.g., correct format for dates, valid email addresses).
 - Check that meaningful error messages appear for missing or incorrect data entries.
 
-## Report Submission and Entity Comparison:
+# Report Submission and Entity Comparison:
 - Test the accuracy and efficiency of the algorithm that matches student reports with supernatural entity data.
 - Ensure that new reports are properly stored and can be retrieved or updated.
 
-## Error Handling:
+# Error Handling:
 - Test how the application behaves when provided with incomplete, incorrect, or conflicting data.
 - Validate that error messages are clear and guide users towards corrective actions.
 
-## User Interface (UI):
+# User Interface (UI):
 - Ensure the interface is responsive and intuitive for users from different roles (students, faculty, staff).
 - Test the navigation flow for ease of use and clarity (e.g., submitting reports, accessing comparison data).
 
-## Security and Access Control:
+# Security and Access Control:
 - Verify that only authorized personnel (faculty, staff) can access certain features like editing supernatural entity data.
 - Ensure sensitive data, like student identities, is protected and cannot be exposed without proper permissions.
 
