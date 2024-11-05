@@ -1,6 +1,22 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
+const { body, param, validationResult } = require('express-validator');
+
+const validateKnownEntity = [
+  body('ketype').isString().notEmpty(),
+  body('keorigin').isString().optional(),
+  body('keabilities').isString().optional(),
+  body('kebehavior').isString().optional(),
+  body('keappearance').isString().optional(),
+  body('keemf5').isInt().optional(),
+  body('keghostorbs').isInt().optional(),
+  body('kespiritbox').isInt().optional(),
+  body('kefreezingtemp').isInt().optional(),
+  body('keuv').isInt().optional(),
+  body('keghostwriting').isInt().optional(),
+  body('kedots').isInt().optional()
+];
 
 // Create known entity
 router.post('/known-entities', (req, res) => {

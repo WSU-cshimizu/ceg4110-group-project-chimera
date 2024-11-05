@@ -2,6 +2,12 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
 
+const validateLocation = [
+  body('building_name').isString().notEmpty(),
+  body('room_number').isInt().optional(),
+  body('roomdetails').isString().optional()
+];
+
 // Create location
 router.post('/locations', (req, res) => {
   const location = req.body;

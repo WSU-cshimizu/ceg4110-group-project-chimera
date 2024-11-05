@@ -10,7 +10,7 @@ A paranormal entity tracking and analysis system built with Express.js and MySQL
 ```bash
 sudo apt install nodejs npm
 sudo apt install mysql-server
-npm install express mysql cors
+npm install express express-validator mysql cors
 ```
 
 2. Install MySQL and create the database:
