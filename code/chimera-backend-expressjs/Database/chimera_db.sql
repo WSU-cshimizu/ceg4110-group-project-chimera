@@ -61,6 +61,29 @@ CREATE TABLE users (
     PRIMARY KEY (userid)
 );
 
+-- Create table for flagged reports
+CREATE TABLE report_flags (
+    flag_id INT NOT NULL AUTO_INCREMENT,
+    report_id INT NOT NULL,
+    user_id INT NOT NULL,
+    reason TEXT NOT NULL,
+    status VARCHAR(20) DEFAULT 'pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (flag_id),
+    FOREIGN KEY (report_id) REFERENCES report(reportid),
+    FOREIGN KEY (user_id) REFERENCES users(userid)
+);
+
+-- Create table for user favorites
+CREATE TABLE report_favorites (
+    user_id INT NOT NULL,
+    report_id INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (user_id, report_id),
+    FOREIGN KEY (user_id) REFERENCES users(userid),
+    FOREIGN KEY (report_id) REFERENCES report(reportid)
+);
+
 ALTER TABLE report
     ADD FOREIGN KEY (location_locationid)
     REFERENCES location (locationid);
@@ -73,6 +96,10 @@ ALTER TABLE report
     ADD FOREIGN KEY (user_userid)
     REFERENCES users (userid);
 
+-- Add upvotes column to report table
+ALTER TABLE report
+ADD COLUMN upvotes INT DEFAULT 0;
+
 ALTER TABLE rpt_entity
     ADD FOREIGN KEY (kwn_entity_entityid)
     REFERENCES kwn_entity (keid);
@@ -80,3 +107,4 @@ ALTER TABLE rpt_entity
 ALTER TABLE rpt_entity
     ADD FOREIGN KEY (location_locationid)
     REFERENCES location (locationid);
+

@@ -74,4 +74,54 @@ router.delete('/reports/:id', (req, res) => {
   });
 });
 
+// Search and filter reports
+router.get('/reports/search', auth, (req, res, next) => {
+  const { keyword, date, location, entityType, sortBy } = req.query;
+  
+  let query = 'SELECT * FROM report WHERE 1=1';
+  const params = [];
+
+  if (keyword) {
+    query += ' AND (reportedappearance LIKE ? OR reportedbehavior LIKE ?)';
+    params.push(`%${keyword}%`, `%${keyword}%`);
+  }
+
+  if (date) {
+    query += ' AND DATE(datetime) = ?';
+    params.push(date);
+  }
+
+  if (location) {
+    query += ' AND location_locationid = ?';
+    params.push(location);
+  }
+
+  if (entityType) {
+    query += ' AND rpt_entity_reportedentityid = ?';
+    params.push(entityType);
+  }
+
+  if (sortBy === 'recent') {
+    query += ' ORDER BY datetime DESC';
+  } else if (sortBy === 'popular') {
+    query += ' ORDER BY upvotes DESC';
+  }
+
+  db.query(query, params, (err, results) => {
+    if (err) return next(err);
+    res.json(results);
+  });
+});
+
+// Upvote a report
+router.post('/reports/:id/upvote', auth, (req, res, next) => {
+  db.query('UPDATE report SET upvotes = upvotes + 1 WHERE reportid = ?', 
+    [req.params.id], 
+    (err) => {
+      if (err) return next(err);
+      res.json({ message: 'Report upvoted successfully' });
+    });
+});
+
+
 module.exports = router;
