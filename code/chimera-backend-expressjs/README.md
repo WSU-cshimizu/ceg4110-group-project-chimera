@@ -76,8 +76,6 @@ Connection details are configured in config/db.config.js:
 - Generate user reports
 - Link reported entities to known entities
 
-
-
 (For Megan)
 Connecting to Database: https://dev.mysql.com/doc/connector-python/en/connector-python-example-connecting.html
 
