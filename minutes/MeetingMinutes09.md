@@ -41,8 +41,12 @@
 
 ###  03:  Create basic comparison tools 
 - Assigned to: Megan Noble
-- Done: 
+- Done: 11/05/2024
 
-###  04:  Finish Basic Admin Functionality 
+###  04:  Finish Explore Template 
+- Assigned to: Aayush Neupane
+- Done: 11/04/2024
+
+###  05:  Finish Basic Admin Functionality 
 - Assigned to: Ben Jeffers
 - Done: N/A
