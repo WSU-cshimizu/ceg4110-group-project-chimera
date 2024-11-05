@@ -35,8 +35,6 @@ The primary objective of this testing plan is to ensure the application meets th
 - Verify that only authorized personnel (faculty, staff) can access certain features like editing supernatural entity data.
 - Ensure sensitive data, like student identities, is protected and cannot be exposed without proper permissions.
 
-
-## Software Library
-
-
 ## Conclusion
+The functional unit testing plan for the C.H.I.M.E.R.A. application ensures that the system is tested thoroughly for validation, usability, and robustness. 
+This plan will help catch potential issues early and improve the overall quality of the application, ultimately assisting in the identification of supernatural disturbances reported by students, faculty, and staff.
