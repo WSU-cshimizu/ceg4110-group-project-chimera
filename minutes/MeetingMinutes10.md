@@ -13,15 +13,17 @@
 
 
 ##  Agenda
-11/05/24:
+11/05/24: (In-class)
 - Group Activity: If your project has a functioning UI,
 find another group with a functioning UI and rate the other group's UI using the SUS framework.
 
+11/05/24: (Out-of-class)
+- Check in with what the team has done.
+
+11/07/24:
+- Check in with what the team has done.
 
 ##  Notes/Comments
-
-
-##  Action Items
 
 ## SUS Score
 1. I think that I would like to use this system frequently.
@@ -45,3 +47,10 @@ find another group with a functioning UI and rate the other group's UI using the
 10. I needed to learn a lot of things before I could get going with this system.
     score: 2
 Total SUS Score 87.5
+
+
+##  Action Items
+
+###  01:  Finishing Testing APIs in Postman
+- Assigned to: Isabella Livingston
+- Done: 
