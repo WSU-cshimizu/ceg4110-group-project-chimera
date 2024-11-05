@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
 
+// Validation rules for locations
 const validateLocation = [
   body('building_name').isString().notEmpty(),
   body('room_number').isInt().optional(),

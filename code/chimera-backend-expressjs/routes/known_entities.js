@@ -3,6 +3,7 @@ const router = express.Router();
 const db = require('../models/db');
 const { body, param, validationResult } = require('express-validator');
 
+// Validation rules for known entities
 const validateKnownEntity = [
   body('ketype').isString().notEmpty(),
   body('keorigin').isString().optional(),

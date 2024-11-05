@@ -4,6 +4,7 @@ const db = require('../models/db');
 const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
 
+// Validation rules for reports
 const validateReport = [
   body('rpt_entity_reportedentityid').isInt().notEmpty(),
   body('location_locationid').isInt().notEmpty(),
