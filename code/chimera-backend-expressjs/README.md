@@ -13,20 +13,11 @@ sudo apt install mysql-server
 npm install express express-validator mysql cors
 ```
 
-2. Install MySQL and create the database:
-```bash
-mysql -u root -p
-CREATE USER 'chimera_user'@'localhost' IDENTIFIED BY '1234';
-CREATE DATABASE chimera_db;
-GRANT ALL PRIVILEGES ON chimera_db.* TO 'chimera_user'@'localhost';
-FLUSH PRIVILEGES;
-```
-
-3. Import the database schema:
+2. Import the database schema:
 ```bash
 mysql -u chimera_user -p chimera_db < Database/chimera_db.sql
 ```
-
+# ------ ACTIONS ------
 Interact with database table:
 ```bash
 mysql -u chimera_user -p chimera_db
@@ -35,7 +26,7 @@ mysql -u chimera_user -p chimera_db
 
 Launch Express.js server:
 ```bash
-node index.js
+node app.js
 ```
 
 -------------------------------------------------------------------------------
