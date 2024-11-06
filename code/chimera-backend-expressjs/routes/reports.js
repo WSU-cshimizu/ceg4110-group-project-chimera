@@ -5,18 +5,18 @@ const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
 
 // Validation rules for reports
-const validateReport = [
-  body('rpt_entity_reportedentityid').isInt().notEmpty(),
-  body('location_locationid').isInt().notEmpty(),
-  body('datetime').isISO8601().notEmpty(),
-  body('weather').isString().optional(),
-  body('reportedevidence').isString().optional(),
-  body('reportedabilities').isString().optional(),
-  body('reportedbehavior').isString().optional(),
-  body('reportedappearance').isString().optional(),
-  body('reportedphenomena').isString().optional(),
-  body('user_userid').isInt().notEmpty()
-];
+// const validateReport = [
+//   body('rpt_entity_reportedentityid').isInt().notEmpty(),
+//   body('location_locationid').isInt().notEmpty(),
+//   body('datetime').isISO8601().notEmpty(),
+//   body('weather').isString().optional(),
+//   body('reportedevidence').isString().optional(),
+//   body('reportedabilities').isString().optional(),
+//   body('reportedbehavior').isString().optional(),
+//   body('reportedappearance').isString().optional(),
+//   body('reportedphenomena').isString().optional(),
+//   body('user_userid').isInt().notEmpty()
+// ];
 
 // Create report
 router.post('/reports', (req, res) => {
@@ -76,7 +76,7 @@ router.delete('/reports/:id', (req, res) => {
 });
 
 // Search and filter reports
-router.get('/reports/search', auth, (req, res, next) => {
+router.get('/reports/search', (req, res, next) => {
   const { keyword, date, location, entityType, sortBy } = req.query;
   
   let query = 'SELECT * FROM report WHERE 1=1';
@@ -115,7 +115,7 @@ router.get('/reports/search', auth, (req, res, next) => {
 });
 
 // Upvote a report
-router.post('/reports/:id/upvote', auth, (req, res, next) => {
+router.post('/reports/:id/upvote', (req, res, next) => {
   db.query('UPDATE report SET upvotes = upvotes + 1 WHERE reportid = ?', 
     [req.params.id], 
     (err) => {

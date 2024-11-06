@@ -39,6 +39,17 @@ app.get('/', (req, res) => {
 const knownEntitiesRoutes = require('./routes/known_entities');
 app.use('/api', knownEntitiesRoutes);
 
+
+// Import and use routes
+const reportsRoutes = require('./routes/reports.js');
+app.use('/api', reportsRoutes);
+
+// Import and use routes
+const userRoutes = require('./routes/users.js');
+app.use('/api', userRoutes);
+
+
+
 // Server configuration
 const PORT = process.env.PORT || 9000;
 app.listen(PORT, () => {
