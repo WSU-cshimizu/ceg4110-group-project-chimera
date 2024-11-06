@@ -31,14 +31,18 @@ router.post('/reports', (req, res) => {
   });
 });
 
-// Read all reports
+// Read all reports with pagination
 router.get('/reports', (req, res) => {
-  db.query('SELECT * FROM report', (err, results) => {
-    if (err) {
-      res.status(500).send(err);
-    } else {
-      res.send(results);
-    }
+  const page = parseInt(req.query.page) || 1;
+  const limit = parseInt(req.query.limit) || 10;
+  const offset = (page - 1) * limit;
+  
+  db.query('SELECT * FROM report LIMIT ? OFFSET ?', [limit, offset], (err, results) => {
+      if (err) {
+          res.status(500).send(err);
+      } else {
+          res.send(results);
+      }
   });
 });
 

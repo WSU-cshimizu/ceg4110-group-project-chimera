@@ -78,8 +78,10 @@ router.delete('/entities/:id', (req, res) => {
 });
 
 
+
 // ------------------ FOR MEGAN ------------------
 // Compare reported entity with known entities to get parameters
+// Ex.) http://localhost:3000/entities/compare/1                 <-- Gets entity ID #1 to use for comparison
 router.get('/entities/compare/:id', (req, res) => {
   const reportedEntityId = req.params.id;
   
@@ -103,6 +105,35 @@ router.get('/entities/compare/:id', (req, res) => {
               knownEntities: knownEntities
           });
       });
+  });
+});
+
+// Filters entity data
+// Ex.) GET /entities/filter?evidence=1&behavior=aggressive&location=5 <-- Gets specific values (evidence: 1, behavior: agressive, location: 5)
+router.get('/entities/filter', (req, res) => {
+  const { evidence, behavior, location } = req.query;
+  let query = 'SELECT * FROM rpt_entity WHERE 1=1';
+  const params = [];
+
+  if (evidence) {
+      query += ' AND rptemf5 = ? OR rptghostorbs = ?';
+      params.push(evidence, evidence);
+  }
+  if (behavior) {
+      query += ' AND rptbehavior LIKE ?';
+      params.push(`%${behavior}%`);
+  }
+  if (location) {
+      query += ' AND location_locationid = ?';
+      params.push(location);
+  }
+
+  db.query(query, params, (err, results) => {
+      if (err) {
+          res.status(500).send(err);
+      } else {
+          res.send(results);
+      }
   });
 });
 
