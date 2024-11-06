@@ -34,7 +34,7 @@ node app.js
 ```
 -------------------------------------------------------------------------------
 
-1. If you add/delete/manipulate the datbase, run the following command to update the database:
+1. If you add/delete/manipulate the datbase, run the following command (to the console) to update the database:
 ```bash
 mysqldump -u chimera_user -p chimera_db > chimera_db_full.sql
 ```
