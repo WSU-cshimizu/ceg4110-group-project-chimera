@@ -5,6 +5,7 @@ const { body, param, validationResult } = require('express-validator');
 
 // Validation rules for known entities
 const validateKnownEntity = [
+  body('keid').isInt().notEmpty(),
   body('ketype').isString().notEmpty(),
   body('keorigin').isString().optional(),
   body('keabilities').isString().optional(),

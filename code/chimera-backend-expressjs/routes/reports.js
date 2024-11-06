@@ -3,20 +3,21 @@ const router = express.Router();
 const db = require('../models/db');
 const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
+const { body, param, validationResult } = require('express-validator');
 
-// Validation rules for reports
-// const validateReport = [
-//   body('rpt_entity_reportedentityid').isInt().notEmpty(),
-//   body('location_locationid').isInt().notEmpty(),
-//   body('datetime').isISO8601().notEmpty(),
-//   body('weather').isString().optional(),
-//   body('reportedevidence').isString().optional(),
-//   body('reportedabilities').isString().optional(),
-//   body('reportedbehavior').isString().optional(),
-//   body('reportedappearance').isString().optional(),
-//   body('reportedphenomena').isString().optional(),
-//   body('user_userid').isInt().notEmpty()
-// ];
+//Validation rules for reports
+const validateReport = [
+  body('rpt_entity_reportedentityid').isInt().notEmpty(),
+  body('location_locationid').isInt().notEmpty(),
+  body('datetime').isISO8601().notEmpty(),
+  body('weather').isString().optional(),
+  body('reportedevidence').isString().optional(),
+  body('reportedabilities').isString().optional(),
+  body('reportedbehavior').isString().optional(),
+  body('reportedappearance').isString().optional(),
+  body('reportedphenomena').isString().optional(),
+  body('user_userid').isInt().notEmpty()
+];
 
 // Create report
 router.post('/reports', (req, res) => {

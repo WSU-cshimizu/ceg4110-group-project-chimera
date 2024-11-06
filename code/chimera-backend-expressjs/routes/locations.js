@@ -5,6 +5,7 @@ const { body, param, validationResult } = require('express-validator');
 
 // Validation rules for locations
 const validateLocation = [
+  body('locationid').isInt().notEmpty(),
   body('building_name').isString().notEmpty(),
   body('room_number').isInt().optional(),
   body('roomdetails').isString().optional()
