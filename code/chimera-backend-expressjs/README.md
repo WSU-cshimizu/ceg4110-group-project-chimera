@@ -17,7 +17,7 @@ npm install express express-validator mysql cors
 ```bash
 mysql -u chimera_user -p chimera_db < Database/chimera_db.sql
 ```
-## ------ ACTIONS ------
+## Actions
 Interact with database table:
 ```bash
 mysql -u chimera_user -p chimera_db
