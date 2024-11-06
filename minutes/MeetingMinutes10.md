@@ -21,7 +21,9 @@ find another group with a functioning UI and rate the other group's UI using the
 - Check in with what the team has done.
 
 11/07/24:
+- Go over requirements
 - Check in with what the team has done.
+- Talk about frontend and backend integration.
 
 ##  Notes/Comments
 11/05/24: (Out-of-class)
