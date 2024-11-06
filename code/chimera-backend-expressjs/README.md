@@ -24,11 +24,14 @@ mysql -u chimera_user -p chimera_db
 ```
 (Enter password: 1234)
 
+Different SQL commands:
+https://www.dataquest.io/blog/sql-commands/ 
+
+
 Launch Express.js server:
 ```bash
 node app.js
 ```
-
 -------------------------------------------------------------------------------
 
 1. If you add/delete/manipulate the datbase, run the following command to update the database:
