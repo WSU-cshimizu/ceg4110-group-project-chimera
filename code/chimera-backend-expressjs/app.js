@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
 });
 
 // Import and use routes
-//const authRoutes = require('./routes/auth.js');
+//const authRoutes = require('./routes/auth.js'); Created authentication route, when it's finished remove "//"s
 const reportedEntitiesRoutes = require('./routes/entities.js');
 const knownEntitiesRoutes = require('./routes/known_entities.js');
 const locationsRoutes = require('./routes/locations.js');
