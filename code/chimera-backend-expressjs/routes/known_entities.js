@@ -3,7 +3,9 @@ const router = express.Router();
 const db = require('../models/db');
 const { body, param, validationResult } = require('express-validator');
 
+// Validation rules for known entities
 const validateKnownEntity = [
+  body('keid').isInt().notEmpty(),
   body('ketype').isString().notEmpty(),
   body('keorigin').isString().optional(),
   body('keabilities').isString().optional(),
@@ -30,14 +32,17 @@ router.post('/known-entities', (req, res) => {
   });
 });
 
-// Read all known entities
+// Read all known entities (added sorting to help frontend)
 router.get('/known-entities', (req, res) => {
-  db.query('SELECT * FROM kwn_entity', (err, results) => {
-    if (err) {
-      res.status(500).send(err);
-    } else {
-      res.send(results);
-    }
+  const sortBy = req.query.sortBy || 'keid';
+  const order = req.query.order || 'ASC';
+  
+  db.query(`SELECT * FROM kwn_entity ORDER BY ${sortBy} ${order}`, (err, results) => {
+      if (err) {
+          res.status(500).send(err);
+      } else {
+          res.send(results);
+      }
   });
 });
 

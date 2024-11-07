@@ -3,7 +3,9 @@ const router = express.Router();
 const db = require('../models/db');
 const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
+const { body, param, validationResult } = require('express-validator');
 
+//Validation rules for reports
 const validateReport = [
   body('rpt_entity_reportedentityid').isInt().notEmpty(),
   body('location_locationid').isInt().notEmpty(),
@@ -29,14 +31,18 @@ router.post('/reports', (req, res) => {
   });
 });
 
-// Read all reports
+// Read all reports with pagination
 router.get('/reports', (req, res) => {
-  db.query('SELECT * FROM report', (err, results) => {
-    if (err) {
-      res.status(500).send(err);
-    } else {
-      res.send(results);
-    }
+  const page = parseInt(req.query.page) || 1;
+  const limit = parseInt(req.query.limit) || 10;
+  const offset = (page - 1) * limit;
+  
+  db.query('SELECT * FROM report LIMIT ? OFFSET ?', [limit, offset], (err, results) => {
+      if (err) {
+          res.status(500).send(err);
+      } else {
+          res.send(results);
+      }
   });
 });
 
@@ -75,7 +81,7 @@ router.delete('/reports/:id', (req, res) => {
 });
 
 // Search and filter reports
-router.get('/reports/search', auth, (req, res, next) => {
+router.get('/reports/search', (req, res, next) => {
   const { keyword, date, location, entityType, sortBy } = req.query;
   
   let query = 'SELECT * FROM report WHERE 1=1';
@@ -114,7 +120,7 @@ router.get('/reports/search', auth, (req, res, next) => {
 });
 
 // Upvote a report
-router.post('/reports/:id/upvote', auth, (req, res, next) => {
+router.post('/reports/:id/upvote', (req, res, next) => {
   db.query('UPDATE report SET upvotes = upvotes + 1 WHERE reportid = ?', 
     [req.params.id], 
     (err) => {

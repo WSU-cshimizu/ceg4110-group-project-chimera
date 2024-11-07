@@ -13,34 +13,28 @@ sudo apt install mysql-server
 npm install express express-validator mysql cors
 ```
 
-2. Install MySQL and create the database:
-```bash
-mysql -u root -p
-CREATE USER 'chimera_user'@'localhost' IDENTIFIED BY '1234';
-CREATE DATABASE chimera_db;
-GRANT ALL PRIVILEGES ON chimera_db.* TO 'chimera_user'@'localhost';
-FLUSH PRIVILEGES;
-```
-
-3. Import the database schema:
+2. Import the database schema:
 ```bash
 mysql -u chimera_user -p chimera_db < Database/chimera_db.sql
 ```
-
+## Actions
 Interact with database table:
 ```bash
 mysql -u chimera_user -p chimera_db
 ```
 (Enter password: 1234)
 
+Different SQL commands:
+https://www.dataquest.io/blog/sql-commands/ 
+
+
 Launch Express.js server:
 ```bash
-node index.js
+node app.js
 ```
-
 -------------------------------------------------------------------------------
 
-1. If you add/delete/manipulate the datbase, run the following command to update the database:
+1. If you add/delete/manipulate the datbase, run the following command (to the console) to update the database:
 ```bash
 mysqldump -u chimera_user -p chimera_db > chimera_db_full.sql
 ```
