@@ -1,6 +1,7 @@
 # Guest Lecture Response
 
 - **Guest Lecturer:** Leland Vakarian
+- **Title** Senior Computer Scientist and SysAdmin
 - **Company:** Mitre
 - **Date:** November 7 2024
 - **Contact:** 
