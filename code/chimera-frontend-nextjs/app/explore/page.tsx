@@ -5,6 +5,15 @@ import "../custom-css/explore-page.css";
 export default function Page() {
   const [entities, setEntities] = useState([]);
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   //useEffect(() => {
   //    fetch('http://localhost:9000/explore')
   //        .then(response => response.json())
@@ -17,7 +26,16 @@ export default function Page() {
     <>
       <main className="grid grid-cols-12 md:grid-rows-[55px_1fr] min-h-screen gap-4 p-4 md:mt-0 mt-[100px]">
         {/* Sidebar Section */}
+
         <section className="col-span-12 md:col-span-3 lg:col-span-3 row-start-1 md:row-start-1 md:sticky md:top-20 self-start p-4">
+          <button
+            type="button"
+            onClick={handleOpenModal}
+            className="w-full py-2.5 mb-5 px-6 text-sm bg-blue-50 text-blue-500 rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 hover:bg-red-100 hover:text-red-700"
+          >
+            Add your story +
+          </button>
+
           <div className="bg-zinc-100 dark:bg-slate-700 text-gray-700 dark:text-gray-200 rounded-md p-3">
             <h1 className="text-xl font-bold">Filter</h1>
             <div className="flex flex-col items-center justify-between gap-3 align-start space-y-4 md:space-y-0 bg-none md:space-x-4 p-6 rounded-lg">
@@ -49,7 +67,7 @@ export default function Page() {
               </div>
 
               <div className="w-full mt-3">
-                <button className="w-full md:ml-[-10px] px-6 py-2 dark:text-white text-black bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-300 font-medium">
+                <button className="w-full md:ml-[-10px] px-6 py-2 text-white bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-300 font-medium">
                   Filter
                 </button>
               </div>
@@ -260,6 +278,109 @@ export default function Page() {
             </div>
           </div>
         </section>
+        {isModalOpen && (
+          <div
+            id="hs-vertically-centered-modal"
+            className="  fixed inset-0 z-[1000000000000000] flex items-center justify-center overflow-x-hidden overflow-y-auto bg-black bg-opacity-50"
+            role="dialog"
+            aria-labelledby="hs-vertically-centered-modal-label"
+          >
+            <div className="bg-zinc-100 dark:bg-slate-700 rounded-xl shadow-xl sm:max-w-lg w-full mx-3 p-4">
+              <div className="flex justify-between items-center py-3 px-4 border-b">
+                <h3
+                  id="hs-vertically-centered-modal-label"
+                  className="font-bold text-gray-800 dark:text-gray-200"
+                >
+                  Add story
+                </h3>
+                <button
+                  type="button"
+                  onClick={handleCloseModal}
+                  className="size-8 inline-flex justify-center items-center gap-x-2 rounded-full bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-none"
+                  aria-label="Close"
+                >
+                  <span className="sr-only">Close</span>
+                  <svg
+                    className="shrink-0 size-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M18 6L6 18"></path>
+                    <path d="M6 6l12 12"></path>
+                  </svg>
+                </button>
+              </div>
+              <div className="p-4 overflow-y-auto">
+                <div className="space-y-4">
+                  <div>
+                    <label className="block font-semibold dark:text-white text-black">Title</label>
+                    <input
+                      type="text"
+                      placeholder="Enter title"
+                      className="w-full p-2 rounded bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-100"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block font-semibold dark:text-white text-black">Date and Time</label>
+                    <input
+                      type="datetime-local"
+                      className="w-full p-2 rounded bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-100"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block font-semibold dark:text-white text-black">Location</label>
+                    <input
+                      type="text"
+                      placeholder="Enter location"
+                      className="w-full p-2 rounded bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-100"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block font-semibold dark:text-white text-black">Weather</label>
+                    <input
+                      type="text"
+                      placeholder="Enter weather"
+                      className="w-full p-2 rounded bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-100"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block font-semibold dark:text-white text-black">Description</label>
+                    <textarea
+                      placeholder="Enter description"
+                      className="w-full p-2 rounded h-24 bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-100"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="flex justify-end items-center gap-x-2 py-3 px-4 border-t">
+                <button
+                  type="button"
+                  onClick={handleCloseModal}
+                  className="py-2 px-3 inline-flex items-center text-sm font-medium rounded-lg border bg-white text-gray-800 hover:bg-gray-50"
+                >
+                  Close
+                </button>
+                <button
+                  type="button"
+                  className="py-2 px-3 inline-flex items-center text-sm font-medium rounded-lg bg-blue-600 text-white hover:bg-blue-700"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </main>
     </>
   );
