@@ -26,6 +26,7 @@ CREATE TABLE `c_user` (
   `userid` int NOT NULL,
   `useremail` text,
   `password` text,
+  `role` varchar(50) DEFAULT 'user',
   PRIMARY KEY (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -36,7 +37,7 @@ CREATE TABLE `c_user` (
 
 LOCK TABLES `c_user` WRITE;
 /*!40000 ALTER TABLE `c_user` DISABLE KEYS */;
-INSERT INTO `c_user` VALUES (1,'dfgdgdfgd',NULL),(2,'dfgdgdfgd',NULL);
+INSERT INTO `c_user` VALUES (1,'dfgdgdfgd',NULL,'user'),(2,'dfgdgdfgd',NULL,'user');
 /*!40000 ALTER TABLE `c_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -183,4 +184,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-07 12:13:34
+-- Dump completed on 2024-11-07 13:23:18
