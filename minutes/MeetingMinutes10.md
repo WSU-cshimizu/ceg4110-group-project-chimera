@@ -11,6 +11,9 @@
 
 11/07/24:
 
+* Aayush Neupane
+* Isabella Livingston
+* Jacob Hackman
 
 ##  Agenda
 11/05/24: (In-class)
@@ -31,7 +34,7 @@ find another group with a functioning UI and rate the other group's UI using the
 - Highlight input that megan will recieve and the expected output
 
 11/07/24:
-
+- 
 
 ## SUS Score
 1. I think that I would like to use this system frequently.
@@ -61,7 +64,7 @@ Total SUS Score 87.5
 
 ###  01:  Finishing Testing APIs in Postman
 - Assigned to: Isabella Livingston
-- Done: 
+- Done: 09/6/2025
 
 ###  02:  Finishing Basic Admin Portal
 - Assigned to: Ben Jeffers
