@@ -10,7 +10,6 @@
 * Megan Noble
 
 11/07/24:
-
 * Aayush Neupane
 * Isabella Livingston
 * Jacob Hackman
@@ -34,6 +33,7 @@ find another group with a functioning UI and rate the other group's UI using the
 - Highlight input that megan will recieve and the expected output
 
 11/07/24:
+- Set up backend and database for team memebers.
 - 
 
 ## SUS Score

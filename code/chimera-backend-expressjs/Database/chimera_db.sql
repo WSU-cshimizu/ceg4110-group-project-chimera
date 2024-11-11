@@ -108,3 +108,7 @@ ALTER TABLE rpt_entity
     ADD FOREIGN KEY (location_locationid)
     REFERENCES location (locationid);
 
+-- For people that are using the schema to create a new database 
+ALTER TABLE users
+    ADD COLUMN password TEXT;
+
