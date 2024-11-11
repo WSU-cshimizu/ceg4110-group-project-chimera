@@ -63,7 +63,7 @@ router.post("/login", async (req, res) => {
     }
 
     // Query the user from the database
-    const query = "SELECT * FROM users WHERE useremail = ?";
+    const query = "SELECT userid, useremail, role FROM users WHERE useremail = ? AND password = ?";
     db.query(query, [useremail], (err, results) => {
       if (err) {
         return res.status(500).send({ error: err });
@@ -87,8 +87,8 @@ router.post("/login", async (req, res) => {
         message: "Logged in successfully.",
         user: {
           userid,
-          name,
           email,
+          role,
         },
       });
     });

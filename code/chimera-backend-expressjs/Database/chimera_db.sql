@@ -111,4 +111,5 @@ ALTER TABLE rpt_entity
 -- For people that are using the schema to create a new database 
 ALTER TABLE users
     ADD COLUMN password TEXT;
+    ADD COLUMN role TEXT;
 
