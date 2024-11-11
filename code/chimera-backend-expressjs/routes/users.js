@@ -57,39 +57,30 @@ router.post("/login", async (req, res) => {
   try {
     const { useremail, password } = req.body;
 
-    // Validate the input fields
     if (!useremail || !password) {
       return res.status(400).send({ message: "Email and password are required." });
     }
 
-    // Query the user from the database
+    // Updated query to include role
     const query = "SELECT userid, useremail, role FROM users WHERE useremail = ? AND password = ?";
-    db.query(query, [useremail], (err, results) => {
+    db.query(query, [useremail, password], (err, results) => {
       if (err) {
         return res.status(500).send({ error: err });
       }
 
-      // Check if the user exists
       if (results.length === 0) {
-        return res.status(404).send({ message: "User not found. Please sign up." });
+        return res.status(404).send({ message: "Invalid credentials" });
       }
 
       const user = results[0];
-
-      // Verify password (assuming plain text for now, but consider hashing in production)
-      if (user.password !== password) {
-        return res.status(401).send({ message: "Invalid email or password." });
-      }
-
-      // If successful, send user details (without sensitive information like password)
-      const { userid, name } = user;
+      
       res.status(200).send({
         message: "Logged in successfully.",
         user: {
-          userid,
-          email,
-          role,
-        },
+          userid: user.userid,
+          email: user.useremail,
+          role: user.role
+        }
       });
     });
   } catch (error) {
