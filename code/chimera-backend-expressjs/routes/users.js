@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const db = require("../models/db");
 
-// Helper function to generate a 6-digit random ID
+// Generates a 6-digit random ID
 const generateUserId = () => {
   return Math.floor(100000 + Math.random() * 900000).toString();
 };
@@ -24,12 +24,12 @@ router.post("/users", async (req, res) => {
   try {
     const user = req.body;
 
-    // Generate a unique user ID
+    // Generate a user ID
     let userId = generateUserId();
     let isUserIdExists = await checkUserIdExists(userId);
     console.log(user)
 
-    // Keep generating until we find a unique ID
+    // Keep generating until we find a ID
     while (isUserIdExists) {
       userId = generateUserId();
       isUserIdExists = await checkUserIdExists(userId);
@@ -91,14 +91,11 @@ router.post("/login", async (req, res) => {
 
 // Read all users
 router.get("/users", (req, res) => {
-  db.query("SELECT * FROM users", (err, results) => {
+  db.query("SELECT userid, useremail, role FROM users", (err, results) => {
     if (err) {
       res.status(500).send(err);
     } else {
-      // res.send(results);
-      res.send({
-        hello: "hii",
-      });
+      res.send(results);
     }
   });
 });
