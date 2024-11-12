@@ -79,8 +79,14 @@ const loginUser = async (req, res) => {
                 const accessToken = jwt.sign(
                     {"username" : email},
                     process.env.ACCESS_TOKEN_SECRET,
-                    {expiresIn : '15m'}
+                    {expiresIn : '10m'}
                 );
+                const refreshToken = jwt.sign(
+                    {"username" : email},
+                    process.env.REFRESH_TOKEN_SECRET,
+                    {expiresIn : '4h'}
+                );
+                res.cookie('jwt', refreshToken, {httpOnly : true, maxAge : 14400000});
                 res.status(200).send(accessToken);
             }
         });
