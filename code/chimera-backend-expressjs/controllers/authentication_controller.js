@@ -4,7 +4,6 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 const path = require('path');
-const { access } = require('fs');
 
 const createNewUser = async (req, res) => {
     const { email, pwd } = req.body;
@@ -95,4 +94,27 @@ const loginUser = async (req, res) => {
     }
 }
 
-module.exports = {createNewUser, loginUser};
+const handleRefreshToken = (req, res) => {
+    const cookies = req.cookies;
+    if(!cookies?.jwt){
+        return res.status(401).send("No JWT found");
+    }
+    const refreshToken = cookies.jwt;
+    jwt.verify(
+        refreshToken,
+        process.env.REFRESH_TOKEN_SECRET,
+        (err, token) => {
+            if(err){
+                return res.send(403).send("Invalid token")
+            }
+            const accessToken = jwt.sign(
+                {"username" : token.username},
+                process.env.ACCESS_TOKEN_SECRET,
+                {expiresIn : '10m'}
+            );
+            res.status(200).send(accessToken);
+        }
+    );
+}
+
+module.exports = {createNewUser, loginUser, handleRefreshToken};
