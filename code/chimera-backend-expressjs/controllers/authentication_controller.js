@@ -99,7 +99,7 @@ const logoutUser = (req, res) => {
     if(!cookies?.jwt){
         return res.sendStatus(204);
     }
-
+    const refreshToken = cookies.jwt;
     res.clearCookie('jwt', refreshToken, {httpOnly : true, maxAge : 14400000});
     res.sendStatus(204);
 }
