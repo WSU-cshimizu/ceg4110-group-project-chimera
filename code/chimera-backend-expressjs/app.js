@@ -3,6 +3,8 @@ const express = require('express');
 const mysql = require('mysql');
 const cors = require('cors');
 
+const verifyJWT = require('./middleware/auth.js')
+
 // Initialize Express app
 const app = express();
 
@@ -44,8 +46,9 @@ const locationsRoutes = require('./routes/locations.js');
 const reportsRoutes = require('./routes/reports.js');
 const usersRoutes = require('./routes/users.js');
 
-//app.use('/api', authRoutes); // Not created yet
+
 app.use('/api', authorizationRoutes);
+app.use(verifyJWT);
 app.use('/api', reportedEntitiesRoutes);
 app.use('/api', knownEntitiesRoutes);
 app.use('/api', locationsRoutes);

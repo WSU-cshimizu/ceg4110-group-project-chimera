@@ -1,6 +1,10 @@
 const express = require('express');
 const db = require('../models/db');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+require('dotenv').config();
+const path = require('path');
+const { access } = require('fs');
 
 const createNewUser = async (req, res) => {
     const { email, pwd } = req.body;
@@ -53,10 +57,10 @@ const loginUser = async (req, res) => {
     const {email, pwd} = req.body;
     
     if(!email){
-        return res.status(400).send("User Email is Required")
+        return res.status(400).send("User Email is Required");
     }
     if(!pwd){
-        return res.status(400).send("User Password is Required")
+        return res.status(400).send("User Password is Required");
     }
 
     try{
@@ -72,7 +76,12 @@ const loginUser = async (req, res) => {
                 return res.status(401).send("Invalid email or password");
             }
             else{
-                res.status(200).send("User log-in successful")
+                const accessToken = jwt.sign(
+                    {"username" : email},
+                    process.env.ACCESS_TOKEN_SECRET,
+                    {expiresIn : '15m'}
+                );
+                res.status(200).send(accessToken);
             }
         });
     }catch (err){
