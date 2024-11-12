@@ -94,6 +94,16 @@ const loginUser = async (req, res) => {
     }
 }
 
+const logoutUser = (req, res) => {
+    const cookies = req.cookies;
+    if(!cookies?.jwt){
+        return res.sendStatus(204);
+    }
+
+    res.clearCookie('jwt', refreshToken, {httpOnly : true, maxAge : 14400000});
+    res.sendStatus(204);
+}
+
 const handleRefreshToken = (req, res) => {
     const cookies = req.cookies;
     if(!cookies?.jwt){
@@ -117,4 +127,4 @@ const handleRefreshToken = (req, res) => {
     );
 }
 
-module.exports = {createNewUser, loginUser, handleRefreshToken};
+module.exports = {createNewUser, loginUser, logoutUser, handleRefreshToken};

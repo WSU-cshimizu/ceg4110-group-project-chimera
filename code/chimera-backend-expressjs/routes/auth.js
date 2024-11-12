@@ -4,6 +4,7 @@ const authenticationController = require('../controllers/authentication_controll
 
 router.post('/auth/createUser', authenticationController.createNewUser);
 router.get('/auth/login', authenticationController.loginUser);
-router.get('/refresh', authenticationController.handleRefreshToken);
+router.get('/auth/logout', authenticationController.logoutUser);
+router.get('/auth/refresh', authenticationController.handleRefreshToken);
 
 module.exports = router;
