@@ -46,14 +46,9 @@ const locationsRoutes = require('./routes/locations.js');
 const reportsRoutes = require('./routes/reports.js');
 const usersRoutes = require('./routes/users.js');
 
-<<<<<<< HEAD
 
 app.use('/api', authorizationRoutes);
 app.use(verifyJWT);
-=======
-//app.use('/api', authRoutes); // Not created yet
-app.use('/api', authorizationRoutes);
->>>>>>> 48ca529 (add authentication controllers and routes)
 app.use('/api', reportedEntitiesRoutes);
 app.use('/api', knownEntitiesRoutes);
 app.use('/api', locationsRoutes);

@@ -1,13 +1,10 @@
 const express = require('express');
 const db = require('../models/db');
 const bcrypt = require('bcrypt');
-<<<<<<< HEAD
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 const path = require('path');
 const { access } = require('fs');
-=======
->>>>>>> 48ca529 (add authentication controllers and routes)
 
 const createNewUser = async (req, res) => {
     const { email, pwd } = req.body;
@@ -60,17 +57,10 @@ const loginUser = async (req, res) => {
     const {email, pwd} = req.body;
     
     if(!email){
-<<<<<<< HEAD
         return res.status(400).send("User Email is Required");
     }
     if(!pwd){
         return res.status(400).send("User Password is Required");
-=======
-        return res.status(400).send("User Email is Required")
-    }
-    if(!pwd){
-        return res.status(400).send("User Password is Required")
->>>>>>> 48ca529 (add authentication controllers and routes)
     }
 
     try{
@@ -86,7 +76,6 @@ const loginUser = async (req, res) => {
                 return res.status(401).send("Invalid email or password");
             }
             else{
-<<<<<<< HEAD
                 const accessToken = jwt.sign(
                     {"username" : email},
                     process.env.ACCESS_TOKEN_SECRET,
@@ -99,9 +88,6 @@ const loginUser = async (req, res) => {
                 );
                 res.cookie('jwt', refreshToken, {httpOnly : true, maxAge : 14400000});
                 res.status(200).send(accessToken);
-=======
-                res.status(200).send("User log-in successful")
->>>>>>> 48ca529 (add authentication controllers and routes)
             }
         });
     }catch (err){
