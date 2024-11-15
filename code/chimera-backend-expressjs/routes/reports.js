@@ -22,6 +22,11 @@ const validateReport = [
 // Create report
 router.post('/reports', (req, res) => {
   const report = req.body;
+
+
+
+
+  
   db.query('INSERT INTO report SET ?', report, (err, result) => {
     if (err) {
       res.status(500).send(err);
