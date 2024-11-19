@@ -19,7 +19,7 @@ const validateReport = [
   body('user_userid').isInt().notEmpty()
 ];
 
-// Create report
+// Create report 
 router.post('/reports', (req, res) => {
   const report = req.body;
   db.query('INSERT INTO report SET ?', report, (err, result) => {
