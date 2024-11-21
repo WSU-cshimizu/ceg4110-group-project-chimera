@@ -1,8 +1,8 @@
 # Guest Lecture Response
 
 - **Guest Lecturer:** Scott Duberstein 
-- **Title** 
-- **Company:** 
+- **Title** Freelancer?
+- **Company:** n/a
 - **Date:** November 21 2024
 - **Contact:** 
 
@@ -15,17 +15,17 @@
 
 ## Lessons Learned
 
-### 1.
+### 1. 
 
 ### 2. 
 
-### 3.
+### 3. 
 
-### 4.
+### 4. 
 
-### 5.
+### 5. 
 
-### 6.
+### 6. There's two dogs in you, one is normal and the other is a demon hell spawn. 
 
 ## Signatures
 Isabella Livingston, Jacob Hackman, Ben Jeffers, Megan Noble, Aayush Neupane
