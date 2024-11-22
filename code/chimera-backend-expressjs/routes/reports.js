@@ -8,7 +8,8 @@ const { body, param, validationResult } = require('express-validator');
 //Validation rules for reports
 const validateReport = [
   body('rpt_entity_reportedentityid').isInt().notEmpty(),
-  body('location_locationid').isInt().notEmpty(),
+  body('title').isString().notEmpty(),
+  //body('location_locationid').isInt().notEmpty(), <-- Set up like this to not validate the location
   body('datetime').isISO8601().notEmpty(),
   body('weather').isString().optional(),
   body('reportedevidence').isString().optional(),
@@ -19,9 +20,18 @@ const validateReport = [
   body('user_userid').isInt().notEmpty()
 ];
 
-// Create report
+// Create report 
 router.post('/reports', (req, res) => {
-  const report = req.body;
+  const report = {
+    title: req.body.title,
+    rpt_entity_reportedentityid: req.body.rpt_entity_reportedentityid,
+    location_locationid: req.body.location_locationid,
+    datetime: req.body.datetime,
+    reportedevidence: req.body.reportedevidence,
+    user_userid: req.body.user_userid,
+    is_anonymous: req.body.is_anonymous
+  };
+
   db.query('INSERT INTO report SET ?', report, (err, result) => {
     if (err) {
       res.status(500).send(err);
