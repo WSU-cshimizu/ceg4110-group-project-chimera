@@ -8,10 +8,10 @@
 
 ## Pertinent Questions
 
-* Question 1: 
-    * Answer: 
-* Question 2: 
-    * Answer: 
+* Question 1: Why do you prefer tech that is documented?
+    * Answer: Unofficial documentation usually is more difficult to analyze and come across. Official documentation would give you the best chance of telling you what you need to know.
+* Question 2: Why do you prefer freelancing?
+    * Answer: Having a job is stressful, and doing this he has more time to choose what he can work on.
 
 ## Lessons Learned
 
