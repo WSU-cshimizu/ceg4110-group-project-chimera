@@ -2,8 +2,11 @@
 import React, { useEffect, useState } from "react";
 import AboutUs from "./landing-page/AboutUs";
 import ContactUs from "./landing-page/ContactUs";
+import { useRouter } from "next/navigation";
 
 const LandingPage = () => {
+  const router = useRouter();
+
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -37,7 +40,7 @@ const LandingPage = () => {
             Are You Ready to Face the Unexplained?
           </h2>
           <h2 className="text-xl md:text-2xl">Start Your Journey Today!</h2>
-          <button className="mt-4 px-6 py-2 bg-indigo-500 text-white text-lg rounded-lg shadow hover:bg-blue-700 transition duration-200">
+          <button onClick={()=>router.push("/explore")} className="mt-4 px-6 py-2 bg-indigo-500 text-white text-lg rounded-lg shadow hover:bg-blue-700 transition duration-200">
             Start Now
           </button>
         </div>
