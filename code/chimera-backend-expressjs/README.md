@@ -23,12 +23,12 @@ npm install express express-validator mysql cors
 
 -------- For Linux Users --------
 ```bash
-mysql -u chimera_user -p chimera_db < Database/chimera_db.sql
+mysql -u your_username -p your_database < Database/chimera_db_full.sql
 ```
 
 -------- For Windows Users --------
 ```bash
-mysql -u chimera_user -p chimera_db < Database\chimera_db.sql
+mysql -u your_username -p your_database < Database\chimera_db_full.sql
 ```
 
 ## Actions
@@ -52,12 +52,12 @@ node app.js
 
 -------- For Linux Users --------
 ```bash
-mysqldump -u chimera_user -p chimera_db > chimera_db_full.sql
+mysqldump -u chimera_user -p chimera_db > Database/chimera_db_full.sql
 ```
 
 -------- For Windows Users --------
 ```bash
-mysqldump -u chimera_user -p chimera_db > chimera_db_full.sql
+mysqldump -u chimera_user -p chimera_db > Database\chimera_db_full.sql
 ```
 
 2. Add this file to the repository

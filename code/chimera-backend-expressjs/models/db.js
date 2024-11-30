@@ -1,10 +1,10 @@
 const mysql = require('mysql2');
 
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "chimera_db"
+  host: "localhost",       // Database host
+  user: "root",            // Your MySQL username
+  password: "Aayush12345", // Your MySQL password
+  database: "chimera_db"   // Database name
 });
 
 connection.connect(error => {

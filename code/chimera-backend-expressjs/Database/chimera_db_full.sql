@@ -84,12 +84,15 @@ DROP TABLE IF EXISTS `report`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `report` (
-  `reportid` int NOT NULL,
+  `reportid` int NOT NULL AUTO_INCREMENT,
+  `title` text,
   `rpt_entity_reportedentityid` int NOT NULL,
   `location_locationid` int NOT NULL,
   `datetime` datetime DEFAULT NULL,
   `reportedevidence` text,
   `user_userid` int NOT NULL,
+  `is_anonymous` BOOLEAN,
+
   PRIMARY KEY (`reportid`),
   KEY `location_locationid` (`location_locationid`),
   KEY `rpt_entity_reportedentityid` (`rpt_entity_reportedentityid`),
@@ -153,12 +156,14 @@ UNLOCK TABLES;
 -- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
+DROP TABLE IF EXISTS `c_users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
   `userid` int NOT NULL,
   `useremail` text,
+  `password` text,
+  `role` varchar(50) DEFAULT 'user'
   PRIMARY KEY (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
