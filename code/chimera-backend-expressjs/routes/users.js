@@ -10,12 +10,16 @@ const generateUserId = () => {
 // Function to check if user ID exists in the database
 const checkUserIdExists = (userId) => {
   return new Promise((resolve, reject) => {
-    db.query("SELECT userid FROM users WHERE userid = ?", [userId], (err, results) => {
-      if (err) {
-        return reject(err);
+    db.query(
+      "SELECT userid FROM users WHERE userid = ?",
+      [userId],
+      (err, results) => {
+        if (err) {
+          return reject(err);
+        }
+        resolve(results.length > 0); // Returns true if userId exists
       }
-      resolve(results.length > 0); // Returns true if userId exists
-    });
+    );
   });
 };
 
@@ -27,7 +31,7 @@ router.post("/users", async (req, res) => {
     // Generate a user ID
     let userId = generateUserId();
     let isUserIdExists = await checkUserIdExists(userId);
-    console.log(user)
+    console.log(user);
 
     // Keep generating until we find a ID
     while (isUserIdExists) {
@@ -38,13 +42,17 @@ router.post("/users", async (req, res) => {
     // Add the generated userId to the user object
     user.userid = userId;
 
-    console.log(user)
+    console.log(user);
     // Insert the user into the database
     db.query("INSERT INTO users SET ?", user, (err, result) => {
       if (err) {
         res.status(500).send(err);
       } else {
-        res.status(201).send({ id: result.insertId, ...user, message: "Logged in sucessfully." });
+        res.status(201).send({
+          id: result.insertId,
+          ...user,
+          message: "Logged in sucessfully.",
+        });
       }
     });
   } catch (error) {
@@ -58,33 +66,46 @@ router.post("/login", async (req, res) => {
     const { useremail, password } = req.body;
 
     if (!useremail || !password) {
-      return res.status(400).send({ message: "Email and password are required." });
+      return res.status(400).json({ message: "Email and password are required." });
     }
 
-    // Updated query to include role
-    const query = "SELECT userid, useremail, role FROM users WHERE useremail = ? AND password = ?";
-    db.query(query, [useremail, password], (err, results) => {
+    console.log("useremail:", useremail);
+
+    // Query the user from the database
+    const query = `SELECT userid, useremail, role, password FROM users WHERE useremail = ?`;
+    db.query(query, [useremail], (err, results) => {
       if (err) {
-        return res.status(500).send({ error: err });
+        console.error("Error executing query:", err);
+        return res.status(500).json({ message: "Server error. Please try again later." });
       }
 
+      // Handle no user found
       if (results.length === 0) {
-        return res.status(404).send({ message: "Invalid credentials" });
+        return res.status(401).json({ message: "Invalid email or password." });
       }
 
       const user = results[0];
-      
-      res.status(200).send({
+
+      // Verify password (plain-text comparison)
+      if (user && user.password !== password) {
+        return res.status(401).json({ message: "Invalid email or password." });
+      }
+      else{
+        return res.status(401).json({message:"User Not Found"})
+      }
+      const { userid, useremail, role } = user;
+      res.status(200).json({
         message: "Logged in successfully.",
         user: {
-          userid: user.userid,
-          email: user.useremail,
-          role: user.role
-        }
+          userid,
+          useremail,
+          role,
+        },
       });
     });
   } catch (error) {
-    res.status(500).send({ error: error.message });
+    console.error("Error:", error);
+    res.status(500).json({ message: "Server error. Please try again later." });
   }
 });
 

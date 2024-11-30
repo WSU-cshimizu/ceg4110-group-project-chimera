@@ -1,21 +1,40 @@
 "use client";
+import { useAuth } from "@/context/AuthContext";
 import { useTheme } from "next-themes";
 import { useRouter, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { scroller as ScrollLink } from "react-scroll";
+import { CiSettings } from "react-icons/ci";
+
+interface UserDetail {
+  id: number;
+  name: string;
+  email: string;
+  // Add other properties based on your `userDetail` structure
+}
 
 const NavigationBar = () => {
   const router = useRouter();
   const pathname = usePathname();
   const { theme, setTheme } = useTheme();
   const [scrollTarget, setScrollTarget] = useState(null);
+  const [loginShow, setLoginShow] = useState(true);
+  const [userDetails, setUserDetails] = useState<any>(null);
+  const [active, setActive] = useState("home");
+  const { isAuthenticated, login, logout } = useAuth();
+
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleNavigation = (sectionId: any) => {
+    setActive(sectionId);
     if (pathname === "/") {
       // If already on the home page, scroll immediately
       ScrollLink.scrollTo(sectionId, {
         smooth: true,
       });
+      if (sectionId === "home") {
+        window.scrollTo(0, 0);
+      }
     } else {
       // If not on the home page, navigate first, then scroll after a delay
       router.push("/");
@@ -23,6 +42,27 @@ const NavigationBar = () => {
       setScrollTarget(sectionId);
       router.push("/");
     }
+  };
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const storedUserDetailString = localStorage.getItem("userDetail") || null;
+
+  const storedUserDetail: UserDetail | null = storedUserDetailString
+    ? JSON.parse(storedUserDetailString)
+    : null;
+
+  useEffect(() => {
+    setLoginShow(false);
+    if (storedUserDetail) {
+      setUserDetails(storedUserDetail);
+    }
+  }, []);
+
+  const removeLocalStorate = () => {
+    localStorage.removeItem("userDetail");
+    window.location.reload();
   };
 
   useEffect(() => {
@@ -48,25 +88,36 @@ const NavigationBar = () => {
         <div className="text-indigo-500 md:order-1 font-extrabold">CHIMERA</div>
         <div className="text-gray-700 dark:text-gray-200 order-3 w-full md:w-auto md:order-2">
           <ul className="flex font-semibold justify-between">
-            <li className="md:px-4 md:py-2 text-indigo-500 dark:text-indigo-400">
-              <span
-                onClick={() => handleNavigation("home")}
-                style={{ cursor: "pointer" }}
-              >
-                Home
-              </span>
-            </li>
-            <li className="md:px-4 md:py-2 hover:text-indigo-400 dark:hover:text-indigo-300">
-              <span
-                onClick={() => handleNavigation("aboutUs")}
-                style={{ cursor: "pointer" }}
-              >
-                About Us
-              </span>
+            <li
+              className={`md:px-4 md:py-2 ${
+                active === "home"
+                  ? "text-indigo-500 dark:text-indigo-400"
+                  : "hover:text-indigo-400 dark:hover:text-indigo-300"
+              }`}
+              onClick={() => handleNavigation("home")}
+              style={{ cursor: "pointer" }}
+            >
+              Home
             </li>
             <li
-              className="md:px-4 md:py-2 hover:text-indigo-400 dark:hover:text-indigo-300"
+              className={`md:px-4 md:py-2 ${
+                active === "aboutUs"
+                  ? "text-indigo-500 dark:text-indigo-400"
+                  : "hover:text-indigo-400 dark:hover:text-indigo-300"
+              }`}
+              onClick={() => handleNavigation("aboutUs")}
+              style={{ cursor: "pointer" }}
+            >
+              About Us
+            </li>
+            <li
+              className={`md:px-4 md:py-2 ${
+                active === "explore"
+                  ? "text-indigo-500 dark:text-indigo-400"
+                  : "hover:text-indigo-400 dark:hover:text-indigo-300"
+              }`}
               onClick={() => {
+                handleNavigation("explore");
                 router.push("/explore");
               }}
               style={{ cursor: "pointer" }}
@@ -74,38 +125,102 @@ const NavigationBar = () => {
               Explore
             </li>
             <li
-              className="md:px-4 md:py-2 hover:text-indigo-400 dark:hover:text-indigo-300"
+              className={`md:px-4 md:py-2 ${
+                active === "contactUs"
+                  ? "text-indigo-500 dark:text-indigo-400"
+                  : "hover:text-indigo-400 dark:hover:text-indigo-300"
+              }`}
+              onClick={() => handleNavigation("contactUs")}
               style={{ cursor: "pointer" }}
             >
-              <span
-                onClick={() => handleNavigation("contactUs")}
-                style={{ cursor: "pointer" }}
-              >
-                Contact Us
-              </span>
+              Contact Us
             </li>
           </ul>
         </div>
         <div className="order-2 md:order-3">
           <div className="flex gap-2">
-            <button
-              className="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-xl flex items-center gap-2"
-              onClick={() => router.push("/login-page")}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                viewBox="0 0 20 20"
-                fill="currentColor"
+            {isAuthenticated || storedUserDetailString ? (
+              <a
+                onClick={() => {
+                  removeLocalStorate();
+                  logout();
+                }}
+                className="cursor-pointer px-5 py-2.5 font-medium bg-blue-50 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg text-sm"
               >
-                <path
-                  fillRule="evenodd"
-                  d="M3 3a1 1 0 011 1v12a1 1 0 11-2 0V4a1 1 0 011-1zm7.707 3.293a1 1 0 010 1.414L9.414 9H17a1 1 0 110 2H9.414l1.293 1.293a1 1 0 01-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <span>Login</span>
-            </button>
+                Log out
+              </a>
+            ) : (
+              <a
+                onClick={() => {
+                  router.push("/login-page");
+                }}
+                className="relative cursor-pointer inline-flex items-center px-12 py-1 overflow-hidden text-sm font-small text-indigo-600 border-2 border-indigo-600 rounded-full hover:text-white group hover:bg-gray-50"
+              >
+                <span className="absolute left-0 block w-full h-0 transition-all bg-indigo-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
+                <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    ></path>
+                  </svg>
+                </span>
+                <span className="relative">Log In</span>
+              </a>
+            )}
+            <div className="relative">
+              {/* Button to open the dropdown */}
+              {isAuthenticated || storedUserDetailString ? (
+                <button
+                  onClick={toggleDropdown}
+                  className="flex h-10 w-10 p-2 items-center justify-center rounded-md border border-gray-800 text-gray-800 focus:outline-none focus:ring-0 focus:ring-gray-200 dark:border-slate-300 dark:text-white"
+                >
+                  <CiSettings size={"23px"} />
+                </button>
+              ) : null}
+
+              {/* Dropdown menu */}
+              {isOpen && (
+                <div
+                  className="absolute z-50 mt-2 right-1 w-48 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"
+                  id="language-dropdown-menu"
+                >
+                  <ul className="py-2 font-medium" role="none">
+                    <li>
+                      <a
+                        href="/profile-settings"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                        role="menuitem"
+                      >
+                        <div className="inline-flex items-center">
+                          
+                          Settings
+                        </div>
+                      </a>
+                    </li>
+                    {/* Add more languages below */}
+                    <li>
+                      <a
+                        href="/my-posts"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                        role="menuitem"
+                      >
+                        <div className="inline-flex items-center">My Posts</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </div>
+
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               type="button"
