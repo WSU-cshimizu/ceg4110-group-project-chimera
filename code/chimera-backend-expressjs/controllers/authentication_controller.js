@@ -18,7 +18,7 @@ const createNewUser = async (req, res) => {
 
     try {
         //Check that user does not already exist
-        db.query('SELECT * FROM c_users WHERE useremail = ?', [email], (err, results) => {
+        db.query('SELECT * FROM users WHERE useremail = ?', [email], (err, results) => {
             if (err) {
                 return res.status(500).send(err);
             }
@@ -29,7 +29,7 @@ const createNewUser = async (req, res) => {
   
         //Create new ID for user based on last created ID
         const newUserId = 0;
-        db.query('SELECT MAX(userid) AS highestId FROM c_users', (err, results) => {
+        db.query('SELECT MAX(userid) AS highestId FROM users', (err, results) => {
             if (err) {
                 return res.status(500).send(err);
             }
@@ -40,7 +40,7 @@ const createNewUser = async (req, res) => {
         hashedPwd = bcrypt.hash(pwd, 10);
         
         //Insert new user into database
-        db.query('INSERT INTO c_users (userid, useremail, password, role) VALUES (?, ?, ?, ?)', [newUserId, email, hashedPwd, "user"], (err) => {
+        db.query('INSERT INTO users (userid, useremail, password, role) VALUES (?, ?, ?, ?)', [newUserId, email, hashedPwd, "user"], (err) => {
             if (err) {
                 return res.status(500).send(err);
             }
@@ -63,7 +63,7 @@ const loginUser = async (req, res) => {
     }
 
     try{
-        db.query('SELECT * FROM c_users WHERE useremail = ?', [email], async (err, results) => {
+        db.query('SELECT * FROM users WHERE useremail = ?', [email], async (err, results) => {
             if(err){
                 return res.status(500).send("Error fetching user data");
             }
