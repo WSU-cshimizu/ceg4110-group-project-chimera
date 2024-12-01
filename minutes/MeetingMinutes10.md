@@ -23,9 +23,7 @@ find another group with a functioning UI and rate the other group's UI using the
 - Check in with what the team has done.
 
 11/07/24:
-- Go over requirements
 - Check in with what the team has done.
-- Talk about frontend and backend integration.
 
 ##  Notes/Comments
 11/05/24: (Out-of-class)
@@ -33,8 +31,8 @@ find another group with a functioning UI and rate the other group's UI using the
 - Highlight input that megan will recieve and the expected output
 
 11/07/24:
-- Set up backend and database for team memebers.
-- 
+- Adjusted report attributes to properly reflect the user submission fields in the frontend  
+- Add password and role as attributes to users for database 
 
 ## SUS Score
 1. I think that I would like to use this system frequently.
@@ -64,8 +62,8 @@ Total SUS Score 87.5
 
 ###  01:  Finishing Testing APIs in Postman
 - Assigned to: Isabella Livingston
-- Done: 09/6/2025
+- Done: 11/6/2024
 
 ###  02:  Finishing Basic Admin Portal
 - Assigned to: Ben Jeffers
-- Done: Hopefully by this Thursday, if not next Monday
+- Done: 11/11/2024

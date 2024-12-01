@@ -15,15 +15,15 @@
 
 ## Lessons Learned
 
-### 1. Don't use technology (hardware, APIs, etc.) that doesn't have official documentation.
+### 1. 
 
-### 2. We tend to talk ourselves out of doing something before we even get started.
+### 2. 
 
-### 3. When applying for jobs, write a cover letter with a few points related to the job description.
+### 3. 
 
-### 4. AAA Devs are academic, available, and amiable.
+### 4. 
 
-### 5. It's important to understand Inheritance vs. Composition.
+### 5. 
 
 ### 6. There's two dogs in you, one is normal and the other is a demon hell spawn. 
 
