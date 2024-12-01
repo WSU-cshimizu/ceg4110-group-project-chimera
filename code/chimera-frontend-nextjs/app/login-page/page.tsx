@@ -83,7 +83,7 @@ const LoginPage = () => {
       // Check the response and handle success
       if (response.status === 201) {
         console.log("Data submitted successfully:", response.data);
-        
+        toast.success("User registered Successfully.")
         setIsRegister(false);
       }
     } catch (error) {

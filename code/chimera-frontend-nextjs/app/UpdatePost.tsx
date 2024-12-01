@@ -39,7 +39,12 @@ const UpdatePost: React.FC<ModalProps> = ({
       setLocations(res.data);
     });
     setFormData(details);
-    setSelectedLocation(details?.location_locationid);
+    console.log(details);
+    if (header === "Reports") {
+      setSelectedLocation(details?.location_details);
+    } else {
+      setSelectedLocation(details?.location_locationid);
+    }
   }, [details]);
 
   const handleSubmit = (e: any) => {
@@ -55,7 +60,8 @@ const UpdatePost: React.FC<ModalProps> = ({
       .put(`http://localhost:9000/api/reports/${id}`, updatedData)
       .then((response) => {
         // Handle successful update
-        console.log("Report updated successfully:", response.data);
+        toast.success("Report updated successfully");
+        onClose();
       })
       .catch((error) => {
         // Handle error
@@ -72,8 +78,8 @@ const UpdatePost: React.FC<ModalProps> = ({
 
       // Handle success response
       console.log("Report status updated:", response.data.message);
-      onClose()
-      toast.success(`The report has been ${status}`)
+      onClose();
+      toast.success(`The report has been ${status}`);
 
       // Optionally, you can update the UI or refresh data here
     } catch (error) {
@@ -83,12 +89,14 @@ const UpdatePost: React.FC<ModalProps> = ({
     }
   };
 
+  console.log(details);
+
   if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 bg-gray-800 bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50">
       <div className="relative p-6 space-y-6 leading-none xs:w-[90%] md:w-[60%] rounded-lg bg-zinc-100 dark:bg-slate-700 ring-1 ring-gray-900/5 text-gray-700 dark:text-white">
-        <h2 className="text-lg font-bold">Edit Details</h2>
+        <h2 className="text-lg font-bold">{header}</h2>
         <form onSubmit={handleSubmit}>
           {/* Title */}
           <div className="mb-4">
@@ -133,21 +141,51 @@ const UpdatePost: React.FC<ModalProps> = ({
             >
               Location of the event:
             </label>
-            <select
-              id="location-select"
-              value={selectedLocation}
-              disabled={isDisabled || false}
-              onChange={handleSelectChange}
-              className={`w-full p-2 mt-1 rounded bg-white text-gray-800 dark:bg-gray-800 dark:text-gray-100`}
-            >
-              <option value="">-- Choose a location --</option>
-              {locations?.map((location) => (
-                <option key={location.locationid} value={location.locationid}>
-                  {location.building_name} - {location.roomdetails}
-                </option>
-              ))}
-            </select>
+            {header === "Reports" ? (
+              <p
+                style={{
+                  width: "100%",
+                  marginTop: 7,
+                  marginBottom: 10,
+                  color: "black",
+                }}
+                className="font-medium text-gray-700 dark:text-gray-300"
+              >
+                {selectedLocation}
+              </p>
+            ) : (
+              <select
+                id="location-select"
+                value={selectedLocation}
+                disabled={isDisabled || false}
+                onChange={handleSelectChange}
+                className={`w-full p-2 mt-1 rounded bg-white text-gray-800 dark:bg-gray-800 dark:text-gray-100`}
+              >
+                <option value="">-- Choose a location --</option>
+                {locations?.map((location) => (
+                  <option key={location.locationid} value={location.locationid}>
+                    {location.building_name} - {location.roomdetails}
+                  </option>
+                ))}
+              </select>
+            )}
           </div>
+          {header === "Reports" ? (
+            <div className="mb-4">
+              <label className="block text-sm font-bold mb-2" htmlFor="title">
+                Posted by
+              </label>
+              <input
+                type="text"
+                disabled={isDisabled || false}
+                id="title"
+                name="title"
+                value={`${details.user_name} || ${details.user_id}`}
+                onChange={handleChange}
+                className="w-full p-2 border rounded"
+              />
+            </div>
+          ) : null}
 
           {/* Description */}
           <div className="mb-4">

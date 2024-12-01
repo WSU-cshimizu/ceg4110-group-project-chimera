@@ -7,6 +7,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import ViewMore from "@/components/ViewMore";
 import LikeButton from "@/components/LikeButton";
+import { BiSearch } from "react-icons/bi";
 
 // Define the form's data structure
 interface FormValues {
@@ -23,13 +24,47 @@ export default function Page() {
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [locations, setLocations] = useState([]);
   const [reportList, setReportList] = useState([]);
-
+  const [likedReports, setLikedReports] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModal2Open, setIsModal2Open] = useState(false);
   const [modalDetails, setModalDetails] = useState(false);
   const [userId, setUserId] = useState<string | null>(null);
   const [user, setUser] = useState<Object | null>(null);
+  const [dateRange, setDateRange] = useState({
+    startDate: "",
+    endDate: "",
+  });
 
+  const handleDateChange = (e: any) => {
+    const { id, value } = e.target;
+    setDateRange((prevRange) => ({
+      ...prevRange,
+      [id]: value,
+    }));
+  };
+
+  const handleDateSubmit = () => {
+    if (dateRange.startDate && dateRange.endDate) {
+      console.log("Start Date:", dateRange.startDate);
+      console.log("End Date:", dateRange.endDate);
+      const datedata = {
+        startDate: dateRange.startDate,
+        endDate: dateRange.endDate,
+      };
+      axios
+        .post("http://localhost:9000/api/filter-reports", datedata)
+        .then((res) => {
+          setReportList(res.data);
+        })
+        .catch((err) => {
+          setReportList([]);
+          console.log(err);
+        });
+    } else {
+      console.error("Both start and end dates must be selected.");
+    }
+  };
   useEffect(() => {
     // Retrieve userDetails from local storage
     const storedUserDetails = localStorage.getItem("userDetail");
@@ -40,6 +75,15 @@ export default function Page() {
       console.log(parsedDetails);
       setUserId(parsedDetails.userid || null); // Extract userid
     }
+
+    axios
+      .get("http://localhost:9000/api/mostLikedReports")
+      .then((res) => {
+        setLikedReports(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   const handleToggleChange = () => {
@@ -116,6 +160,23 @@ export default function Page() {
       });
   }, []);
 
+  const handleClear = () => {
+    setDateRange({
+      startDate: "",
+      endDate: "",
+    });
+
+    axios
+      .get("http://localhost:9000/api/reports")
+      .then((res) => {
+        console.log("response", res);
+        setReportList(res.data);
+      })
+      .catch((err) => {
+        console.log("location fetch error");
+      });
+  };
+
   const {
     register,
     handleSubmit,
@@ -132,6 +193,18 @@ export default function Page() {
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
+  };
+
+  const handleSearch = (event :any) => {
+    const value = event.target.value.toLowerCase();
+    setSearchTerm(value);
+
+    // Filter data based on search term
+    const filtered = reportList.filter((item) =>
+      item.title.toLowerCase().includes(value)
+    );
+
+    setReportList(filtered);
   };
 
   const items = Array.from({ length: 10 });
@@ -153,35 +226,50 @@ export default function Page() {
             <h1 className="text-xl font-bold">Filter</h1>
             <div className="flex flex-col items-center justify-between gap-3 align-start space-y-4 md:space-y-0 bg-none md:space-x-4 p-6 rounded-lg">
               <div className="relative w-full mb-3">
-                <label className=" mb-2 text-sm font-medium dark:text-white text-black">
-                  Date and Time
+                <label
+                  htmlFor="startDate"
+                  className="mb-2 text-sm font-medium text-black dark:text-white"
+                >
+                  Start Date and Time
                 </label>
                 <input
                   type="datetime-local"
-                  id="date-time"
-                  className=" w-full px-4 py-2 bg-white text-gray-700 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+                  id="startDate"
+                  value={dateRange.startDate}
+                  onChange={handleDateChange}
+                  className="w-full px-4 py-2 bg-white text-gray-700 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
                 />
               </div>
 
-              <div className="relative w-full">
-                <label className="block md:ml-[-10px] mb-2 text-sm font-medium dark:text-white text-black">
-                  Category of Report
-                </label>
-                <select
-                  id="category"
-                  className=" md:ml-[-10px] w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+              <div className="relative w-full mb-3">
+                <label
+                  htmlFor="endDate"
+                  className="mb-2 text-sm font-medium text-black dark:text-white"
                 >
-                  <option value="">Select Category</option>
-                  <option value="sales">Sales</option>
-                  <option value="finance">Finance</option>
-                  <option value="inventory">Inventory</option>
-                  <option value="customer">Customer</option>
-                </select>
+                  End Date and Time
+                </label>
+                <input
+                  type="datetime-local"
+                  id="endDate"
+                  value={dateRange.endDate}
+                  onChange={handleDateChange}
+                  className="w-full px-4 py-2 bg-white text-gray-700 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+                />
               </div>
-
               <div className="w-full mt-3">
-                <button className="w-full md:ml-[-10px] px-6 py-2 text-white bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-300 font-medium">
+                <button
+                  onClick={handleDateSubmit}
+                  className="w-full md:ml-[-10px] px-6 py-2 text-white bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-300 font-medium"
+                >
                   Filter
+                </button>
+              </div>
+              <div className="w-full mt-3">
+                <button
+                  onClick={handleClear}
+                  className="w-full md:ml-[-10px] px-6 py-2 text-white bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-300 font-medium"
+                >
+                  Clear
                 </button>
               </div>
             </div>
@@ -190,70 +278,91 @@ export default function Page() {
 
         {/* Main Content Section */}
         <article className="col-span-12 md:col-span-6 lg:col-span-5 row-start-2 md:row-start-1 md:mt-[45px] p-4">
+          <div className="pt-2 relative my-3 mx-auto text-gray-600 dark:text-gray-300">
+            <input
+              className="border-2 border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+              name="search"
+              placeholder="Search"
+              onChange={handleSearch}
+            />
+          </div>
           <ul className="space-y-8">
-            {reportList.length > 0
-              ? reportList.map(
-                  (items) =>
-                    items.status !== "pending" &&
-                    items.status !== "denied" && (
-                      <li className="text-sm leading-6">
-                        <div className="relative group">
-                          <div className="absolute transition rounded-lg opacity-25 -inset-1 duration-400 group-hover:opacity-100 group-hover:duration-200"></div>
-                          <a className="cursor-pointer">
-                            <div className="relative p-6 space-y-6 leading-none rounded-lg bg-zinc-100 dark:bg-slate-700 ring-1 ring-gray-900/5">
-                              <div className="flex items-center justify-between">
-                                <div className="flex items-center space-x-4">
-                                  <img
-                                    src="https://cdn.pixabay.com/photo/2023/10/03/10/49/anonymous-8291223_1280.png"
-                                    className="w-12 h-12 bg-center bg-cover border rounded-full"
-                                    alt="Tim Cook"
-                                  />
-                                  <div>
-                                    <h3 className="text-lg font-semibold text-gray-700 dark:text-white">
-                                      {items.user_name == null ||
-                                      items.is_anonymous
-                                        ? "Anonymous"
-                                        : items.user_name}
-                                    </h3>
-                                    <p className="text-gray-500 text-md">
-                                      {dateconverter(items.datetime)}
-                                    </p>
-                                  </div>
-                                </div>
-
-                                <LikeButton
-                                  postId={items.reportid}
-                                  userId={items.user_id}
+            {reportList.length > 0 ? (
+              reportList.map(
+                (items) =>
+                  items.status !== "pending" &&
+                  items.status !== "denied" && (
+                    <li className="text-sm leading-6">
+                      <div className="relative group">
+                        <div className="absolute transition rounded-lg opacity-25 -inset-1 duration-400 group-hover:opacity-100 group-hover:duration-200"></div>
+                        <a className="cursor-pointer">
+                          <div className="relative p-6 space-y-6 leading-none rounded-lg bg-zinc-100 dark:bg-slate-700 ring-1 ring-gray-900/5">
+                            <div className="flex items-center justify-between">
+                              <div className="flex items-center space-x-4">
+                                <img
+                                  src={
+                                    items.is_anonymous
+                                      ? "https://cdn.pixabay.com/photo/2023/10/03/10/49/anonymous-8291223_1280.png"
+                                      : "https://pics.craiyon.com/2023-12-24/THsjm15QQhaId4fUzAcBgQ.webp"
+                                  }
+                                  className="w-12 h-12 bg-center bg-cover border rounded-full"
+                                  alt="Tim Cook"
                                 />
+                                <div>
+                                  <h3 className="text-lg font-semibold text-gray-700 dark:text-white">
+                                    {items.title}
+                                  </h3>
+                                  <h4 className="text-md text-gray-400  text-gray-700 dark:text-white mb-2">
+                                    {items.user_name == null ||
+                                    items.is_anonymous
+                                      ? "Anonymous"
+                                      : items.user_name}
+                                  </h4>
+                                  <p className="text-gray-500 text-md">
+                                    {dateconverter(items.datetime)}
+                                  </p>
+                                </div>
                               </div>
-                              <p className="leading-normal dark:text-gray-300 text-gray-600 text-md">
-                                {items.reportedevidence ?? null}
-                              </p>
 
-                              <button
-                                onClick={() => handleViewMore(items)}
-                                className="flex items-center text-indigo-700 dark:bg-white border border-indigo-600 py-2 px-5 gap-1 rounded inline-flex items-center"
-                              >
-                                <span>View More</span>
-                                <svg
-                                  fill="none"
-                                  stroke="currentColor"
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth="2"
-                                  viewBox="0 0 24 24"
-                                  className="w-3 h-3 ml-2"
-                                >
-                                  <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                </svg>
-                              </button>
+                              <LikeButton
+                                postId={items.reportid}
+                                userId={items.user_id}
+                              />
                             </div>
-                          </a>
-                        </div>
-                      </li>
-                    )
-                )
-              : null}
+                            <p className="leading-normal dark:text-gray-300 text-gray-600 text-md">
+                              {items.reportedevidence ?? null}
+                            </p>
+
+                            <button
+                              onClick={() => handleViewMore(items)}
+                              className="flex items-center text-indigo-700 dark:bg-white border border-indigo-600 py-2 px-5 gap-1 rounded inline-flex items-center"
+                            >
+                              <span>View More</span>
+                              <svg
+                                fill="none"
+                                stroke="currentColor"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                viewBox="0 0 24 24"
+                                className="w-3 h-3 ml-2"
+                              >
+                                <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                              </svg>
+                            </button>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                  )
+              )
+            ) : (
+              <div className="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-full text-pink-700 bg-pink-100 border border-pink-300 ">
+                <div className="text-xs font-normal leading-none max-w-full flex-initial">
+                  No reports found!
+                </div>
+              </div>
+            )}
           </ul>
         </article>
         {isModal2Open && (
@@ -275,102 +384,27 @@ export default function Page() {
                     role="list"
                     className="divide-y divide-gray-200 dark:divide-gray-700"
                   >
-                    <li className="py-3 sm:py-4">
-                      <div className="flex items-center space-x-4">
-                        <div className="flex-shrink-0">
-                          <img
-                            className="w-8 h-8 rounded-full"
-                            src="https://cdn.pixabay.com/photo/2023/10/03/10/49/anonymous-8291223_1280.png"
-                            alt="Neil image"
-                          />
+                    {likedReports?.map((items) => (
+                      <li className="py-3 sm:py-4">
+                        <div className="flex items-center space-x-4">
+                          <div className="flex-shrink-0">
+                            <img
+                              className="w-8 h-8 rounded-full"
+                              src="https://cdn.pixabay.com/photo/2023/10/03/10/49/anonymous-8291223_1280.png"
+                              alt="Neil image"
+                            />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                              {items.title}
+                            </p>
+                            <p className="text-sm text-gray-500 truncate dark:text-gray-400">
+                              {items.reportedevidence}
+                            </p>
+                          </div>
                         </div>
-                        <div className="flex-1 min-w-0">
-                          <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                            Neil Sims
-                          </p>
-                          <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                            {`I was alone in my room when the air suddenly turned cold, sending a chill down my spine. 
-                          The lights flickered for a moment, and I could swear I heard soft footsteps approaching. As I turned, my breath caught—there, in the dim corner ...`}
-                          </p>
-                        </div>
-                      </div>
-                    </li>
-                    <li className="py-3 sm:py-4">
-                      <div className="flex items-center space-x-4">
-                        <div className="flex-shrink-0">
-                          <img
-                            className="w-8 h-8 rounded-full"
-                            src="https://cdn.pixabay.com/photo/2023/10/03/10/49/anonymous-8291223_1280.png"
-                            alt="Bonnie image"
-                          />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                            Bonnie Green
-                          </p>
-                          <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                            {`I was alone in my room when the air suddenly turned cold, sending a chill down my spine. The lights flickered for a moment, and I could swear I heard soft footsteps approaching. As I turned, my breath caught—there, in the dim corner ...`}
-                          </p>
-                        </div>
-                      </div>
-                    </li>
-                    <li className="py-3 sm:py-4">
-                      <div className="flex items-center space-x-4">
-                        <div className="flex-shrink-0">
-                          <img
-                            className="w-8 h-8 rounded-full"
-                            src="https://cdn.pixabay.com/photo/2023/10/03/10/49/anonymous-8291223_1280.png"
-                            alt="Michael image"
-                          />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                            Michael Gough
-                          </p>
-                          <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                            {`I was alone in my room when the air suddenly turned cold, sending a chill down my spine. The lights flickered for a moment, and I could swear I heard soft footsteps approaching. As I turned, my breath caught—there, in the dim corner ...`}
-                          </p>
-                        </div>
-                      </div>
-                    </li>
-                    <li className="py-3 sm:py-4">
-                      <div className="flex items-center space-x-4">
-                        <div className="flex-shrink-0">
-                          <img
-                            className="w-8 h-8 rounded-full"
-                            src="https://cdn.pixabay.com/photo/2023/10/03/10/49/anonymous-8291223_1280.png"
-                            alt="Lana image"
-                          />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                            Lana Byrd
-                          </p>
-                          <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                            {`I was alone in my room when the air suddenly turned cold, sending a chill down my spine. The lights flickered for a moment, and I could swear I heard soft footsteps approaching. As I turned, my breath caught—there, in the dim corner ...`}
-                          </p>
-                        </div>
-                      </div>
-                    </li>
-                    <li className="pt-3 pb-0 sm:pt-4">
-                      <div className="flex items-center space-x-4">
-                        <div className="flex-shrink-0">
-                          <img
-                            className="w-8 h-8 rounded-full"
-                            src="https://cdn.pixabay.com/photo/2023/10/03/10/49/anonymous-8291223_1280.png"
-                            alt="Thomas image"
-                          />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                            Thomes Lean
-                          </p>
-                          <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                            {`I was alone in my room when the air suddenly turned cold, sending a chill down my spine. The lights flickered for a moment, and I could swear I heard soft footsteps approaching. As I turned, my breath caught—there, in the dim corner ...`}
-                          </p>
-                        </div>
-                      </div>
-                    </li>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>

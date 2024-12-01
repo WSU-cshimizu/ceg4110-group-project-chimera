@@ -96,7 +96,7 @@ const UserTable = () => {
               <td className="px-6 py-4">{user.useremail}</td>
               <td className="px-6 py-4">{user.role}</td>
               <td className="px-6 py-4">
-                {user.is_blocked == 0 ? "Blocked" : "Not Blocked"}
+                {!user.is_blocked == 0 ? "Blocked" : "Not Blocked"}
               </td>
               <td className="px-6 py-4">
                 <button
@@ -105,7 +105,7 @@ const UserTable = () => {
                     handleBlockUser(user.userid, user.is_blocked);
                   }}
                 >
-                  {user.is_blocked == 1 ? "Block user" : "Unblock"}
+                  {!user.is_blocked == 1 ? "Block user" : "Unblock"}
                 </button>
                 <button
                   className="ml-2 px-3 py-1 text-sm text-white bg-red-600 rounded hover:bg-red-700"

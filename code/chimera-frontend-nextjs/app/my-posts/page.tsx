@@ -84,21 +84,16 @@ const Page = () => {
                         <div className="flex items-center justify-between">
                           <div className=" w-full flex justify-between items-center space-x-4">
                             <div className="flex space-x-4">
-                              <img
-                                src="https://cdn.pixabay.com/photo/2023/10/03/10/49/anonymous-8291223_1280.png"
-                                className="w-12 h-12 bg-center bg-cover border rounded-full"
-                                alt="Tim Cook"
-                              />
+                              
                               <div>
                                 <h3 className="text-lg font-semibold text-gray-700 dark:text-white">
-                                  {items.user_name == null || items.is_anonymous
-                                    ? "Anonymous"
-                                    : items.user_name}
+                                  {items.title}
                                 </h3>
                                 <p className="text-gray-500 text-md">
                                   {dateconverter(items.datetime)}
                                 </p>
                               </div>
+                             
                             </div>
 
                             <div
