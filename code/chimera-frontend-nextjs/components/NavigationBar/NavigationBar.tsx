@@ -47,18 +47,40 @@ const NavigationBar = () => {
     setIsOpen(!isOpen);
   };
 
-  const storedUserDetailString = localStorage.getItem("userDetail") || null;
+  // const storedUserDetailString = localStorage.getItem("userDetail") || null;
 
-  const storedUserDetail: UserDetail | null = storedUserDetailString
-    ? JSON.parse(storedUserDetailString)
-    : null;
+  // const storedUserDetail: UserDetail | null = storedUserDetailString
+  //   ? JSON.parse(storedUserDetailString)
+  //   : null;
+  const [storedUserDetail, setStoredUserDetail] = useState<UserDetail | null>(null);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedUserDetailString = localStorage.getItem("userDetail");
+      if (storedUserDetailString) {
+        setStoredUserDetail(JSON.parse(storedUserDetailString));
+      }
+    }
+  }, []);
+  
+
+
+
+
+  // useEffect(() => {
+  //   setLoginShow(false);
+  //   if (storedUserDetail) {
+  //     setUserDetails(storedUserDetail);
+  //   }
+  // }, []);
   useEffect(() => {
     setLoginShow(false);
     if (storedUserDetail) {
       setUserDetails(storedUserDetail);
     }
-  }, []);
+  }, [storedUserDetail]);
+  
+
 
   const removeLocalStorate = () => {
     localStorage.removeItem("userDetail");
@@ -139,7 +161,7 @@ const NavigationBar = () => {
         </div>
         <div className="order-2 md:order-3">
           <div className="flex gap-2">
-            {isAuthenticated || storedUserDetailString ? (
+            {isAuthenticated || storedUserDetail ? (
               <a
                 onClick={() => {
                   removeLocalStorate();
@@ -166,9 +188,12 @@ const NavigationBar = () => {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      // stroke-linecap="round"
+                      // stroke-linejoin="round"
+                      // stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M14 5l7 7m0 0l-7 7m7-7H3"
                     ></path>
                   </svg>
@@ -178,7 +203,7 @@ const NavigationBar = () => {
             )}
             <div className="relative">
               {/* Button to open the dropdown */}
-              {isAuthenticated || storedUserDetailString ? (
+              {isAuthenticated || storedUserDetail ? (
                 <button
                   onClick={toggleDropdown}
                   className="flex h-10 w-10 p-2 items-center justify-center rounded-md border border-gray-800 text-gray-800 focus:outline-none focus:ring-0 focus:ring-gray-200 dark:border-slate-300 dark:text-white"

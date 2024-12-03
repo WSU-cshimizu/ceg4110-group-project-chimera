@@ -12,13 +12,39 @@ const AccountSettings = () => {
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
 
-  const storedUserDetailString = localStorage.getItem("userDetail") || null;
-  const userDetail = JSON.parse(
-    storedUserDetailString ? storedUserDetailString : ""
-  ); // Parse the string into an object
+  // const storedUserDetailString = localStorage.getItem("userDetail") || null;
+  // const userDetail = JSON.parse(
+  //   storedUserDetailString ? storedUserDetailString : ""
+  // ); // Parse the string into an object
+  const [userDetail, setUserDetail] = useState(null); // State to store user details
 
+useEffect(() => {
+  // Access localStorage only on the client side
+  const storedUserDetailString = localStorage.getItem("userDetail");
+  if (storedUserDetailString) {
+    setUserDetail(JSON.parse(storedUserDetailString)); // Parse and set the user detail
+  }
+}, []);
+
+
+
+
+  // useEffect(() => {
+  //   if (storedUserDetailString) {
+  //     axios
+  //       .get(`http://localhost:9000/api/users/${userDetail.userid}`)
+  //       .then((res) => {
+  //         console.log(res.data);
+  //         const { name, useremail } = res.data;
+  //         setFormData({ name, useremail });
+  //       })
+  //       .catch((err) => {
+  //         console.log(err);
+  //       });
+  //   }
+  // }, [storedUserDetailString]);
   useEffect(() => {
-    if (storedUserDetailString) {
+    if (userDetail) {
       axios
         .get(`http://localhost:9000/api/users/${userDetail.userid}`)
         .then((res) => {
@@ -30,7 +56,10 @@ const AccountSettings = () => {
           console.log(err);
         });
     }
-  }, [storedUserDetailString]);
+  }, [userDetail]);
+  
+
+
 
   const handleSubmitChange = (e: any) => {
     e.preventDefault();

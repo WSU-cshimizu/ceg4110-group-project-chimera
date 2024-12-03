@@ -24,7 +24,7 @@ export default function Page() {
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [locations, setLocations] = useState([]);
   const [reportList, setReportList] = useState([]);
-  const [likedReports, setLikedReports] = useState([]);
+  // const [likedReports, setLikedReports] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModal2Open, setIsModal2Open] = useState(false);
@@ -65,26 +65,34 @@ export default function Page() {
       console.error("Both start and end dates must be selected.");
     }
   };
-  useEffect(() => {
-    // Retrieve userDetails from local storage
-    const storedUserDetails = localStorage.getItem("userDetail");
-    console.log(storedUserDetails);
-    if (storedUserDetails) {
-      const parsedDetails = JSON.parse(storedUserDetails);
-      setUser(parsedDetails);
-      console.log(parsedDetails);
-      setUserId(parsedDetails.userid || null); // Extract userid
-    }
 
-    axios
-      .get("http://localhost:9000/api/mostLikedReports")
-      .then((res) => {
-        setLikedReports(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+
+  // useEffect(() => {
+  //   // Retrieve userDetails from local storage
+  //   const storedUserDetails = localStorage.getItem("userDetail");
+  //   console.log(storedUserDetails);
+  //   if (storedUserDetails) {
+  //     const parsedDetails = JSON.parse(storedUserDetails);
+  //     setUser(parsedDetails);
+  //     console.log(parsedDetails);
+  //     setUserId(parsedDetails.userid || null); // Extract userid
+  //   }
+
+    // axios
+    //   .get("http://localhost:9000/api/mostLikedReports")
+    //   .then((res) => {
+    //     setLikedReports(res.data);
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+  // }, []);
+ 
+
+
+  
+
+
 
   const handleToggleChange = () => {
     setIsChecked(!isChecked);
@@ -108,32 +116,105 @@ export default function Page() {
     return readableDateTime;
   };
 
+  
   const onSubmit = (data: any) => {
-    data.reportedEvidence = data.description;
-    data.location_locationid = selectedLocation;
-    data.user_userid = userId;
-    data.is_anonymous = isChecked ? 1 : 0;
-
+    const payload = {
+      title: data.title,
+      rpt_entity_reportedentityid: data.rpt_entity_reportedentityid,
+      location_locationid: selectedLocation, // Ensure this is set
+      datetime: data.datetime,
+      reportedevidence: data.description,
+      user_userid: userId || 1, // Ensure userId is properly set, default to 1
+      is_anonymous: isChecked ? 1 : 0, // Convert boolean to number
+    };
+  
+    console.log("Submitting payload:", payload); // Debugging
+  
     axios
-      .post("http://localhost:9000/api/reports", data)
+      .post("http://localhost:9000/api/reports", payload)
       .then((res) => {
-        toast.success("Report posted sucessfully.");
+        toast.success("Report posted successfully.");
+        console.log("API Response:", res.data);
       })
       .catch((err) => {
         toast.error("Couldn't submit the report");
+        console.error("Error details:", err.response?.data || err.message);
       });
   };
+
 
   const handleChange = (event: any) => {
     const selectedId = event.target.value;
     setSelectedLocation(selectedId);
   };
 
-  const handleViewMore = (details: any) => {
-    console.log(details);
-    setModalDetails(details); // Set the details to be passed to the modal
-    setIsModal2Open(true); // Open the modal
+  // const handleViewMore = (details: any) => {
+  //   console.log(details);
+  //   setModalDetails(details); // Set the details to be passed to the modal
+  //   setIsModal2Open(true); // Open the modal
+  // };
+  // const handleViewMore = async (details: any) => {
+  //   try {
+  //     // Fetch the entity name using the rpt_entity_reportedentityid
+  //     const response = await axios.get(
+  //       `http://localhost:9000/api/known_entities/${details.rpt_entity_reportedentityid}`
+  //     );
+  
+  //     // Add the entity name to the details object
+  //     const updatedDetails = {
+  //       ...details,
+  //       entity_name: response.data.name || "Unknown Entity",
+  //     };
+  
+  //     setModalDetails(updatedDetails); // Set the updated details to the modal
+  //     setIsModal2Open(true); // Open the modal
+  //   } catch (error) {
+  //     console.error("Failed to fetch entity name:", error);
+  //     setModalDetails({ ...details, entity_name: "Unknown Entity" });
+  //     setIsModal2Open(true); // Open the modal even if entity fetching fails
+  //   }
+  // };
+
+
+  // const handleViewMore = async (details: any) => {
+  //   try {
+  //     const response = await axios.get(
+  //       `http://localhost:9000/api/entities/${details.rpt_entity_reportedentityid}`
+  //     );
+  //     const entityName = response.data.name || "Unknown Entity";
+  
+  //     setModalDetails({ ...details, entity_name: entityName });
+  //     setIsModal2Open(true);
+  //   } catch (err) {
+  //     console.error("Error fetching entity name:", err);
+  //     setModalDetails({ ...details, entity_name: "Unknown Entity" });
+  //     setIsModal2Open(true);
+  //   }
+  // };
+  const handleViewMore = async (details: any) => {
+    try {
+      // Fetch the entity type (name) using the `rpt_entity_reportedentityid`
+      const response = await axios.get(
+        `http://localhost:9000/api/entities/name/${details.rpt_entity_reportedentityid}`
+      );
+  
+      // Add the fetched entity type to the report details
+      const updatedDetails = {
+        ...details,
+        entity_name: response.data.ketype || "Unknown Entity",
+      };
+  
+      setModalDetails(updatedDetails); // Pass the updated details to the modal
+      setIsModal2Open(true); // Open the modal
+    } catch (error) {
+      console.error("Failed to fetch entity name (ketype):", error);
+      // If the fetch fails, fallback to default
+      setModalDetails({ ...details, entity_name: "Unknown Entity" });
+      setIsModal2Open(true);
+    }
   };
+  
+  
 
   const closeModal = () => {
     setIsModal2Open(false); // Close the modal
@@ -292,7 +373,8 @@ export default function Page() {
                 (items) =>
                   items.status !== "pending" &&
                   items.status !== "denied" && (
-                    <li className="text-sm leading-6">
+                    // <li className="text-sm leading-6">
+                    <li key={items.reportid} className="text-sm leading-6">
                       <div className="relative group">
                         <div className="absolute transition rounded-lg opacity-25 -inset-1 duration-400 group-hover:opacity-100 group-hover:duration-200"></div>
                         <a className="cursor-pointer">
@@ -324,10 +406,10 @@ export default function Page() {
                                 </div>
                               </div>
 
-                              <LikeButton
+                              {/* <LikeButton
                                 postId={items.reportid}
                                 userId={items.user_id}
-                              />
+                              /> */}
                             </div>
                             <p className="leading-normal dark:text-gray-300 text-gray-600 text-md">
                               {items.reportedevidence ?? null}
@@ -384,7 +466,7 @@ export default function Page() {
                     role="list"
                     className="divide-y divide-gray-200 dark:divide-gray-700"
                   >
-                    {likedReports?.map((items) => (
+                    {/* {likedReports?.map((items) => (
                       <li className="py-3 sm:py-4">
                         <div className="flex items-center space-x-4">
                           <div className="flex-shrink-0">
@@ -404,7 +486,7 @@ export default function Page() {
                           </div>
                         </div>
                       </li>
-                    ))}
+                    ))} */}
                   </ul>
                 </div>
               </div>

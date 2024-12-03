@@ -168,4 +168,25 @@ router.get('/entities/matches/:id', (req, res) => {
   });
 });
 
+
+router.get('/entities/name/:id', (req, res) => {
+  const query = `
+    SELECT ketype 
+    FROM kwn_entity 
+    WHERE keid = ?`; // Assuming `keid` is the primary key for `kwn_entity`
+
+  db.query(query, [req.params.id], (err, results) => {
+    if (err) {
+      res.status(500).send(err);
+    } else if (results.length === 0) {
+      res.status(404).send({ error: 'Entity not found.' });
+    } else {
+      res.status(200).json({ ketype: results[0].ketype });
+    }
+  });
+});
+
+
+
+
 module.exports = router;

@@ -33,6 +33,10 @@ const ViewMore: React.FC<ModalProps> = ({ isOpen, onClose, details }) => {
           <strong>Description:</strong>{" "}
           {details?.reportedevidence || "No Description"}
         </p>
+        <p>
+          <strong>Guessed Entity:</strong>{" "}
+          {details?.entity_name || "None"}
+        </p>
         <button
           className="bg-indigo-600 text-white px-4 py-2 rounded mt-4"
           onClick={onClose}
